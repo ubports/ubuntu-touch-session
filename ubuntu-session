@@ -1,0 +1,46 @@
+#!/bin/bash
+
+
+if [ -n "${DBUS_SESSION_BUS_ADDRESS:+x}" ]; then
+    echo "Starting session bus"
+    eval `dbus-launch --sh-syntax`
+    if [ -n "${DBUS_SESSION_BUS_ADDRESS:+x}" ]; then
+        exit 1
+    fi
+fi
+    
+echo ${DBUS_SESSION_BUS_ADDRESS} > $HOME/.dbus-session
+
+# Initialize shell, env, etc
+
+export HOSTNAME=android
+export SHELL=/system/bin/sh
+export TERM=vt100
+export ANDROID_CACHE=/cache
+export LOOP_MOUNTPOINT=/mnt/obb
+export ASEC_MOUNTPOINT=/mnt/asec
+export ANDROID_PROPERTY_WORKSPACE=8,49152
+export ANDROID_ASSETS=/system/app
+export ANDROID_BOOTLOGO=1
+export USER=ubuntu
+export LD_LIBRARY_PATH=/opt/qt5/lib:/vendor/lib:/system/lib
+export QML_IMPORT_PATH=/opt/qt5/imports
+export QT_FONT_PATH=/opt/qt5/lib/fonts
+export PATH=/opt/qt5/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
+export ANDROID_DATA=/data
+export QT_QPA_PLATFORM=hybris
+export SHLVL=1
+export HOME=/home/ubuntu
+export MKSH=/system/bin/sh
+export ANDROID_ROOT=/system
+export EXTERNAL_STORAGE=/mnt/sdcard
+export QT_PLUGIN_PATH=/opt/qt5/plugins
+
+device=`grep Hardware /proc/cpuinfo | awk '{print $3}'`
+
+env
+if [ "$device" == "ventana" ]; then
+    exec qml-tablet-shell
+else
+    exec qml-phone-shell
+fi

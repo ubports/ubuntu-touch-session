@@ -1,0 +1,14 @@
+Source: ubuntu-session
+Section: x11
+Priority: extra
+Maintainer: Ricardo Mendoza <ricardo.mendoza@canonical.com>
+Build-Depends: debhelper (>= 8.0.0)
+Standards-Version: 3.9.3
+
+Package: ubuntu-session
+Architecture: all
+Depends: ${shlibs:Depends}, ${misc:Depends}
+Description: Ubuntu Session Manager for Mobile Devices
+ The ubuntu-session tool aims to setup a very simple session manager
+ for our mobile shell.
+
