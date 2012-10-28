@@ -1,4 +1,10 @@
-ubuntu-session (0.1) UNRELEASED; urgency=low
+ubuntu-session (0.2) quantal; urgency=low
+
+  * Make native
+
+ -- Ricardo Mendoza <ricardo.mendoza@canonical.com>  Fri, 26 Oct 2012 13:06:54 -0430
+
+ubuntu-session (0.1) quantal; urgency=low
 
   * Initial release
 
