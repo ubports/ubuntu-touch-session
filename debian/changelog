@@ -1,3 +1,11 @@
+ubuntu-session (0.4) quantal; urgency=low
+
+  * Pass a list of services to start depending on the device
+  * Wait for all children before exiting automatically
+  * Catch SIGTERM from upstart job to support restart/stop
+
+ -- Ricardo Mendoza <ricardo.mendoza@canonical.com>  Mon, 29 Oct 2012 07:22:55 -0430
+
 ubuntu-session (0.3) quantal; urgency=low
 
   * Fix dbus session bring up
