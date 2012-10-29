@@ -1,3 +1,10 @@
+ubuntu-session (0.5) quantal; urgency=low
+
+  * Add per-service logging support
+  * Ask all started services to exit before stopping the session
+
+ -- Ricardo Mendoza <ricardo.mendoza@canonical.com>  Mon, 29 Oct 2012 09:39:39 -0430
+
 ubuntu-session (0.4) quantal; urgency=low
 
   * Pass a list of services to start depending on the device
