@@ -1,15 +1,13 @@
 #!/bin/bash
 
-
-if [ -n "${DBUS_SESSION_BUS_ADDRESS:+x}" ]; then
+if [ -z "$DBUS_SESSION_BUS_ADDRESS" ]; then
     echo "Starting session bus"
-    eval `dbus-launch --sh-syntax`
-    if [ -n "${DBUS_SESSION_BUS_ADDRESS:+x}" ]; then
+    export `dbus-launch | grep -m1 ADDRESS`
+    if [ -z "$DBUS_SESSION_BUS_ADDRESS" ]; then
+        echo "Unable to start session bus"
         exit 1
     fi
 fi
-    
-echo ${DBUS_SESSION_BUS_ADDRESS} > $HOME/.dbus-session
 
 # Initialize shell, env, etc
 
@@ -36,9 +34,12 @@ export ANDROID_ROOT=/system
 export EXTERNAL_STORAGE=/mnt/sdcard
 export QT_PLUGIN_PATH=/opt/qt5/plugins
 
-device=`grep Hardware /proc/cpuinfo | awk '{print $3}'`
+echo ${DBUS_SESSION_BUS_ADDRESS} > $HOME/.dbus-session
 
 env
+
+device=`grep Hardware /proc/cpuinfo | awk '{print $3}'`
+
 if [ "$device" == "ventana" ]; then
     exec qml-tablet-shell
 else
