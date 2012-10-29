@@ -68,11 +68,13 @@ if [ ! -d "$HOME/.ubuntu-session/logs/" ]; then
 fi
 
 while read service; do
-    service_path=( $(echo "$service" | tr "/" " ") )
+    service=( $service )
+    arguments=${service[@]:1}
+    service_path=( $(echo "${service[0]}" | tr "/" " ") )
     binary=${service_path[${#service_path[@]}-1]}
-    $service &> "$HOME/.ubuntu-session/logs/$binary.log" &
-    pids=("${pids[@]}" "$service $!")
-    echo "Started $service with pid $!"
+    ${service[0]} $arguments &> "$HOME/.ubuntu-session/logs/$binary.log" &
+    pids=("${pids[@]}" "${service[0]} $!")
+    echo "Started ${service[0]} with pid $!"
 done < "$services"
 
 trap 'on_stop' TERM

@@ -1,3 +1,9 @@
+ubuntu-session (0.6) quantal; urgency=low
+
+  * Fix problem when having more than one argument
+
+ -- Ricardo Mendoza <ricardo.mendoza@canonical.com>  Mon, 29 Oct 2012 10:48:20 -0430
+
 ubuntu-session (0.5) quantal; urgency=low
 
   * Add per-service logging support
