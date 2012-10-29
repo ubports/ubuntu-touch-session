@@ -1,8 +1,14 @@
 #!/bin/bash
 
+on_stop()
+{
+    echo "Stopping session..."
+    kill ${DBUS_SESSION_BUS_PID}
+}
+
 if [ -z "$DBUS_SESSION_BUS_ADDRESS" ]; then
     echo "Starting session bus"
-    export `dbus-launch | grep -m1 ADDRESS`
+    export `dbus-launch`
     if [ -z "$DBUS_SESSION_BUS_ADDRESS" ]; then
         echo "Unable to start session bus"
         exit 1
@@ -34,14 +40,23 @@ export ANDROID_ROOT=/system
 export EXTERNAL_STORAGE=/mnt/sdcard
 export QT_PLUGIN_PATH=/opt/qt5/plugins
 
-echo ${DBUS_SESSION_BUS_ADDRESS} > $HOME/.dbus-session
+echo "DBUS_SESSION_BUS_ADDRESS=${DBUS_SESSION_BUS_ADDRESS}" > $HOME/.dbus-session
+echo "DBUS_SESSION_BUS_PID=${DBUS_SESSION_BUS_PID}" >> $HOME/.dbus-session
 
 env
 
 device=`grep Hardware /proc/cpuinfo | awk '{print $3}'`
 
 if [ "$device" == "ventana" ]; then
-    exec qml-tablet-shell
+    services="/etc/tablet-services"
 else
-    exec qml-phone-shell
+    services="/etc/phone-services"
 fi
+
+while read service; do
+    $service &
+done < "$services"
+
+trap 'on_stop' TERM
+
+wait
