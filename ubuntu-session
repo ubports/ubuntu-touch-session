@@ -1,9 +1,21 @@
 #!/bin/bash
 
+export HOME=/home/ubuntu
+echo "Redirecting output to local session logs"
+exec &> "$HOME/.ubuntu-session/logs/ubuntu-session.log"
+
 on_stop()
 {
-    echo "Stopping session..."
+    echo "Stopping services..."
+    for pid in "${pids[@]}"
+    do
+        tuple=( $pid )
+        echo "Stopping ${tuple[0]}"
+        kill ${tuple[1]}
+    done
+    echo "Killing session bus..."
     kill ${DBUS_SESSION_BUS_PID}
+    echo "Session stopped."
 }
 
 if [ -z "$DBUS_SESSION_BUS_ADDRESS" ]; then
@@ -43,8 +55,6 @@ export QT_PLUGIN_PATH=/opt/qt5/plugins
 echo "DBUS_SESSION_BUS_ADDRESS=${DBUS_SESSION_BUS_ADDRESS}" > $HOME/.dbus-session
 echo "DBUS_SESSION_BUS_PID=${DBUS_SESSION_BUS_PID}" >> $HOME/.dbus-session
 
-env
-
 device=`grep Hardware /proc/cpuinfo | awk '{print $3}'`
 
 if [ "$device" == "ventana" ]; then
@@ -53,8 +63,16 @@ else
     services="/etc/phone-services"
 fi
 
+if [ ! -d "$HOME/.ubuntu-session/logs/" ]; then
+    mkdir -p "$HOME/.ubuntu-session/logs"
+fi
+
 while read service; do
-    $service &
+    service_path=( $(echo "$service" | tr "/" " ") )
+    binary=${service_path[${#service_path[@]}-1]}
+    $service &> "$HOME/.ubuntu-session/logs/$binary.log" &
+    pids=("${pids[@]}" "$service $!")
+    echo "Started $service with pid $!"
 done < "$services"
 
 trap 'on_stop' TERM
