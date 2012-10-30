@@ -1,6 +1,6 @@
 #!/bin/bash
 
-export HOME=/home/ubuntu
+export HOME=/home/phablet
 echo "Redirecting output to local session logs"
 exec &> "$HOME/.ubuntu-session/logs/ubuntu-session.log"
 
@@ -38,7 +38,7 @@ export ASEC_MOUNTPOINT=/mnt/asec
 export ANDROID_PROPERTY_WORKSPACE=8,49152
 export ANDROID_ASSETS=/system/app
 export ANDROID_BOOTLOGO=1
-export USER=ubuntu
+export USER=phablet
 export LD_LIBRARY_PATH=/opt/qt5/lib:/vendor/lib:/system/lib
 export QML_IMPORT_PATH=/opt/qt5/imports
 export QT_FONT_PATH=/opt/qt5/lib/fonts
@@ -46,7 +46,6 @@ export PATH=/opt/qt5/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin
 export ANDROID_DATA=/data
 export QT_QPA_PLATFORM=hybris
 export SHLVL=1
-export HOME=/home/ubuntu
 export MKSH=/system/bin/sh
 export ANDROID_ROOT=/system
 export EXTERNAL_STORAGE=/mnt/sdcard
