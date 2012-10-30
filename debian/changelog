@@ -1,3 +1,9 @@
+ubuntu-session (0.7) quantal; urgency=low
+
+  * Change default session user
+
+ -- Ricardo Mendoza <ricardo.mendoza@canonical.com>  Tue, 30 Oct 2012 08:07:22 -0430
+
 ubuntu-session (0.6) quantal; urgency=low
 
   * Fix problem when having more than one argument
