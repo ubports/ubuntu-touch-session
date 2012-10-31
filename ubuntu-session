@@ -58,8 +58,10 @@ device=`grep Hardware /proc/cpuinfo | awk '{print $3}'`
 
 if [ "$device" == "ventana" ]; then
     services="/etc/tablet-services"
+    export GRID_UNIT_PX=10
 else
     services="/etc/phone-services"
+    export GRID_UNIT_PX=18
 fi
 
 if [ ! -d "$HOME/.ubuntu-session/logs/" ]; then
