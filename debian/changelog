@@ -1,3 +1,9 @@
+ubuntu-session (0.10) UNRELEASED; urgency=low
+
+  * ubuntu-session.com: Add respawn so shell gets restarted if it crashes.
+
+ -- Michael Frey <michael.frey@canonical.com>  Wed, 07 Nov 2012 09:12:36 -0500
+
 ubuntu-session (0.9) quantal; urgency=low
 
   * export LANG and LANGUAGE as they are needed by apps
