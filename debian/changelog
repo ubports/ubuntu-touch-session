@@ -1,3 +1,9 @@
+ubuntu-session (0.11) quantal; urgency=low
+
+  * Autostart maliit-server
+
+ -- Ricardo Mendoza <ricardo.mendoza@canonical.com>  Mon, 19 Nov 2012 11:07:38 -0430
+
 ubuntu-session (0.10) quantal; urgency=low
 
   * ubuntu-session.com: Add respawn so shell gets restarted if it crashes.
