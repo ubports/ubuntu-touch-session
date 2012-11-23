@@ -1,3 +1,9 @@
+ubuntu-session (0.12) quantal; urgency=low
+
+  * Add maliit as default input method
+
+ -- Ricardo Mendoza <ricardo.mendoza@canonical.com>  Fri, 23 Nov 2012 19:04:10 -0430
+
 ubuntu-session (0.11) quantal; urgency=low
 
   * Autostart maliit-server
