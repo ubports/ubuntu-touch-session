@@ -79,6 +79,7 @@ while read service; do
     ${service[0]} $arguments &> "$HOME/.ubuntu-session/logs/$binary.log" &
     pids=("${pids[@]}" "${service[0]} $!")
     echo "Started ${service[0]} with pid $!"
+    sleep 3
 done < "$services"
 
 trap 'on_stop' TERM
