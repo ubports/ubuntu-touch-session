@@ -1,3 +1,9 @@
+ubuntu-session (0.14) quantal; urgency=low
+
+  * Introduce delay on start-up of services to wait for completion.
+
+ -- Ricardo Mendoza <ricardo.mendoza@canonical.com>  Mon, 26 Nov 2012 14:50:49 -0430
+
 ubuntu-session (0.13) quantal; urgency=low
 
   * Updating packaging with latest standards
