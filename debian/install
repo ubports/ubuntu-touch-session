@@ -1,3 +1,0 @@
-ubuntu-session /usr/bin/
-ubuntu-session.conf /etc/init/
-*-services /etc/ 
