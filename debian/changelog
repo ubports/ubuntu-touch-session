@@ -1,3 +1,9 @@
+ubuntu-session (0.16) quantal; urgency=low
+
+  * Inherit environment from login shells
+
+ -- Ricardo Mendoza <ricardo.mendoza@canonical.com>  Wed, 28 Nov 2012 18:44:43 -0430
+
 ubuntu-session (0.15) quantal; urgency=low
 
   * Adding /etc/dbus-1/system.d/ofono-phablet.conf for oFono handling by
