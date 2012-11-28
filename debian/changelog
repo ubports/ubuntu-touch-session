@@ -1,3 +1,10 @@
+ubuntu-session (0.15) quantal; urgency=low
+
+  * Adding /etc/dbus-1/system.d/ofono-phablet.conf for oFono handling by
+    the phablet user
+
+ -- Ricardo Salveti de Araujo <ricardo.salveti@canonical.com>  Wed, 28 Nov 2012 12:30:59 -0200
+
 ubuntu-session (0.14) quantal; urgency=low
 
   * Introduce delay on start-up of services to wait for completion.
