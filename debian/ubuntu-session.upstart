@@ -1,6 +1,7 @@
 author "Tony Espy <espy@canonical.com>"
 
 start on mounted MOUNTPOINT=/run
+stop on stopping dbus
 
 setuid phablet
 setgid android_input
