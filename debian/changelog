@@ -1,3 +1,9 @@
+ubuntu-session (0.17) quantal; urgency=low
+
+  * debian/ubuntu-session.conf: stop the session on shutdown.
+
+ -- Michael Frey <michael.frey@canonical.com>  Thu, 29 Nov 2012 15:53:39 -0500
+
 ubuntu-session (0.16) quantal; urgency=low
 
   * Inherit environment from login shells
