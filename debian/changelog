@@ -1,3 +1,9 @@
+ubuntu-session (0.18) quantal; urgency=low
+
+  * add ofono-setup to phone-services and tablet-services
+
+ -- Bill Filler <bill.filler@canonical.com>  Thu, 29 Nov 2012 19:36:46 -0500
+
 ubuntu-session (0.17) quantal; urgency=low
 
   * debian/ubuntu-session.conf: stop the session on shutdown.
