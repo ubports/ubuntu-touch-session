@@ -1,0 +1,57 @@
+#!/bin/bash
+ 
+CREATION_PARAMS_FB=('--print-id' \
+        -s 'auth/method=oauth2' \
+        -s 'auth/mechanism=user_agent' \
+        -s 'u:auth/oauth2/user_agent/WindowId=2341' \
+        -s 'auth/oauth2/user_agent/Host=www.facebook.com' \
+        -s 'auth/oauth2/user_agent/AuthPath=/dialog/oauth' \
+        -s 'auth/oauth2/user_agent/ClientId=302061903208115' \
+        -s 'auth/oauth2/user_agent/RedirectUri=https://www.facebook.com/connect/login_success.html' \
+        -s 'auth/oauth2/user_agent/ResponseType/item0=token' \
+        -s "as:auth/oauth2/user_agent/Scope=["\
+"'publish_stream',"\
+"'read_stream',"\
+"'status_update',"\
+"'user_photos',"\
+"'friends_photos',"\
+"'xmpp_login']" \
+        -s 'auth/oauth2/user_agent/Display=popup' \
+)
+
+CREATION_PARAMS_TWITTER=('--print-id' \
+        -s 'auth/method=oauth2' \
+        -s 'auth/mechanism=HMAC-SHA1' \
+        -s 'u:auth/oauth2/HMAC-SHA1/WindowId=2341' \
+        -s 'auth/oauth2/HMAC-SHA1/RequestEndpoint=https://api.twitter.com/oauth/request_token' \
+        -s 'auth/oauth2/HMAC-SHA1/TokenEndpoint=https://api.twitter.com/oauth/access_token' \
+        -s 'auth/oauth2/HMAC-SHA1/AuthorizationEndpoint=https://api.twitter.com/oauth/authorize' \
+        -s 'auth/oauth2/HMAC-SHA1/ConsumerKey=NGOB5S7sICsj6epjh0PhAw' \
+        -s 'auth/oauth2/HMAC-SHA1/ConsumerSecret=rbUEJCBEokMnGZd8bubd0QL2cSmoCjJeyiSJpnx3OM0' \
+        -s 'auth/oauth2/HMAC-SHA1/Callback=https://wiki.ubuntu.com/' \
+)
+
+account-console list | grep "provider"
+
+if [ ${?} -ne "0" ]; then
+    ID_FACEBOOK="$(account-console create facebook ${CREATION_PARAMS_FB[@]})"
+    account-console edit "$ID_FACEBOOK" --username lolachang2010@yahoo.co.uk --password Ubuntu2010
+     
+    ID_TWITTER="$(account-console create twitter ${CREATION_PARAMS_TWITTER[@]})"
+    account-console edit "$ID_TWITTER" --username lola_chang --password friedmushrooms
+else
+    fb_array=( $(account-console list | grep facebook) )
+    ID_FACEBOOK=${fb_array[2]%?}
+    tw_array=( $(account-console list | grep twitter) )
+    ID_TWITTER=${tw_array[2]%?}
+    echo "Accounts already present"
+fi
+ 
+echo $ID_FACEBOOK
+echo $ID_TWITTER
+
+account-console edit "${ID_FACEBOOK}" --enable --service facebook-microblog
+account-console edit "${ID_TWITTER}" --enable --service twitter-microblog
+
+account-console login "${ID_FACEBOOK}" --service facebook-microblog
+account-console login "${ID_TWITTER}" --service twitter-microblog

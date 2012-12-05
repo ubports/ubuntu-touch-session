@@ -1,3 +1,13 @@
+ubuntu-session (0.19) quantal; urgency=low
+
+  * Support per-service start up delay argument
+  * Reduce maliit-server delay to 1s
+  * Add create-lola-accounts startup script
+  * Start signon-ui service
+  * Run chewie_messaging_populate_menu
+
+ -- Ricardo Mendoza <ricardo.mendoza@canonical.com>  Wed, 05 Dec 2012 10:34:06 +0000
+
 ubuntu-session (0.18) quantal; urgency=low
 
   * add ofono-setup to phone-services and tablet-services
