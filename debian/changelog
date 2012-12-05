@@ -1,3 +1,9 @@
+ubuntu-session (0.20) quantal; urgency=low
+
+  * Install startup scripts
+
+ -- Ricardo Mendoza <ricardo.mendoza@canonical.com>  Wed, 05 Dec 2012 12:16:05 +0000
+
 ubuntu-session (0.19) quantal; urgency=low
 
   * Support per-service start up delay argument
