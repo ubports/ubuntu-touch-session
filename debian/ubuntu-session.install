@@ -1,3 +1,4 @@
 ubuntu-session /usr/bin/
 *-services /etc/
 etc/dbus-1/system.d
+startup-scripts/* /usr/bin/
