@@ -55,8 +55,3 @@ account-console edit "${ID_TWITTER}" --enable --service twitter-microblog
 
 account-console login "${ID_FACEBOOK}" --service facebook-microblog
 account-console login "${ID_TWITTER}" --service twitter-microblog
-
-
-
-
-
