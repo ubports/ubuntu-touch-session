@@ -1,3 +1,9 @@
+ubuntu-session (0.21) quantal; urgency=low
+
+  * Move delay to pre-start of the service
+
+ -- Ricardo Mendoza <ricardo.mendoza@canonical.com>  Thu, 06 Dec 2012 11:11:45 +0000
+
 ubuntu-session (0.20) quantal; urgency=low
 
   * Install startup scripts

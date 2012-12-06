@@ -55,10 +55,10 @@ while read service; do
     arguments=${service[@]:2}
     service_path=( $(echo "${service[1]}" | tr "/" " ") )
     binary=${service_path[${#service_path[@]}-1]}
+    sleep ${service[0]}
     ${service[1]} $arguments &> "$HOME/.ubuntu-session/logs/$binary.log" &
     pids=("${pids[@]}" "${service[1]} $!")
     echo "Started ${service[1]} with pid $! (${service[0]} secs start delay)"
-    sleep ${service[0]}
 done < "$services"
 
 trap 'on_stop' TERM
