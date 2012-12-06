@@ -1,4 +1,4 @@
-ubuntu-session (0.22) UNRELEASED; urgency=low
+ubuntu-session (0.22) quantal; urgency=low
 
   * Adding delay of 12 seconds for ofono-setup, to always start
     after ofonod
