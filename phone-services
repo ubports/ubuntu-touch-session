@@ -1,6 +1,6 @@
-1   maliit-server
-0   qml-phone-shell
-12  ofono-setup
+0   maliit-server
+2   qml-phone-shell
 1   signon-ui
 0   chewie_messaging_populate_menu
 0   friends-service -do
+12  ofono-setup
