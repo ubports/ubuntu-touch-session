@@ -1,3 +1,9 @@
+ubuntu-session (0.24) quantal; urgency=low
+
+  * Shuffle delays around now that they are pre-start and not post.
+
+ -- Ricardo Mendoza <ricardo.mendoza@canonical.com>  Fri, 07 Dec 2012 09:50:23 +0000
+
 ubuntu-session (0.23) quantal; urgency=low
 
   * Adding delay of 12 seconds for ofono-setup, to always start
