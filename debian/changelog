@@ -1,4 +1,4 @@
-ubuntu-session (0.25) UNRELEASED; urgency=low
+ubuntu-session (0.25) quantal; urgency=low
 
   * Updating tablet-services with the new syntax, and using the same timeout
     arguments as we have for phone
