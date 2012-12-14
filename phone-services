@@ -1,6 +1,5 @@
 0   maliit-server
 2   qml-phone-shell
-1   signon-ui
 0   chewie_messaging_populate_menu
-0   friends-service -do
+2   manage-address-books.py create
 12  ofono-setup
