@@ -35,7 +35,7 @@ account-console list | grep "provider"
 
 if [ ${?} -ne "0" ]; then
     ID_FACEBOOK="$(account-console create facebook ${CREATION_PARAMS_FB[@]})"
-    account-console edit "$ID_FACEBOOK" --username lolachang2010@yahoo.co.uk --password Ubuntu2010
+    account-console edit "$ID_FACEBOOK" --username lolachang2010@yahoo.co.uk --password Ubuntu2012
      
     ID_TWITTER="$(account-console create twitter ${CREATION_PARAMS_TWITTER[@]})"
     account-console edit "$ID_TWITTER" --username lola_chang --password friedmushrooms
@@ -47,11 +47,26 @@ else
     echo "Accounts already present"
 fi
  
-echo $ID_FACEBOOK
-echo $ID_TWITTER
+no_network=true
+
+while [ $no_network == true ]; do
+    ip addr show wlan0 | grep "inet " &> /dev/null
+    if [ $? -eq 0 ]; then
+        no_network=false
+    else
+        sleep 5
+    fi
+done
+
+pkill signon-ui
+signon-ui & 
+sleep 4
+
+account-console login "${ID_FACEBOOK}" --service facebook-microblog
+account-console login "${ID_TWITTER}" --service twitter-microblog
 
 account-console edit "${ID_FACEBOOK}" --enable --service facebook-microblog
 account-console edit "${ID_TWITTER}" --enable --service twitter-microblog
 
-account-console login "${ID_FACEBOOK}" --service facebook-microblog
-account-console login "${ID_TWITTER}" --service twitter-microblog
+pkill friends-service
+friends-service -do &

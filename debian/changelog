@@ -1,3 +1,11 @@
+ubuntu-session (0.27) quantal; urgency=low
+
+  * Start address book fake-data setup script
+  * Make create-lola-accounts deal with signon-ui races and
+    handle startup of friends-service at the correct time
+
+ -- Ricardo Mendoza <ricardo.mendoza@canonical.com>  Fri, 14 Dec 2012 11:52:50 -0430
+
 ubuntu-session (0.26) quantal; urgency=low
 
   * Bringing tablet services up to par with phone
