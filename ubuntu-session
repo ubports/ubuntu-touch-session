@@ -79,3 +79,4 @@ done < "$services"
 trap 'on_stop' TERM
 
 wait $shell_pid
+on_stop
