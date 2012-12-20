@@ -1,3 +1,4 @@
+0   pulseaudio --start --log-target=syslog
 0   maliit-server
 2   qml-phone-shell
 1   signon-ui
