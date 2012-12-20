@@ -1,4 +1,4 @@
-ubuntu-session (0.31) UNRELEASED; urgency=low
+ubuntu-session (0.31) quantal; urgency=low
 
   * Starting pulse at the session to avoid issues with pid mismatch and races
     when starting pulse (LP: #1088546)
