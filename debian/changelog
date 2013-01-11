@@ -1,3 +1,10 @@
+ubuntu-session (0.33) quantal; urgency=low
+
+  * ubuntu-session: added device section for Manta (nexus 10)
+  * tablet-services: match phone-services for now 
+
+ -- Bill Filler <bill.filler@canonical.com>  Fri, 11 Jan 2013 18:16:13 -0500
+
 ubuntu-session (0.32) quantal; urgency=low
 
   * Add friends-service back onto phone list
