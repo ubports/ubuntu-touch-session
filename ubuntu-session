@@ -49,14 +49,20 @@ echo "Device=$device"
 
 if [ "$device" == "ventana" ]; then
     services="/etc/tablet-services"
+    grep -q GRID_UNIT_PX /home/phablet/.bashrc
+    [ $? -ne 0 ] && echo "export GRID_UNIT_PX=10" >> /home/phablet/.bashrc
     export GRID_UNIT_PX=10
     export FORM_FACTOR="tablet"
 elif [ "$device" == "Manta" ]; then
     services="/etc/tablet-services"
+    grep -q GRID_UNIT_PX /home/phablet/.bashrc
+    [ $? -ne 0 ] && echo "export GRID_UNIT_PX=20" >> /home/phablet/.bashrc
     export GRID_UNIT_PX=20
     export FORM_FACTOR="tablet"
 else
     services="/etc/phone-services"
+    grep -q GRID_UNIT_PX /home/phablet/.bashrc
+    [ $? -ne 0 ] && echo "export GRID_UNIT_PX=18" >> /home/phablet/.bashrc
     export GRID_UNIT_PX=18
     export FORM_FACTOR="phone"
 fi
