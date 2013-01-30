@@ -1,3 +1,9 @@
+ubuntu-session (0.34) quantal; urgency=low
+
+  * Correctly export GRID_UNIT_PX for shell session as well
+
+ -- Ricardo Mendoza <ricmm@venus>  Wed, 30 Jan 2013 11:31:54 -0430
+
 ubuntu-session (0.33) quantal; urgency=low
 
   * ubuntu-session: added device section for Manta (nexus 10)
