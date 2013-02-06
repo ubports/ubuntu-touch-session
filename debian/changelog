@@ -1,3 +1,10 @@
+ubuntu-session (0.36) quantal; urgency=low
+
+  * Add plymouth and udev Upstart .override files to
+    disable Upstart jobs (LP: 1111604).
+
+ -- Tony Espy <espy@canonical.com>  Tue, 05 Feb 2013 19:17:33 -0500
+
 ubuntu-session (0.35) quantal; urgency=low
 
   * Set QTWEBKIT_DPR correctly for devices and export to shell 
