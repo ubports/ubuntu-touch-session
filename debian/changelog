@@ -1,3 +1,10 @@
+ubuntu-session (0.37) quantal; urgency=low
+
+  * Add plymouth and udev Upstart .override files to
+    disable Upstart jobs (LP: 1111604).
+
+ -- Tony Espy <espy@canonical.com>  Thu, 07 Feb 2013 16:17:48 -0500
+
 ubuntu-session (0.36) quantal; urgency=low
 
   * Take care of exporting env when launching the dbus session 
