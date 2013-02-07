@@ -32,18 +32,6 @@ do
     export $var;
 done
 
-if [ -z "$DBUS_SESSION_BUS_ADDRESS" ]; then
-    echo "Starting session bus"
-    export `dbus-launch`
-    if [ -z "$DBUS_SESSION_BUS_ADDRESS" ]; then
-        echo "Unable to start session bus"
-        exit 1
-    fi
-fi
-
-echo "DBUS_SESSION_BUS_ADDRESS=${DBUS_SESSION_BUS_ADDRESS}" > $HOME/.dbus-session
-echo "DBUS_SESSION_BUS_PID=${DBUS_SESSION_BUS_PID}" >> $HOME/.dbus-session
-
 device=`grep Hardware /proc/cpuinfo | awk '{print $3}'`
 echo "Device=$device"
 
@@ -72,6 +60,18 @@ else
     export QTWEBKIT_DPR=2.0
     export FORM_FACTOR="phone"
 fi
+
+if [ -z "$DBUS_SESSION_BUS_ADDRESS" ]; then
+    echo "Starting session bus"
+    export `dbus-launch`
+    if [ -z "$DBUS_SESSION_BUS_ADDRESS" ]; then
+        echo "Unable to start session bus"
+        exit 1
+    fi
+fi
+
+echo "DBUS_SESSION_BUS_ADDRESS=${DBUS_SESSION_BUS_ADDRESS}" > $HOME/.dbus-session
+echo "DBUS_SESSION_BUS_PID=${DBUS_SESSION_BUS_PID}" >> $HOME/.dbus-session
 
 if [ ! -d "$HOME/.ubuntu-session/logs/" ]; then
     mkdir -p "$HOME/.ubuntu-session/logs"
