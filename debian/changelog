@@ -1,3 +1,9 @@
+ubuntu-session (0.36) quantal; urgency=low
+
+  * Take care of exporting env when launching the dbus session 
+
+ -- Ricardo Mendoza <ricardo.mendoza@canonical.com>  Thu, 07 Feb 2013 14:28:47 -0430
+
 ubuntu-session (0.35) quantal; urgency=low
 
   * Set QTWEBKIT_DPR correctly for devices and export to shell 
