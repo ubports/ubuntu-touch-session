@@ -35,13 +35,7 @@ done
 device=`grep Hardware /proc/cpuinfo | awk '{print $3}'`
 echo "Device=$device"
 
-if [ "$device" == "ventana" ]; then
-    services="/etc/tablet-services"
-    grep -q GRID_UNIT_PX /home/phablet/.bashrc
-    [ $? -ne 0 ] && echo "export GRID_UNIT_PX=10" >> /home/phablet/.bashrc
-    export GRID_UNIT_PX=10
-    export FORM_FACTOR="tablet"
-elif [ "$device" == "Manta" ]; then
+if [ "$device" == "Manta" ]; then
     services="/etc/tablet-services"
     grep -q GRID_UNIT_PX /home/phablet/.bashrc
     [ $? -ne 0 ] && echo "export GRID_UNIT_PX=20" >> /home/phablet/.bashrc
@@ -50,6 +44,24 @@ elif [ "$device" == "Manta" ]; then
     [ $? -ne 0 ] && echo "export QTWEBKIT_DPR=2.5" >> /home/phablet/.bashrc
     export QTWEBKIT_DPR=2.5
     export FORM_FACTOR="tablet"
+elif [ "$device" == "grouper" ]; then
+    services="/etc/tablet-services"
+    grep -q GRID_UNIT_PX /home/phablet/.bashrc
+    [ $? -ne 0 ] && echo "export GRID_UNIT_PX=14" >> /home/phablet/.bashrc
+    export GRID_UNIT_PX=14
+    grep -q QTWEBKIT_DPR /home/phablet/.bashrc
+    [ $? -ne 0 ] && echo "export QTWEBKIT_DPR=1.3" >> /home/phablet/.bashrc
+    export QTWEBKIT_DPR=1.3
+    export FORM_FACTOR="tablet"
+elif [ "$device" == "HTC DNA" ]; then
+    services="/etc/phone-services"
+    grep -q GRID_UNIT_PX /home/phablet/.bashrc
+    [ $? -ne 0 ] && echo "export GRID_UNIT_PX=30" >> /home/phablet/.bashrc
+    export GRID_UNIT_PX=30
+    grep -q QTWEBKIT_DPR /home/phablet/.bashrc
+    [ $? -ne 0 ] && echo "export QTWEBKIT_DPR=2.5" >> /home/phablet/.bashrc
+    export QTWEBKIT_DPR=2.5
+    export FORM_FACTOR="phone"
 else
     services="/etc/phone-services"
     grep -q GRID_UNIT_PX /home/phablet/.bashrc
