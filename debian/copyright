@@ -3,11 +3,7 @@ Upstream-Name: ubuntu-session
 Source: https://code.launchpad.net/~rocket-scientists/aal+/ubuntu-session
 
 Files: *
-Copyright: 2012 Canonical Ltd
-License: GPL-3.0+
-
-Files: debian/*
-Copyright: 2012 Canonical Ltd
+Copyright: 2012-2013 Canonical Ltd
 License: GPL-3.0+
 
 License: GPL-3.0+
