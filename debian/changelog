@@ -1,3 +1,9 @@
+ubuntu-session (0.40) quantal; urgency=low
+
+  * fix copyright in package
+
+ -- Michael Zanetti <michael.zanetti@canonical.com>  Wed, 20 Feb 2013 22:34:23 +0100
+
 ubuntu-session (0.39) quantal; urgency=low
 
   * moved lola script to generic create-online-accounts script 
