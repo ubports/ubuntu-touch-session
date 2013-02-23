@@ -21,7 +21,7 @@ echo "Redirecting output to local session logs"
 exec &> "$HOME/.ubuntu-session/logs/ubuntu-session.log"
 
 # Default for any application executed from this script
-DEFAULT_OOMADJ=2
+DEFAULT_OOMADJ=-10
 
 # /proc is is not properly mapped yet, so we need to use ps to find the
 # right pid to be able to modify oom_adj

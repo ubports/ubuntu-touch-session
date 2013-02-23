@@ -1,3 +1,10 @@
+ubuntu-session (0.41) quantal; urgency=low
+
+  * Increasing the default oom_adj for core applications to avoid being killed
+    by the android low memory killer
+
+ -- Ricardo Salveti de Araujo <ricardo.salveti@canonical.com>  Fri, 22 Feb 2013 22:24:34 -0300
+
 ubuntu-session (0.40) quantal; urgency=low
 
   * fix copyright in package
