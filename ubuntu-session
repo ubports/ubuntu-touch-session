@@ -78,6 +78,15 @@ elif [ "$device" == "HTC DNA" ]; then
     [ $? -ne 0 ] && echo "export QTWEBKIT_DPR=2.5" >> /home/phablet/.bashrc
     export QTWEBKIT_DPR=2.5
     export FORM_FACTOR="phone"
+elif [ "$device" == "SMDK4210" ]; then
+    services="/etc/phone-services"
+    grep -q GRID_UNIT_PX /home/phablet/.bashrc
+    [ $? -ne 0 ] && echo "export GRID_UNIT_PX=12" >> /home/phablet/.bashrc
+    export GRID_UNIT_PX=12
+    grep -q QTWEBKIT_DPR /home/phablet/.bashrc
+    [ $? -ne 0 ] && echo "export QTWEBKIT_DPR=1.2" >> /home/phablet/.bashrc
+    export QTWEBKIT_DPR=1.2
+    export FORM_FACTOR="phone"
 else
     services="/etc/phone-services"
     grep -q GRID_UNIT_PX /home/phablet/.bashrc
