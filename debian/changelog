@@ -2,7 +2,7 @@ ubuntu-session (0.42) quantal; urgency=low
 
   * add support for SMDK4210 (Samsung GT-I9100) to ubuntu-session
 
- -- Oliver Grawert <ogra@chromebook>  Thu, 14 Mar 2013 01:08:04 +0100
+ -- Oliver Grawert <ogra@ubuntu.com>  Thu, 14 Mar 2013 01:08:04 +0100
 
 ubuntu-session (0.41) quantal; urgency=low
 
