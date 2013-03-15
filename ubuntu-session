@@ -64,7 +64,6 @@ device=$(grep ro.cm.device /system/build.prop |sed -e 's/.*=//')
 echo "Device=$device"
 
 # defaults
-services="/etc/phone-services"
 GRID_UNIT_PX=18
 QTWEBKIT_DPR=2.0
 FORM_FACTOR="phone"
@@ -108,7 +107,7 @@ while read service; do
         shell_pid=$!
         echo "Got Shell pid = $shell_pid"
     fi
-done < $services
+done < /etc/$FORM_FACTOR-services
 
 wait $shell_pid
 on_stop
