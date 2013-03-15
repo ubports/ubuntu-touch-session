@@ -1,3 +1,16 @@
+ubuntu-session (0.43) quantal; urgency=low
+
+  * rewrite ubuntu-session in distro compliant POSIX, remove all bashisms and
+    tidy it up a bit
+  * switch device pattern matching to cyanogenmod device names
+  * rewrite the kill code so that processes are killed in the reverse order in
+    which they were started
+  * move device specific configs to /etc/ubuntu-session.d/$device.conf, so
+    adding a new device just needs adding of such a conf file
+  * keep the last ubuntu-session log around
+
+ -- Oliver Grawert <ogra@ubuntu.com>  Fri, 15 Mar 2013 13:31:45 +0100
+
 ubuntu-session (0.42) quantal; urgency=low
 
   * add support for SMDK4210 (Samsung GT-I9100) to ubuntu-session
