@@ -50,9 +50,6 @@ trap on_stop EXIT INT QUIT ILL KILL SEGV TERM
 
 # Default for any application executed from this script
 DEFAULT_OOMADJ=-10
-
-# /proc is is not properly mapped yet, so we need to use ps to find the
-# right pid to be able to modify oom_adj
 echo $DEFAULT_OOMADJ > /proc/$$/oom_adj
 
 # Initialize environment
@@ -60,7 +57,7 @@ for var in $(cat /etc/environment); do
     export $var
 done
 
-device=$(grep ro.cm.device /system/build.prop |sed -e 's/.*=//')
+device=$(grep ro.product.device /system/build.prop |sed -e 's/.*=//')
 echo "Device=$device"
 
 # defaults
