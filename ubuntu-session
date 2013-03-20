@@ -53,7 +53,7 @@ DEFAULT_OOMADJ=-10
 
 # /proc is is not properly mapped yet, so we need to use ps to find the
 # right pid to be able to modify oom_adj
-echo $DEFAULT_OOMADJ > /proc/$(pgrep ubuntu-session)/oom_adj
+echo $DEFAULT_OOMADJ > /proc/$$/oom_adj
 
 # Initialize environment
 for var in $(cat /etc/environment); do
