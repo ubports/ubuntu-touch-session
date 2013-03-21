@@ -57,7 +57,7 @@ for var in $(cat /etc/environment); do
     export $var
 done
 
-device=$(grep ro.product.device /system/build.prop |sed -e 's/.*=//')
+device=$(grep ^ro.product.device= /system/build.prop |sed -e 's/.*=//')
 echo "Device=$device"
 
 # defaults
