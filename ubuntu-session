@@ -24,7 +24,7 @@ logdir=$HOME/.ubuntu-session/logs/
 logfile=$logdir/ubuntu-session.log
 bashrc=$HOME/.bashrc
 
-[ ! -d $logdir ] || mkdir -p $logdir
+[ -d $logdir ] || mkdir -p $logdir
 [ -e $logfile ] && cp $logfile $logfile.old
 
 echo "Redirecting output to local session logs"
