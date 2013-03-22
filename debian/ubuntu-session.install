@@ -3,3 +3,4 @@ ubuntu-session /usr/bin/
 etc/dbus-1/system.d
 startup-scripts/* /usr/bin/
 *.override /etc/init
+ubuntu-session.d/* /etc/ubuntu-session.d/
