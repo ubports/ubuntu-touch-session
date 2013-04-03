@@ -1,3 +1,14 @@
+ubuntu-session (0.45) quantal; urgency=low
+
+  [ András Mamenyák ]
+  * Add Note 10.1 conf files
+
+  [ Ricardo Salveti de Araujo ]
+  * Adding config files for GT-I9000B, GT-N7000, espressorf, espressowifi and
+    tf300t
+
+ -- Ricardo Salveti de Araujo <ricardo.salveti@canonical.com>  Wed, 03 Apr 2013 13:10:56 -0300
+
 ubuntu-session (0.44) quantal; urgency=low
 
   * Adding conf files for mako and maguro
