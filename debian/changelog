@@ -1,7 +1,7 @@
 ubuntu-session (0.46) quantal; urgency=low
 
   * increase time before running the shell to decrease likelyhood of the
-    connection to maliit failing (LP: 1157508)
+    connection to maliit failing (LP: #1157508)
 
  -- Michael Zanetti <michael.zanetti@canonical.com>  Fri, 19 Apr 2013 15:55:06 +0200
 
