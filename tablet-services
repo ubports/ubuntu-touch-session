@@ -1,6 +1,6 @@
 0   pulseaudio --start --log-target=syslog
 0   maliit-server
-2   qml-phone-shell
+4   qml-phone-shell
 0   chewie_messaging_populate_menu
 0   friends-service -do
 2   manage-address-books.py create
