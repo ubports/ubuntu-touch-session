@@ -1,4 +1,4 @@
-ubuntu-session (0.48-0ubuntu1) UNRELEASED; urgency=low
+ubuntu-session (0.48-0ubuntu1) raring; urgency=low
 
   * Removing need for FORM_FACTOR.
   * Updating name of contacts script.
