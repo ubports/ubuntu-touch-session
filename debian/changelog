@@ -1,3 +1,10 @@
+ubuntu-session (0.48-0ubuntu1) UNRELEASED; urgency=low
+
+  * Removing need for FORM_FACTOR.
+  * Updating name of contacts script.
+
+ -- Sergio Schvezov <sergio.schvezov@canonical.com>  Thu, 23 May 2013 17:49:00 -0300
+
 ubuntu-session (0.47) quantal; urgency=low
 
   * Reverting change made on 0.46 as it causes other sync issues.

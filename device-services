@@ -3,5 +3,5 @@
 2   qml-phone-shell
 0   chewie_messaging_populate_menu
 0   friends-service -do
-2   manage-address-books.py create
+2   manage-address-books create
 12  ofono-setup
