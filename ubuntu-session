@@ -63,7 +63,6 @@ echo "Device=$device"
 # defaults
 GRID_UNIT_PX=18
 QTWEBKIT_DPR=2.0
-FORM_FACTOR="phone"
 
 # override defaults by sourcing /etc/ubuntu-session.d/$device.conf
 [ -e /etc/ubuntu-session.d/$device.conf ] && . /etc/ubuntu-session.d/$device.conf
@@ -73,7 +72,6 @@ grep -q QTWEBKIT_DPR $bashrc || echo "export QTWEBKIT_DPR=${QTWEBKIT_DPR}" >> $b
 
 export GRID_UNIT_PX=${GRID_UNIT_PX}
 export QTWEBKIT_DPR=${QTWEBKIT_DPR}
-export FORM_FACTOR=${FORM_FACTOR}
 
 
 if [ -z "$DBUS_SESSION_BUS_ADDRESS" ]; then
@@ -104,7 +102,7 @@ while read service; do
         shell_pid=$!
         echo "Got Shell pid = $shell_pid"
     fi
-done < /etc/$FORM_FACTOR-services
+done < /etc/device-services
 
 wait $shell_pid
 on_stop
