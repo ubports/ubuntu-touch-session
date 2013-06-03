@@ -1,3 +1,9 @@
+ubuntu-session (0.48-0ubuntu2) saucy; urgency=low
+
+  * Releasing for saucy.
+
+ -- Sergio Schvezov <sergio.schvezov@canonical.com>  Mon, 03 Jun 2013 14:48:37 -0300
+
 ubuntu-session (0.48-0ubuntu1) raring; urgency=low
 
   * Removing need for FORM_FACTOR.
