@@ -2,11 +2,10 @@ Source: ubuntu-touch-session
 Section: x11
 Priority: extra
 Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
-XSBC-Original-Maintainer: Ricardo Mendoza <ricardo.mendoza@canonical.com>
 Build-Depends: debhelper (>= 9)
 Standards-Version: 3.9.3
 
-Package: ubuntu--touch-session
+Package: ubuntu-touch-session
 Architecture: all
 Depends: ${shlibs:Depends},
          ${misc:Depends},
