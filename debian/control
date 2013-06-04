@@ -1,4 +1,4 @@
-Source: ubuntu-session
+Source: ubuntu-touch-session
 Section: x11
 Priority: extra
 Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
@@ -6,11 +6,11 @@ XSBC-Original-Maintainer: Ricardo Mendoza <ricardo.mendoza@canonical.com>
 Build-Depends: debhelper (>= 9)
 Standards-Version: 3.9.3
 
-Package: ubuntu-session
+Package: ubuntu--touch-session
 Architecture: all
 Depends: ${shlibs:Depends},
          ${misc:Depends},
-Description: Ubuntu Session Manager for Mobile Devices
- The ubuntu-session tool aims to setup a very simple session manager
- for our mobile shell.
+Description: Ubuntu Session Manager for Ubuntu Touch Devices
+ The ubuntu-touch-session tool aims to setup a very simple session
+ manager for the ubuntu-touch mobile shell.
 

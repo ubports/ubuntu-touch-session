@@ -1,6 +1,6 @@
-ubuntu-session /usr/bin/
+ubuntu-touch-session /usr/bin/
 *-services /etc/
 etc/dbus-1/system.d
 startup-scripts/* /usr/bin/
 *.override /etc/init
-ubuntu-session.d/* /etc/ubuntu-session.d/
+ubuntu-touch-session.d/* /etc/ubuntu-touch-session.d/

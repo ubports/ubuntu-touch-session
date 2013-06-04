@@ -20,8 +20,8 @@ set -e
 
 export HOME=/home/phablet
 
-logdir=$HOME/.ubuntu-session/logs/
-logfile=$logdir/ubuntu-session.log
+logdir=$HOME/.ubuntu-touch-session/logs/
+logfile=$logdir/ubuntu-touch-session.log
 bashrc=$HOME/.bashrc
 
 [ -d $logdir ] || mkdir -p $logdir
@@ -50,7 +50,7 @@ trap on_stop EXIT INT QUIT ILL KILL SEGV TERM
 
 # Default for any application executed from this script
 DEFAULT_OOMADJ=-10
-echo $DEFAULT_OOMADJ > /proc/$$/oom_adj
+echo $DEFAULT_OOMADJ > /proc/$$/oom_adj || true
 
 # Initialize environment
 for var in $(cat /etc/environment); do
@@ -64,8 +64,8 @@ echo "Device=$device"
 GRID_UNIT_PX=18
 QTWEBKIT_DPR=2.0
 
-# override defaults by sourcing /etc/ubuntu-session.d/$device.conf
-[ -e /etc/ubuntu-session.d/$device.conf ] && . /etc/ubuntu-session.d/$device.conf
+# override defaults by sourcing /etc/ubuntu-touch-session.d/$device.conf
+[ -e /etc/ubuntu-touch-session.d/$device.conf ] && . /etc/ubuntu-touch-session.d/$device.conf
 
 grep -q GRID_UNIT_PX $bashrc || echo "export GRID_UNIT_PX=${GRID_UNIT_PX}" >> $bashrc
 grep -q QTWEBKIT_DPR $bashrc || echo "export QTWEBKIT_DPR=${QTWEBKIT_DPR}" >> $bashrc
@@ -95,7 +95,7 @@ while read service; do
         command=$(basename $command)
     fi
     sleep $delay
-    $command $args >"$HOME/.ubuntu-session/logs/$command.log" 2>&1 &
+    $command $args >"$HOME/.ubuntu-touch-session/logs/$command.log" 2>&1 &
     pids="$! $pids"
     echo "Started $command with pid $! ($delay secs start delay)"
     if [ "$command" = "qml-phone-shell" ]; then

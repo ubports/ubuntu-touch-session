@@ -1,3 +1,12 @@
+ubuntu-touch-session (0.49) UNRELEASED; urgency=low
+
+  * rename everything from ubuntu-session to ubuntu-touch-session
+  * drop udev.override file, not needed in the flipped container
+  * make the upstart job depend on started dbus and started lxc-android-config
+  * make it non fatal if we can not set oom_adj
+
+ -- Oliver Grawert <ogra@ubuntu.com>  Tue, 04 Jun 2013 18:30:23 +0200
+
 ubuntu-session (0.48-0ubuntu2) saucy; urgency=low
 
   * Releasing for saucy.

@@ -1,6 +1,7 @@
 author "Tony Espy <espy@canonical.com>"
 
-start on mounted MOUNTPOINT=/run
+start on (started lxc-android-config
+	     and started dbus)
 stop on stopping dbus
 
 setuid phablet
@@ -9,7 +10,7 @@ setgid android_input
 respawn
 
 script
-        
-        exec /usr/bin/ubuntu-session
+
+        exec /usr/bin/ubuntu-touch-session
 
 end script
