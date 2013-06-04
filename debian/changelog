@@ -1,4 +1,4 @@
-ubuntu-touch-session (0.49) UNRELEASED; urgency=low
+ubuntu-touch-session (0.49) saucy; urgency=low
 
   * rename everything from ubuntu-session to ubuntu-touch-session
   * drop udev.override file, not needed in the flipped container
