@@ -89,7 +89,7 @@ while read delay command args; do
     $command $args >"$HOME/.ubuntu-touch-session/logs/$command.log" 2>&1 &
     pids="$! $pids"
     echo "Started $command with pid $! ($delay secs start delay)"
-    if [ "$command" = "qml-phone-shell" ]; then
+    if [ "$command" = "unity8" ]; then
         shell_pid=$!
         echo "Got Shell pid = $shell_pid"
     fi
