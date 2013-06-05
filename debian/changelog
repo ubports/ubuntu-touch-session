@@ -1,4 +1,4 @@
-ubuntu-touch-session (0.53) UNRELEASED; urgency=low
+ubuntu-touch-session (0.53) saucy; urgency=low
 
   * we want oom to be at -10, not -1
 
