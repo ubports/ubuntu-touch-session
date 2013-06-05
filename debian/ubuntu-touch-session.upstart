@@ -6,11 +6,8 @@ stop on stopping dbus
 
 setuid phablet
 setgid android_input
+oom score -1
 
 respawn
 
-script
-
-        exec /usr/bin/ubuntu-touch-session
-
-end script
+exec /usr/bin/ubuntu-touch-session

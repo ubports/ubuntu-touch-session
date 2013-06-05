@@ -48,10 +48,6 @@ on_stop()
 
 trap on_stop EXIT INT QUIT ILL KILL SEGV TERM
 
-# Default for any application executed from this script
-DEFAULT_OOMADJ=-10
-echo $DEFAULT_OOMADJ > /proc/$$/oom_adj || true
-
 # Initialize environment
 for var in $(cat /etc/environment); do
     export $var
@@ -86,14 +82,9 @@ fi
 echo "DBUS_SESSION_BUS_ADDRESS=${DBUS_SESSION_BUS_ADDRESS}" > $HOME/.dbus-session
 echo "DBUS_SESSION_BUS_PID=${DBUS_SESSION_BUS_PID}" >> $HOME/.dbus-session
 
-while read service; do
-    delay=$(echo $service|awk '{print $1}')
-    command=$(echo $service|awk '{print $2}')
-    args=$(echo $service|awk '{$1=$2=""; print}'|sed -e 's/^[ \t]*//')
+while read delay command args; do
+    command=${command##*/}
 
-    if $(echo $command|grep -q /); then
-        command=$(basename $command)
-    fi
     sleep $delay
     $command $args >"$HOME/.ubuntu-touch-session/logs/$command.log" 2>&1 &
     pids="$! $pids"

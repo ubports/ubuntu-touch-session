@@ -1,3 +1,13 @@
+ubuntu-touch-session (0.50) UNRELEASED; urgency=low
+
+  * Use upstart's native OOM handling instead of setting it in the
+    ubuntu-session script itself.  This fixes a failure caused by trying to
+    set the oom_adj from a non-root process.
+  * Don't do 'script exec [...]' in the upstart job - we just want 'exec'.
+  * Simplify ubuntu-touch-session handling of /etc/device-services.
+
+ -- Steve Langasek <steve.langasek@ubuntu.com>  Tue, 04 Jun 2013 16:38:07 -0700
+
 ubuntu-touch-session (0.49) saucy; urgency=low
 
   * rename everything from ubuntu-session to ubuntu-touch-session
