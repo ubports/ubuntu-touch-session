@@ -1,3 +1,9 @@
+ubuntu-touch-session (0.52) UNRELEASED; urgency=low
+
+  * switch from qml-phone-shell to unity8
+
+ -- Oliver Grawert <ogra@ubuntu.com>  Wed, 05 Jun 2013 16:18:15 +0200
+
 ubuntu-touch-session (0.51) saucy; urgency=low
 
   * fix upstream url and name in debian/copyright
