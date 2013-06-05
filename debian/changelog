@@ -1,3 +1,9 @@
+ubuntu-touch-session (0.51) UNRELEASED; urgency=low
+
+  * fix upstream url and name in debian/copyright
+
+ -- Oliver Grawert <ogra@ubuntu.com>  Wed, 05 Jun 2013 11:42:32 +0200
+
 ubuntu-touch-session (0.50) saucy; urgency=low
 
   * Use upstart's native OOM handling instead of setting it in the
