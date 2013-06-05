@@ -1,3 +1,9 @@
+ubuntu-touch-session (0.54) UNRELEASED; urgency=low
+
+  * set Vcs-Bzr entry in debian/control
+
+ -- Oliver Grawert <ogra@ubuntu.com>  Wed, 05 Jun 2013 16:53:47 +0200
+
 ubuntu-touch-session (0.53) saucy; urgency=low
 
   * we want oom to be at -10, not -1

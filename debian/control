@@ -4,6 +4,7 @@ Priority: extra
 Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
 Build-Depends: debhelper (>= 9)
 Standards-Version: 3.9.3
+Vcs-Bzr: lp:~phablet-team/session-manager-touch/trunk
 
 Package: ubuntu-touch-session
 Architecture: all
