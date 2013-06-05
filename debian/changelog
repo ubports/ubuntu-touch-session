@@ -1,4 +1,4 @@
-ubuntu-touch-session (0.55) UNRELEASED; urgency=low
+ubuntu-touch-session (0.55) saucy; urgency=low
 
   * Replacing qml-phone-shell check with unity8 check in script. 
 
