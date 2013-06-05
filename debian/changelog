@@ -1,4 +1,4 @@
-ubuntu-touch-session (0.51) UNRELEASED; urgency=low
+ubuntu-touch-session (0.51) saucy; urgency=low
 
   * fix upstream url and name in debian/copyright
 
