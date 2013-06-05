@@ -1,4 +1,4 @@
-ubuntu-touch-session (0.54) UNRELEASED; urgency=low
+ubuntu-touch-session (0.54) saucy; urgency=low
 
   * set Vcs-Bzr entry in debian/control
 
