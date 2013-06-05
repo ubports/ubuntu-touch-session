@@ -6,7 +6,7 @@ stop on stopping dbus
 
 setuid phablet
 setgid android_input
-oom score -1
+oom score -10
 
 respawn
 
