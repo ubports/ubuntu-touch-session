@@ -1,4 +1,4 @@
-ubuntu-touch-session (0.52) UNRELEASED; urgency=low
+ubuntu-touch-session (0.52) saucy; urgency=low
 
   * switch from qml-phone-shell to unity8
 
