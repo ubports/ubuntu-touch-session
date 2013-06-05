@@ -1,4 +1,4 @@
-ubuntu-touch-session (0.50) UNRELEASED; urgency=low
+ubuntu-touch-session (0.50) saucy; urgency=low
 
   * Use upstart's native OOM handling instead of setting it in the
     ubuntu-session script itself.  This fixes a failure caused by trying to
