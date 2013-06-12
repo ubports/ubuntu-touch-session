@@ -1,6 +1,6 @@
 author "Tony Espy <espy@canonical.com>"
 
-start on (started lxc-android-config
+start on (started udev
 	     and started dbus)
 stop on stopping dbus
 
