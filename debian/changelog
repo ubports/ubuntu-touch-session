@@ -1,4 +1,4 @@
-ubuntu-touch-session (0.56) UNRELEASED; urgency=low
+ubuntu-touch-session (0.56) saucy; urgency=low
 
   * wait for udev being started so we are sure container as well as host HW
     handling are in place
