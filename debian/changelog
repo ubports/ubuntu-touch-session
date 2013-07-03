@@ -1,3 +1,10 @@
+ubuntu-touch-session (0.57) UNRELEASED; urgency=low
+
+  * Setting rlimit nice to 40 40, to follow what's is used by Android and
+    avoid having warnings with binder (RLIMIT_NICE not set)
+
+ -- Ricardo Salveti de Araujo <ricardo.salveti@canonical.com>  Tue, 02 Jul 2013 23:28:35 -0300
+
 ubuntu-touch-session (0.56) saucy; urgency=low
 
   * wait for udev being started so we are sure container as well as host HW
