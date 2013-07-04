@@ -12,8 +12,6 @@ oom score -10
 respawn
 
 script
-    set -x
-
     export HOME=/home/phablet
     bashrc=$HOME/.bashrc
 
@@ -22,7 +20,6 @@ script
     done
     
     device=$(grep ^ro.product.device= /system/build.prop |sed -e 's/.*=//')
-    echo "Device=$device"
     
     # defaults
     GRID_UNIT_PX=18
@@ -31,8 +28,6 @@ script
     # override defaults by sourcing /etc/ubuntu-touch-session.d/$device.conf
     [ -e /etc/ubuntu-touch-session.d/$device.conf ] && . /etc/ubuntu-touch-session.d/$device.conf
     
-    echo $bashrc
-
     grep -q GRID_UNIT_PX $bashrc || echo "export GRID_UNIT_PX=${GRID_UNIT_PX}" >> $bashrc
     grep -q QTWEBKIT_DPR $bashrc || echo "export QTWEBKIT_DPR=${QTWEBKIT_DPR}" >> $bashrc
     
