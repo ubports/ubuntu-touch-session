@@ -6,6 +6,7 @@ stop on stopping dbus
 
 setuid phablet
 setgid android_input
+limit nice 40 40
 oom score -10
 
 respawn

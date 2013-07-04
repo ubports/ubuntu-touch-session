@@ -1,10 +1,17 @@
-ubuntu-touch-session (0.57) saucy; urgency=low
+ubuntu-touch-session (0.58) saucy; urgency=low
 
   * Migrate to use upstart user session jobs
   * Add dep on upstart-app-launch 
   * Override application.conf to pass desktop hint for testing
 
  -- Ricardo Mendoza <ricardo.mendoza@canonical.com>  Wed, 03 Jul 2013 18:03:37 -0430
+
+ubuntu-touch-session (0.57) saucy; urgency=low
+
+  * Setting rlimit nice to 40 40, to follow what's is used by Android and
+    avoid having warnings with binder (RLIMIT_NICE not set)
+
+ -- Ricardo Salveti de Araujo <ricardo.salveti@canonical.com>  Wed, 03 Jul 2013 20:58:06 -0300
 
 ubuntu-touch-session (0.56) saucy; urgency=low
 
