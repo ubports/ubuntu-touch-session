@@ -1,6 +1,5 @@
-ubuntu-touch-session /usr/bin/
-*-services /etc/
 etc/dbus-1/system.d
 startup-scripts/* /usr/bin/
 *.override /etc/init
 ubuntu-touch-session.d/* /etc/ubuntu-touch-session.d/
+upstart-session/* /usr/share/upstart/sessions/
