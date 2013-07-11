@@ -1,3 +1,4 @@
+upstart-app-launch/* /usr/share/upstart/sessions/
 etc/dbus-1/system.d
 startup-scripts/* /usr/bin/
 *.override /etc/init
