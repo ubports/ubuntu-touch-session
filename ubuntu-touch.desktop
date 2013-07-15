@@ -1,0 +1,8 @@
+[Desktop Entry]
+Name=Ubuntu Touch
+Comment=This session logs you into Ubuntu Touch
+Exec=ubuntu-touch-session
+TryExec=ubuntu-touch-session
+Icon=
+Type=Application
+X-Ubuntu-Gettext-Domain=ubuntu-touch-session
