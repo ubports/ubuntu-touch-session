@@ -1,11 +1,16 @@
 ubuntu-touch-session (0.58) UNRELEASED; urgency=low
 
+  [ Ricardo Mendoza ]
   * Migrate to use upstart user session jobs
-  * Add dep on upstart-app-launch 
+  * Add dep on upstart-app-launch
   * Override application.conf to pass desktop hint for testing
   * Remove stale services
 
- -- Ricardo Mendoza <ricardo.mendoza@canonical.com>  Wed, 03 Jul 2013 18:03:37 -0430
+  [ Ricardo Salveti de Araujo ]
+  * ubuntu-touch-session.conf: using getprop instead of parsing the file by
+    hand
+
+ -- Ricardo Salveti de Araujo <ricardo.salveti@canonical.com>  Mon, 15 Jul 2013 17:37:06 -0300
 
 ubuntu-touch-session (0.57) saucy; urgency=low
 
