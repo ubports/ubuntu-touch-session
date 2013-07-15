@@ -1,4 +1,4 @@
-ubuntu-touch-session (0.58) saucy; urgency=low
+ubuntu-touch-session (0.58) UNRELEASED; urgency=low
 
   * Migrate to use upstart user session jobs
   * Add dep on upstart-app-launch 
