@@ -1,4 +1,4 @@
-ubuntu-touch-session (0.58) UNRELEASED; urgency=low
+ubuntu-touch-session (0.58) saucy; urgency=low
 
   [ Ricardo Mendoza ]
   * Migrate to use upstart user session jobs
@@ -10,7 +10,7 @@ ubuntu-touch-session (0.58) UNRELEASED; urgency=low
   * ubuntu-touch-session.conf: using getprop instead of parsing the file by
     hand
 
- -- Ricardo Salveti de Araujo <ricardo.salveti@canonical.com>  Mon, 15 Jul 2013 17:37:06 -0300
+ -- Ricardo Salveti de Araujo <ricardo.salveti@canonical.com>  Mon, 15 Jul 2013 17:42:35 -0300
 
 ubuntu-touch-session (0.57) saucy; urgency=low
 
