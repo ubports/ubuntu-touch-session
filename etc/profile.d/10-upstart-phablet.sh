@@ -1,2 +1,2 @@
 # Join the phablet Upstart session
-export UPSTART_SESSION=$(initctl list-sessions | awk '{ print $NF; quit }')
+export UPSTART_SESSION=$(/sbin/initctl list-sessions | awk '{ print $NF; quit }')
