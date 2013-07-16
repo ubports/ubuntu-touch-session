@@ -1,5 +1,6 @@
 upstart-app-launch/* /usr/share/upstart/sessions/
 etc/dbus-1/system.d
+etc/profile.d
 startup-scripts/* /usr/bin/
 *.override /etc/init
 ubuntu-touch-session.d/* /etc/ubuntu-touch-session.d/
