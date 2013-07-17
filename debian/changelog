@@ -1,4 +1,4 @@
-ubuntu-touch-session (0.59) UNRELEASED; urgency=low
+ubuntu-touch-session (0.59) saucy; urgency=low
 
   [ Ricardo Mendoza ]
   * Join Upstart session by default on non-UI terminal sessions
