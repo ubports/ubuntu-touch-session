@@ -1,3 +1,10 @@
+ubuntu-touch-session (0.60) UNRELEASED; urgency=low
+
+  * also export DBUS_SESSION_BUS_ADDRESS from dbus-source.sh so we can drop it
+    from ~/.bashrc
+
+ -- Oliver Grawert <ogra@ubuntu.com>  Wed, 17 Jul 2013 12:04:47 +0200
+
 ubuntu-touch-session (0.59) saucy; urgency=low
 
   [ Ricardo Mendoza ]
