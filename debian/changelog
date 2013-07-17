@@ -1,6 +1,10 @@
 ubuntu-touch-session (0.59) UNRELEASED; urgency=low
 
-  * fir typo in ubuntu-touch-session-setup.conf
+  [ Ricardo Mendoza ]
+  * Join Upstart session by default on non-UI terminal sessions
+
+  [ Oliver Grawert ]
+  * fix typo in ubuntu-touch-session-setup.conf
 
  -- Oliver Grawert <ogra@ubuntu.com>  Tue, 16 Jul 2013 18:29:13 +0200
 
