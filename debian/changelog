@@ -5,6 +5,9 @@ ubuntu-touch-session (0.59) UNRELEASED; urgency=low
 
   [ Oliver Grawert ]
   * fix typo in ubuntu-touch-session-setup.conf
+  * ship /etc/profile.d/dbus-source.sh to source dbus session address
+  * make sure XDG_RUNTIME_DIR is available when upstart-phablet.sh is called
+  * drop sequence number from 10-upstart-phablet.sh
 
  -- Oliver Grawert <ogra@ubuntu.com>  Tue, 16 Jul 2013 18:29:13 +0200
 
