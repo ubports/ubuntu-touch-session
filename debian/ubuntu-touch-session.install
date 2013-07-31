@@ -7,6 +7,3 @@ ubuntu-touch-session.d/* /etc/ubuntu-touch-session.d/
 upstart-session/* /usr/share/upstart/sessions/
 ubuntu-touch-session /usr/bin/
 ubuntu-touch.desktop /usr/share/xsessions
-lxc-overrides/init.rc /var/lib/lxc/android/overrides/
-lxc-overrides/ueventd.rc /var/lib/lxc/android/overrides/
-lxc-overrides/lxc-android-config.override /etc/init/
