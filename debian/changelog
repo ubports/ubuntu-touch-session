@@ -1,4 +1,4 @@
-ubuntu-touch-session (0.61) UNRELEASED; urgency=low
+ubuntu-touch-session (0.61) saucy; urgency=low
 
   * adjust GT-I9100 default settings to avoid UI element overlaps and have
     the browser use the right pagesize at 100% scaling
