@@ -1,3 +1,10 @@
+ubuntu-touch-session (0.61) UNRELEASED; urgency=low
+
+  * adjust GT-I9100 default settings to avoid UI element overlaps and have
+    the browser use the right pagesize at 100% scaling
+
+ -- Oliver Grawert <ogra@ubuntu.com>  Mon, 05 Aug 2013 11:46:48 +0200
+
 ubuntu-touch-session (0.60) saucy; urgency=low
 
   * also export DBUS_SESSION_BUS_ADDRESS from dbus-source.sh so we can drop it
