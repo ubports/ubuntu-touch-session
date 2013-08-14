@@ -1,4 +1,4 @@
-ubuntu-touch-session (0.63) UNRELEASED; urgency=low
+ubuntu-touch-session (0.63) saucy; urgency=low
 
   * drop XDG_RUNTIME_DIR creation from upstart job (LP: #1206897)
 
