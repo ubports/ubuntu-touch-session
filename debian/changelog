@@ -1,4 +1,4 @@
-ubuntu-touch-session (0.62) UNRELEASED; urgency=low
+ubuntu-touch-session (0.62) saucy; urgency=low
 
   [Max Wällstedt]
   * Add config file for Samsung Galaxy S II (AT&T) [SGH-I777]
