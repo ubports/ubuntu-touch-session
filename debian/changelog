@@ -1,3 +1,10 @@
+ubuntu-touch-session (0.62) UNRELEASED; urgency=low
+
+  [Max Wällstedt]
+  * Add config file for Samsung Galaxy S II (AT&T) [SGH-I777]
+
+ -- Oliver Grawert <ogra@ubuntu.com>  Wed, 14 Aug 2013 10:56:28 +0200
+
 ubuntu-touch-session (0.61) saucy; urgency=low
 
   * adjust GT-I9100 default settings to avoid UI element overlaps and have
