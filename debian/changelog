@@ -1,7 +1,7 @@
-ubuntu-touch-session (0.64) UNRELEASED; urgency=low
+ubuntu-touch-session (0.64) saucy; urgency=low
 
   * Providing an override for application-click to use the desktop file hint.
-  * Only overriding relevant stanzas in application-legacy. 
+  * Only overriding relevant stanzas in application-legacy.
 
  -- Sergio Schvezov <sergio.schvezov@canonical.com>  Wed, 21 Aug 2013 18:21:41 -0300
 
