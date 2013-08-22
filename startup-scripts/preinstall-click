@@ -1,0 +1,54 @@
+#!/usr/bin/python3
+# Copyright (C) 2013 Canonical Ltd.
+# Author: Sergio Schvezov <sergio.schvezov@canonical.com>
+
+# This program is free software: you can redistribute it and/or modify
+# it under the terms of the GNU General Public License as published by
+# the Free Software Foundation; version 3 of the License.
+#
+# This program is distributed in the hope that it will be useful,
+# but WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+# GNU General Public License for more details.
+#
+# You should have received a copy of the GNU General Public License
+# along with this program.  If not, see <http://www.gnu.org/licenses/>.
+
+import json
+import os
+import os.path
+import subprocess
+
+preinstalled_path = '/usr/share/preinstalled/click'
+
+
+def install_required(pkg, manifest):
+    pkg_manifest = json.loads(
+        subprocess.check_output(['click', 'info', pkg]).decode('utf-8'))
+    installed_pkg_version = ''
+    for item in manifest:
+        if item['name'] == pkg_manifest['name']:
+            installed_pkg_version = item['version']
+            break
+    if installed_pkg_version < pkg_manifest['version']:
+        return True
+    return False
+
+
+def main():
+    install_manifest = subprocess.check_output(
+        ['click', 'list', '--manifest'])
+    install_manifest = json.loads(install_manifest.decode('utf-8'))
+    preinstalled_click = filter((lambda x: x.endswith('.click')),
+                                os.listdir(preinstalled_path))
+    for pkg in preinstalled_click:
+        pkg = os.path.join(preinstalled_path, pkg)
+        if install_required(pkg, install_manifest):
+            subprocess.call(['/usr/bin/pkcon', 'install-local', pkg])
+        else:
+            print('Installation of %s not required' % pkg)
+
+
+if __name__ == '__main__':
+    if os.path.exists(preinstalled_path) and os.path.isdir(preinstalled_path):
+        main()
