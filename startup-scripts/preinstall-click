@@ -36,7 +36,7 @@ def install_required(pkg, manifest):
     return False
 
 
-def main():
+def install():
     install_manifest = subprocess.check_output(
         ['click', 'list', '--manifest'])
     install_manifest = json.loads(install_manifest.decode('utf-8'))
@@ -60,5 +60,29 @@ def main():
                 print('Installation of %s not required' % pkg)
 
 
+def run_required():
+    version_file = '/etc/ubuntu-build'
+    last_version_run = os.path.expanduser('~/.ubuntu-build')
+    if not os.path.exists(version_file):
+        print('Not on image based upgrade system, forcing install')
+        return True
+    with open(version_file, 'r') as f:
+        build = f.read().strip()
+    if not os.path.exists(last_version_run):
+        print('No previous run for %s found, installing' % build)
+        with open(last_version_run, 'w') as f:
+            f.write(build)
+        return True
+    with open(last_version_run, 'r') as f:
+        last_build = f.read().strip()
+    if build == last_build:
+        return False
+    else:
+        print('Previous run was for %s but we are now on %s' %
+              (last_version_run, build))
+        return True
+
+
 if __name__ == '__main__':
-    main()
+    if run_required():
+        install()
