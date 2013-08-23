@@ -20,6 +20,7 @@ import os.path
 import subprocess
 
 preinstalled_path = '/usr/share/preinstalled/click'
+customization_path = '/custom/preinstalled/click'
 
 
 def install_required(pkg, manifest):
@@ -39,16 +40,25 @@ def main():
     install_manifest = subprocess.check_output(
         ['click', 'list', '--manifest'])
     install_manifest = json.loads(install_manifest.decode('utf-8'))
-    preinstalled_click = filter((lambda x: x.endswith('.click')),
-                                os.listdir(preinstalled_path))
-    for pkg in preinstalled_click:
-        pkg = os.path.join(preinstalled_path, pkg)
-        if install_required(pkg, install_manifest):
-            subprocess.call(['/usr/bin/pkcon', 'install-local', pkg])
-        else:
-            print('Installation of %s not required' % pkg)
+
+    for click_path in (preinstalled_path, customization_path):
+        click_pkg_path = []
+        try:
+            click_pkg = filter((lambda x: x.endswith('.click')),
+                               os.listdir(click_path))
+            click_pkg_path = [os.path.join(click_path, x) for x in click_pkg]
+        except OSError as e:
+            if e.errno == 2:
+                print('Directory %s does not exist' % click_path)
+                pass
+            else:
+                raise e
+        for pkg in click_pkg_path:
+            if install_required(pkg, install_manifest):
+                subprocess.call(['/usr/bin/pkcon', 'install-local', pkg])
+            else:
+                print('Installation of %s not required' % pkg)
 
 
 if __name__ == '__main__':
-    if os.path.exists(preinstalled_path) and os.path.isdir(preinstalled_path):
-        main()
+    main()
