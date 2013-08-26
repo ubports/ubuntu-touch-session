@@ -1,4 +1,4 @@
-ubuntu-touch-session (0.65) UNRELEASED; urgency=low
+ubuntu-touch-session (0.65) saucy; urgency=low
 
   * Adding upstart session job that installs click packages for user.
 
