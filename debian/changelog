@@ -1,3 +1,16 @@
+ubuntu-touch-session (0.65) UNRELEASED; urgency=low
+
+  * Adding upstart session job that installs click packages for user.
+
+ -- Sergio Schvezov <sergio.schvezov@canonical.com>  Thu, 22 Aug 2013 11:30:13 -0300
+
+ubuntu-touch-session (0.64) saucy; urgency=low
+
+  * Providing an override for application-click to use the desktop file hint.
+  * Only overriding relevant stanzas in application-legacy.
+
+ -- Sergio Schvezov <sergio.schvezov@canonical.com>  Wed, 21 Aug 2013 18:21:41 -0300
+
 ubuntu-touch-session (0.63) saucy; urgency=low
 
   * drop XDG_RUNTIME_DIR creation from upstart job (LP: #1206897)
