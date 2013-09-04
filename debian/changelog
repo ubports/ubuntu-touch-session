@@ -1,4 +1,4 @@
-ubuntu-touch-session (0.66) UNRELEASED; urgency=low
+ubuntu-touch-session (0.66) saucy; urgency=low
 
   * make sure ~/.config/user-dirs.dirs is created on login if it does not
     exist yet (LP: #1219348)
