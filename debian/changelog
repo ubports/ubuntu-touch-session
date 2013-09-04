@@ -1,3 +1,10 @@
+ubuntu-touch-session (0.66) UNRELEASED; urgency=low
+
+  * make sure ~/.config/user-dirs.dirs is created on login if it does not
+    exist yet (LP: #1219348)
+
+ -- Oliver Grawert <ogra@ubuntu.com>  Wed, 04 Sep 2013 16:01:03 +0200
+
 ubuntu-touch-session (0.65) saucy; urgency=low
 
   * Adding upstart session job that installs click packages for user.
