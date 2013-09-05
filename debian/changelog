@@ -1,9 +1,16 @@
-ubuntu-touch-session (0.66) UNRELEASED; urgency=low
+ubuntu-touch-session (0.67) UNRELEASED; urgency=low
 
   * Remove preinstallation of click packages; this is now handled
     differently in click 0.4.3 and livecd-rootfs 2.181.
 
  -- Colin Watson <cjwatson@ubuntu.com>  Thu, 05 Sep 2013 11:33:36 +0100
+
+ubuntu-touch-session (0.66) saucy; urgency=low
+
+  * make sure ~/.config/user-dirs.dirs is created on login if it does not
+    exist yet (LP: #1219348)
+
+ -- Oliver Grawert <ogra@ubuntu.com>  Wed, 04 Sep 2013 16:01:03 +0200
 
 ubuntu-touch-session (0.65) saucy; urgency=low
 
