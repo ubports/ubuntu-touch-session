@@ -1,4 +1,4 @@
-ubuntu-touch-session (0.67) UNRELEASED; urgency=low
+ubuntu-touch-session (0.67) saucy; urgency=low
 
   * Remove preinstallation of click packages; this is now handled
     differently in click 0.4.3 and livecd-rootfs 2.181.
