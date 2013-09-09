@@ -6,3 +6,5 @@ TryExec=ubuntu-touch-session
 Icon=
 Type=Application
 X-Ubuntu-Gettext-Domain=ubuntu-touch-session
+X-Ubuntu-Touch=true
+X-LightDM-Session-Type=mir
