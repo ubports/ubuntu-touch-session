@@ -10,7 +10,6 @@ Package: ubuntu-touch-session
 Architecture: all
 Depends: ${shlibs:Depends},
          ${misc:Depends},
-         unity8-greeter,
          upstart-app-launch,
 Conflicts: qml-phone-shell (<< 7.80~)
 Description: Ubuntu Session Manager for Ubuntu Touch Devices

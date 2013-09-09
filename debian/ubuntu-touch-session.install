@@ -7,5 +7,4 @@ ubuntu-touch-session.d/* /etc/ubuntu-touch-session.d/
 upstart-session/* /usr/share/upstart/sessions/
 ubuntu-touch-session /usr/bin/
 ubuntu-touch.desktop /usr/share/lightdm/sessions
-unity8-greeter-touch.desktop /usr/share/lightdm/greeters
 52-ubuntu-touch.conf /etc/lightdm/lightdm.conf.d

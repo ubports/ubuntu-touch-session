@@ -1,7 +1,0 @@
-[Desktop Entry]
-Type=Application
-Name=Unity 8 Greeter Touch
-Exec=ubuntu-touch-session unity8-greeter -fullscreen
-Icon=unity8
-X-Ubuntu-Touch=true
-X-LightDM-Session-Type=mir
