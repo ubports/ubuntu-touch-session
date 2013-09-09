@@ -1,18 +1,7 @@
-description "Application Launching for Legacy Applications"
-author "Ted Gould <ted@canonical.com>"
-
-instance ${APP_ID}-${INSTANCE_ID}
-
-start on application-legacy-start
-stop on application-end or desktop-end
-
-env APP_EXEC="echo Error"
-
-pre-start script
-	initctl set-env APP_EXEC="`/usr/lib/arm-linux-gnueabihf/upstart-app-launch//desktop-exec ${APP_ID}`"
+script
+	if [ -z $APP_EXEC_POLICY ]; then
+		exec $APP_EXEC --desktop_file_hint=/usr/share/applications/$APP_ID.desktop
+	else
+		exec aa-exec -p "$APP_EXEC_POLICY" -- $APP_EXEC
+	fi
 end script
-
-exec $APP_EXEC --desktop_file_hint=/usr/share/applications/$APP_ID.desktop
-
-post-start exec /usr/lib/arm-linux-gnueabihf/upstart-app-launch//zg-report-app open application://${APP_ID}.desktop
-post-stop exec /usr/lib/arm-linux-gnueabihf/upstart-app-launch//zg-report-app close application://${APP_ID}.desktop

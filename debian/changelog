@@ -1,3 +1,43 @@
+ubuntu-touch-session (0.67) saucy; urgency=low
+
+  * Remove preinstallation of click packages; this is now handled
+    differently in click 0.4.3 and livecd-rootfs 2.181.
+
+ -- Colin Watson <cjwatson@ubuntu.com>  Thu, 05 Sep 2013 11:33:36 +0100
+
+ubuntu-touch-session (0.66) saucy; urgency=low
+
+  * make sure ~/.config/user-dirs.dirs is created on login if it does not
+    exist yet (LP: #1219348)
+
+ -- Oliver Grawert <ogra@ubuntu.com>  Wed, 04 Sep 2013 16:01:03 +0200
+
+ubuntu-touch-session (0.65) saucy; urgency=low
+
+  * Adding upstart session job that installs click packages for user.
+
+ -- Sergio Schvezov <sergio.schvezov@canonical.com>  Thu, 22 Aug 2013 11:30:13 -0300
+
+ubuntu-touch-session (0.64) saucy; urgency=low
+
+  * Providing an override for application-click to use the desktop file hint.
+  * Only overriding relevant stanzas in application-legacy.
+
+ -- Sergio Schvezov <sergio.schvezov@canonical.com>  Wed, 21 Aug 2013 18:21:41 -0300
+
+ubuntu-touch-session (0.63) saucy; urgency=low
+
+  * drop XDG_RUNTIME_DIR creation from upstart job (LP: #1206897)
+
+ -- Oliver Grawert <ogra@ubuntu.com>  Wed, 14 Aug 2013 18:24:28 +0200
+
+ubuntu-touch-session (0.62) saucy; urgency=low
+
+  [Max Wällstedt]
+  * Add config file for Samsung Galaxy S II (AT&T) [SGH-I777]
+
+ -- Oliver Grawert <ogra@ubuntu.com>  Wed, 14 Aug 2013 10:56:28 +0200
+
 ubuntu-touch-session (0.61) saucy; urgency=low
 
   * adjust GT-I9100 default settings to avoid UI element overlaps and have
