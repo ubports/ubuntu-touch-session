@@ -1,4 +1,4 @@
-ubuntu-touch-session (0.68) UNRELEASED; urgency=low
+ubuntu-touch-session (0.68) saucy; urgency=low
 
   * move maliit startup around so it starts before unity8 and gets restarted
     along if unity8 restarts
