@@ -1,7 +1,7 @@
-ubuntu-touch-session (0.69) UNRELEASED; urgency=low
+ubuntu-touch-session (0.69) saucy; urgency=low
 
   * Adding QPA_PLATFORM_PLUGIN setup mechanism outside of /etc/environment
-    and with an option to enable mir. 
+    and with an option to enable mir.
 
  -- Sergio Schvezov <sergio.schvezov@canonical.com>  Wed, 11 Sep 2013 15:31:44 -0400
 
