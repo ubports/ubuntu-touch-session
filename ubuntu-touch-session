@@ -1,0 +1,23 @@
+#!/bin/sh
+
+# WARNING: this wrapper is only for setting up screen environment variables
+# that would need to be shared between a greeter process and the user session.
+# Do NOT add any other hacks here.  We eventually intend for this wrapper to
+# go away, once we dynamically determine screen settings.
+
+# defaults
+GRID_UNIT_PX=18
+QTWEBKIT_DPR=2.0
+
+# override defaults by sourcing /etc/ubuntu-touch-session.d/$device.conf
+device=$(getprop ro.product.device)
+[ -e /etc/ubuntu-touch-session.d/$device.conf ] && . /etc/ubuntu-touch-session.d/$device.conf
+
+export GRID_UNIT_PX=${GRID_UNIT_PX}
+export QTWEBKIT_DPR=${QTWEBKIT_DPR}
+
+if [ "$#" -ne 0 ]; then
+    $@
+else
+    init --user
+fi
