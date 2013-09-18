@@ -1,3 +1,17 @@
+ubuntu-touch-session (0.69) saucy; urgency=low
+
+  * Adding QPA_PLATFORM_PLUGIN setup mechanism outside of /etc/environment
+    and with an option to enable mir.
+
+ -- Sergio Schvezov <sergio.schvezov@canonical.com>  Wed, 11 Sep 2013 15:31:44 -0400
+
+ubuntu-touch-session (0.68) saucy; urgency=low
+
+  * move maliit startup around so it starts before unity8 and gets restarted
+    along if unity8 restarts
+
+ -- Oliver Grawert <ogra@ubuntu.com>  Tue, 10 Sep 2013 21:01:13 +0200
+
 ubuntu-touch-session (0.67) saucy; urgency=low
 
   * Remove preinstallation of click packages; this is now handled
