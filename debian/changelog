@@ -1,11 +1,3 @@
-ubuntu-touch-session (0.70) UNRELEASED; urgency=low
-
-  * merge lp:~mterry/session-manager-touch/lightdm-switch which switched us
-    away from a hacked together upstart session manager script to proper
-    ubuntu session handling including logind and policykit support
-
- -- Oliver Grawert <ogra@ubuntu.com>  Tue, 17 Sep 2013 23:48:48 +0200
-
 ubuntu-touch-session (0.69) saucy; urgency=low
 
   * Adding QPA_PLATFORM_PLUGIN setup mechanism outside of /etc/environment

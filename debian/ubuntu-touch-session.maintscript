@@ -1,2 +1,0 @@
-rm_conffile /etc/init/ubuntu-touch-session.conf
-rm_conffile /etc/init/ubuntu-touch-session-setup.conf
