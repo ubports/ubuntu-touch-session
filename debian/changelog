@@ -1,4 +1,4 @@
-ubuntu-touch-session (0.71) UNRELEASED; urgency=low
+ubuntu-touch-session (0.71) saucy; urgency=low
 
   * install the seat defaults settings for lightdm in the proper configuration
     directory, this finally makes logind and policykit work.
