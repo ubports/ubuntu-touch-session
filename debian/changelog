@@ -1,4 +1,4 @@
-ubuntu-touch-session (0.70) UNRELEASED; urgency=low
+ubuntu-touch-session (0.70) saucy; urgency=low
 
   * merge lightdm re-work so we now use a proper display manager and get also
     a working logind session
