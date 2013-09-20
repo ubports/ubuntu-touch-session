@@ -2,6 +2,9 @@ ubuntu-touch-session (0.71) UNRELEASED; urgency=low
 
   * install the seat defaults settings for lightdm in the proper configuration
     directory, this finally makes logind and policykit work.
+  * add the ~/.bashrc hack to set GRID_UNIT_PX and QTWEBKIT_DPR back to the
+    ubuntu-touch-session script, as it breaks utah execution of autopilot
+    tests if these are not available in adb
 
  -- Oliver Grawert <ogra@ubuntu.com>  Fri, 20 Sep 2013 18:59:13 +0200
 
