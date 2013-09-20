@@ -1,0 +1,7 @@
+[Desktop Entry]
+Name=Ubuntu Touch
+Exec=ubuntu-touch-session
+TryExec=ubuntu-touch-session
+Type=Application
+X-LightDM-Session-Type=mir
+X-LightDM-DesktopName=Unity

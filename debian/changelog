@@ -1,3 +1,11 @@
+ubuntu-touch-session (0.70) UNRELEASED; urgency=low
+
+  * merge lightdm re-work so we now use a proper display manager and get also
+    a working logind session
+  * add /etc/lightdm.conf to force surfaceflinger session
+
+ -- Oliver Grawert <ogra@ubuntu.com>  Fri, 20 Sep 2013 13:07:13 +0200
+
 ubuntu-touch-session (0.69) saucy; urgency=low
 
   * Adding QPA_PLATFORM_PLUGIN setup mechanism outside of /etc/environment
