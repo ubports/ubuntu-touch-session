@@ -1,4 +1,4 @@
-ubuntu-touch-session (0.72) UNRELEASED; urgency=low
+ubuntu-touch-session (0.72) saucy; urgency=low
 
   * revert revert all the lightdm changes as it breaks surfaceflinger on
     maguro making the device unbootable
