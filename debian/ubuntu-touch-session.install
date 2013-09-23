@@ -1,12 +1,9 @@
 upstart-app-launch/* /usr/share/upstart/sessions/
 etc/dbus-1/system.d
 etc/profile.d
-etc/lightdm/lightdm.conf.d/60-seat-defaults.conf
 startup-scripts/* /usr/bin/
 *.override /etc/init
 ubuntu-touch-session.d/* /etc/ubuntu-touch-session.d/
 upstart-session/* /usr/share/upstart/sessions/
-ubuntu-touch-session /usr/bin/
-ubuntu-touch.desktop /usr/share/lightdm/sessions
-ubuntu-touch-surfaceflinger.desktop /usr/share/lightdm/sessions
-52-ubuntu-touch.conf /etc/lightdm/lightdm.conf.d
+ubuntu-touch-session-setup.conf /etc/init/
+ubuntu-touch-session.conf /etc/init/

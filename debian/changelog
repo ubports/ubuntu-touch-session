@@ -1,3 +1,10 @@
+ubuntu-touch-session (0.72) UNRELEASED; urgency=low
+
+  * revert revert all the lightdm changes as it breaks surfaceflinger on
+    maguro making the device unbootable
+
+ -- Oliver Grawert <ogra@ubuntu.com>  Mon, 23 Sep 2013 11:06:16 +0200
+
 ubuntu-touch-session (0.71) saucy; urgency=low
 
   * install the seat defaults settings for lightdm in the proper configuration

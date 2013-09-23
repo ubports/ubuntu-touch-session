@@ -1,33 +1,45 @@
-#!/bin/sh
+author "Ricardo Mendoza <ricmm@ubuntu.com>"
 
-# WARNING: this wrapper is only for setting up screen environment variables
-# that would need to be shared between a greeter process and the user session.
-# Do NOT add any other hacks here.  We eventually intend for this wrapper to
-# go away, once we dynamically determine screen settings.
+instance $USER
 
-if [ -f "$HOME/.display-mir" ]; then
-    export QT_QPA_PLATFORM=ubuntumirclient
-else
-    export QT_QPA_PLATFORM=ubuntu
-fi
+stop on runlevel [016]
 
-# defaults
-GRID_UNIT_PX=18
-QTWEBKIT_DPR=2.0
+limit nice 40 40
+oom score -10
 
-# override defaults by sourcing /etc/ubuntu-touch-session.d/$device.conf
-device=$(getprop ro.product.device)
-[ -e /etc/ubuntu-touch-session.d/$device.conf ] && . /etc/ubuntu-touch-session.d/$device.conf
+script
+    export HOME="/home/$USER"
+    bashrc=$HOME/.bashrc
 
-bashrc=$HOME/.bashrc
-grep -q GRID_UNIT_PX $bashrc || echo "export GRID_UNIT_PX=${GRID_UNIT_PX}" >> $bashrc
-grep -q QTWEBKIT_DPR $bashrc || echo "export QTWEBKIT_DPR=${QTWEBKIT_DPR}" >> $bashrc
+    uid=$(getent passwd "$USER"|cut -d: -f3)
+    export XDG_RUNTIME_DIR="/run/user/$uid"
 
-export GRID_UNIT_PX=${GRID_UNIT_PX}
-export QTWEBKIT_DPR=${QTWEBKIT_DPR}
+    for var in $(cat /etc/environment); do
+        export $var
+    done
 
-if [ "$#" -ne 0 ]; then
-    $@
-else
-    init --user
-fi
+    device=$(getprop ro.product.device)
+
+    if [ -f "$HOME/.display-mir" ]; then
+        export QT_QPA_PLATFORM=ubuntumirclient
+    else
+        export QT_QPA_PLATFORM=ubuntu
+    fi
+
+    # defaults
+    GRID_UNIT_PX=18
+    QTWEBKIT_DPR=2.0
+
+    # override defaults by sourcing /etc/ubuntu-touch-session.d/$device.conf
+    [ -e /etc/ubuntu-touch-session.d/$device.conf ] && . /etc/ubuntu-touch-session.d/$device.conf
+
+    grep -q GRID_UNIT_PX $bashrc || echo "export GRID_UNIT_PX=${GRID_UNIT_PX}" >> $bashrc
+    grep -q QTWEBKIT_DPR $bashrc || echo "export QTWEBKIT_DPR=${QTWEBKIT_DPR}" >> $bashrc
+
+    export GRID_UNIT_PX=${GRID_UNIT_PX}
+    export QTWEBKIT_DPR=${QTWEBKIT_DPR}
+
+    export DESKTOP_SESSION=ubuntu-touch
+
+    exec su -s /bin/sh -c 'exec "$0" "$@"' $USER -- init --user
+end script
