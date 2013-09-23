@@ -22,6 +22,11 @@ device=$(getprop ro.product.device)
 export GRID_UNIT_PX=${GRID_UNIT_PX}
 export QTWEBKIT_DPR=${QTWEBKIT_DPR}
 
+# Save in bashrc for autopilot's benefit
+bashrc=$HOME/.bashrc
+grep -q GRID_UNIT_PX $bashrc || echo "export GRID_UNIT_PX=${GRID_UNIT_PX}"
+grep -q QTWEBKIT_DPR $bashrc || echo "export QTWEBKIT_DPR=${QTWEBKIT_DPR}"
+
 if [ "$#" -ne 0 ]; then
     $@
 else
