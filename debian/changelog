@@ -1,3 +1,35 @@
+ubuntu-touch-session (0.73) saucy; urgency=low
+
+  * rename ubuntu-touch-session to ubuntu-touch-session.conf, seems reverting
+    the bzr commit didnt do that for whatever reason
+
+ -- Oliver Grawert <ogra@ubuntu.com>  Mon, 23 Sep 2013 12:04:37 +0200
+
+ubuntu-touch-session (0.72) saucy; urgency=low
+
+  * revert revert all the lightdm changes as it breaks surfaceflinger on
+    maguro making the device unbootable
+
+ -- Oliver Grawert <ogra@ubuntu.com>  Mon, 23 Sep 2013 11:06:16 +0200
+
+ubuntu-touch-session (0.71) saucy; urgency=low
+
+  * install the seat defaults settings for lightdm in the proper configuration
+    directory, this finally makes logind and policykit work.
+  * add the ~/.bashrc hack to set GRID_UNIT_PX and QTWEBKIT_DPR back to the
+    ubuntu-touch-session script, as it breaks utah execution of autopilot
+    tests if these are not available in adb
+
+ -- Oliver Grawert <ogra@ubuntu.com>  Fri, 20 Sep 2013 18:59:13 +0200
+
+ubuntu-touch-session (0.70) saucy; urgency=low
+
+  * merge lightdm re-work so we now use a proper display manager and get also
+    a working logind session
+  * add /etc/lightdm.conf to force surfaceflinger session
+
+ -- Oliver Grawert <ogra@ubuntu.com>  Fri, 20 Sep 2013 13:07:13 +0200
+
 ubuntu-touch-session (0.69) saucy; urgency=low
 
   * Adding QPA_PLATFORM_PLUGIN setup mechanism outside of /etc/environment
