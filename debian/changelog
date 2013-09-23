@@ -1,3 +1,10 @@
+ubuntu-touch-session (0.73) UNRELEASED; urgency=low
+
+  * rename ubuntu-touch-session to ubuntu-touch-session.conf, seems reverting
+    the bzr commit didnt do that for whatever reason
+
+ -- Oliver Grawert <ogra@ubuntu.com>  Mon, 23 Sep 2013 12:04:37 +0200
+
 ubuntu-touch-session (0.72) saucy; urgency=low
 
   * revert revert all the lightdm changes as it breaks surfaceflinger on
