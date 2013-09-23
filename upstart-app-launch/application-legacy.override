@@ -1,7 +1,0 @@
-script
-	if [ -z $APP_EXEC_POLICY ]; then
-		exec $APP_EXEC --desktop_file_hint=/usr/share/applications/$APP_ID.desktop
-	else
-		exec aa-exec -p "$APP_EXEC_POLICY" -- $APP_EXEC
-	fi
-end script

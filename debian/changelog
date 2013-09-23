@@ -1,3 +1,11 @@
+ubuntu-touch-session (0.74) UNRELEASED; urgency=low
+
+  * Drop upstart-app-launch overrides as latest version will correctly set
+    --desktop-file-hint= all by itself and the overrides break the new version
+    as they, well, override it.
+
+ -- Loïc Minier <loic.minier@ubuntu.com>  Mon, 23 Sep 2013 22:36:21 +0200
+
 ubuntu-touch-session (0.73) saucy; urgency=low
 
   * rename ubuntu-touch-session to ubuntu-touch-session.conf, seems reverting

@@ -10,7 +10,7 @@ Package: ubuntu-touch-session
 Architecture: all
 Depends: ${shlibs:Depends},
          ${misc:Depends},
-         upstart-app-launch,
+         upstart-app-launch (>> 0.1+13.10.20130919.4-0ubuntu1~),
 Conflicts: qml-phone-shell (<< 7.80~)
 Description: Ubuntu Session Manager for Ubuntu Touch Devices
  The ubuntu-touch-session tool aims to setup a very simple session
