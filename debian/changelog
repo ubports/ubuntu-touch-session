@@ -1,4 +1,4 @@
-ubuntu-touch-session (0.73) UNRELEASED; urgency=low
+ubuntu-touch-session (0.73) saucy; urgency=low
 
   * rename ubuntu-touch-session to ubuntu-touch-session.conf, seems reverting
     the bzr commit didnt do that for whatever reason
