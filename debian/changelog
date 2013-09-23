@@ -1,4 +1,4 @@
-ubuntu-touch-session (0.74) UNRELEASED; urgency=low
+ubuntu-touch-session (0.74) saucy; urgency=low
 
   * Drop upstart-app-launch overrides as latest version will correctly set
     --desktop-file-hint= all by itself and the overrides break the new version
