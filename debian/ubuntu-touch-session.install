@@ -1,4 +1,3 @@
-upstart-app-launch/* /usr/share/upstart/sessions/
 etc/dbus-1/system.d
 etc/profile.d
 startup-scripts/* /usr/bin/
