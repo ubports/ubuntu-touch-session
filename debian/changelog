@@ -1,3 +1,9 @@
+ubuntu-touch-session (0.76) UNRELEASED; urgency=low
+
+  * merge lightdm support from lp:~mterry/session-manager-touch/lightdm-switch
+
+ -- Oliver Grawert <ogra@ubuntu.com>  Fri, 27 Sep 2013 12:12:46 +0200
+
 ubuntu-touch-session (0.75) saucy; urgency=low
 
   * Fix versioned dependency on upstart-app-launch to use PPA versin.
