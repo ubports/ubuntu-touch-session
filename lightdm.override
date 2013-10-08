@@ -1,9 +1,11 @@
 limit nice 40 40
 oom score -10
 
-# lightdm normally waits for plymouth-ready, but since we disable plymouth, we
-# remove that condition from lightdm's start stanza.
+# lightdm job normally waits for plymouth-ready, but since we disable plymouth,
+# we remove that condition from lightdm's start stanza; also, we want to wait
+# on lxc-android-config to get the Android drivers setup
 start on ((filesystem
            and runlevel [!06]
-           and started dbus)
+           and started dbus
+           and started lxc-android-config)
           or runlevel PREVLEVEL=S)
