@@ -1,3 +1,10 @@
+ubuntu-touch-session (0.80) UNRELEASED; urgency=low
+
+  * Drop duplicate stop line in maliit-server job; stop on stopping unity8 is
+    sufficient; thanks Oliver Grawert and Thomas Voß.
+
+ -- Loïc Minier <loic.minier@ubuntu.com>  Thu, 10 Oct 2013 15:42:54 +0200
+
 ubuntu-touch-session (0.79) saucy; urgency=low
 
   * Start maliit-server *after* unity8 as it's how it's meant to work nowadays
