@@ -1,3 +1,12 @@
+ubuntu-touch-session (0.81) UNRELEASED; urgency=low
+
+  * Make the pulseaudio job 'expect daemon', without which the session init
+    loses track of the process (causing churn as it tries to restart a
+    process that's already running) and fails to reliably clean it up on
+    exit.
+
+ -- Steve Langasek <steve.langasek@ubuntu.com>  Sat, 12 Oct 2013 00:38:38 -0700
+
 ubuntu-touch-session (0.80) saucy; urgency=low
 
   * Drop duplicate stop line in maliit-server job; stop on stopping unity8 is
