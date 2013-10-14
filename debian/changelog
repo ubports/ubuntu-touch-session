@@ -1,3 +1,10 @@
+ubuntu-touch-session (0.82) saucy; urgency=low
+
+  * Break unity8 << 7.83~.
+  * Drop qml-phone-shell conflict.
+
+ -- Michał Sawicz <michal.sawicz@canonical.com>  Tue, 15 Oct 2013 01:15:44 +0200
+
 ubuntu-touch-session (0.81) saucy; urgency=low
 
   * Make the pulseaudio job 'expect daemon', without which the session init
