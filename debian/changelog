@@ -1,4 +1,4 @@
-ubuntu-touch-session (0.83) UNRELEASED; urgency=low
+ubuntu-touch-session (0.83) saucy; urgency=low
 
   * merge lp:~saviq/session-manager-touch/drop-unity8
 
