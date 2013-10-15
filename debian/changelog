@@ -1,3 +1,10 @@
+ubuntu-touch-session (0.84) UNRELEASED; urgency=low
+
+  * ofono-setup.conf: making it start on started dbus, so we can have a
+    working phone right after boot
+
+ -- Ricardo Salveti de Araujo <ricardo.salveti@canonical.com>  Tue, 15 Oct 2013 18:04:07 -0300
+
 ubuntu-touch-session (0.83) saucy; urgency=low
 
   * merge lp:~saviq/session-manager-touch/drop-unity8
