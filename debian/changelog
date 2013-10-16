@@ -1,3 +1,11 @@
+ubuntu-touch-session (0.85) UNRELEASED; urgency=low
+
+  * add a 2 second sleep to maliit-server startup to work around a missing
+    SIGSTOP from unity8 which would tell upstart when unity8 is ready for
+    connections
+
+ -- Oliver Grawert <ogra@ubuntu.com>  Wed, 16 Oct 2013 14:45:49 +0200
+
 ubuntu-touch-session (0.84) saucy; urgency=low
 
   * ofono-setup.conf: making it start on started dbus, so we can have a
