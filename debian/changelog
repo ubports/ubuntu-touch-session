@@ -1,4 +1,4 @@
-ubuntu-touch-session (0.85) UNRELEASED; urgency=low
+ubuntu-touch-session (0.85) saucy; urgency=low
 
   * add a 2 second sleep to maliit-server startup to work around a missing
     SIGSTOP from unity8 which would tell upstart when unity8 is ready for
