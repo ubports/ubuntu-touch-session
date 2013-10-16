@@ -1,4 +1,4 @@
-ubuntu-touch-session (0.86) UNRELEASED; urgency=low
+ubuntu-touch-session (0.86) saucy; urgency=low
 
   * merge lp:~bfiller/session-manager-touch/fix-maliit-hang
     (LP: #1233550)
