@@ -1,3 +1,10 @@
+ubuntu-touch-session (0.86) UNRELEASED; urgency=low
+
+  * merge lp:~bfiller/session-manager-touch/fix-maliit-hang
+    (LP: #1233550)
+
+ -- Oliver Grawert <ogra@ubuntu.com>  Wed, 16 Oct 2013 19:16:33 +0200
+
 ubuntu-touch-session (0.85) saucy; urgency=low
 
   * add a 2 second sleep to maliit-server startup to work around a missing
