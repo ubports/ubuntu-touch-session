@@ -11,6 +11,7 @@ Architecture: all
 Depends: ${shlibs:Depends},
          ${misc:Depends},
          lightdm,
+         unity-system-compositor,
          upstart-app-launch (>= 0.1+13.10.20130923.4-0ubuntu1~),
 Breaks: unity8 (<< 7.83~)
 Description: Ubuntu Session Manager for Ubuntu Touch Devices
