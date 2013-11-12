@@ -5,7 +5,11 @@
 # Do NOT add any other hacks here.  We eventually intend for this wrapper to
 # go away, once we dynamically determine screen settings.
 
-export QT_QPA_PLATFORM=ubuntumirclient
+if [ -n "$MIR_SOCKET" ]; then
+    export QT_QPA_PLATFORM=ubuntumirclient
+else
+    export QT_QPA_PLATFORM=ubuntu
+fi
 
 # defaults
 GRID_UNIT_PX=18
