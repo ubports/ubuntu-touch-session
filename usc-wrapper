@@ -1,0 +1,8 @@
+#!/bin/sh
+
+# We need to grab at least ANDROID_ROOT from /etc/environment, because Mir uses
+# it to find input configuration files and autopilot won't work without that.
+# Might as well grab all of /etc/environment while we're at it.
+. /etc/environment
+
+unity-system-compositor
