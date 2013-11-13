@@ -8,3 +8,4 @@ ubuntu-touch-session /usr/bin/
 ubuntu-touch.desktop /usr/share/lightdm/sessions
 ubuntu-touch-surfaceflinger.desktop /usr/share/lightdm/sessions
 52-ubuntu-touch.conf /etc/lightdm/lightdm.conf.d
+usc-wrapper /usr/share/ubuntu-touch-session/
