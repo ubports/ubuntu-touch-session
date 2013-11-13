@@ -1,4 +1,0 @@
-# We shipped a ubuntu-touch-surfaceflinger session for Ubuntu Touch 13.10.
-# SurfaceFlinger is no longer supported, but users may have the session name
-# saved in AccountsService, so we should provide this compatibility shunt.
-/usr/share/lightdm/sessions/ubuntu-touch.desktop /usr/share/lightdm/sessions/ubuntu-touch-surfaceflinger.desktop
