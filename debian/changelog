@@ -1,4 +1,4 @@
-ubuntu-touch-session (0.87) UNRELEASED; urgency=low
+ubuntu-touch-session (0.87) trusty; urgency=low
 
   * ubuntu-touch-session.d/generic.conf: adding config file for the
     emulator
