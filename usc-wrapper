@@ -1,9 +1,14 @@
 #!/bin/sh
 
-# We need to grab at least ANDROID_ROOT from /etc/environment, because Mir uses
+if [ ! -e /home/phablet/.display-mir ]; then
+    # LightDM will see that we failed to start and try the next seat, which
+    # should be surfaceflinger.
+    exit 1
+fi
+
+# We need to grab ANDROID_ROOT from /etc/environment, because Mir uses
 # it to find input configuration files and autopilot won't work without that.
-# Might as well grab all of /etc/environment while we're at it.
-set -a
 . /etc/environment
+export ANDROID_ROOT
 
 unity-system-compositor $@
