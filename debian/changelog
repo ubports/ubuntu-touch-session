@@ -1,3 +1,10 @@
+ubuntu-touch-session (0.87) trusty; urgency=low
+
+  * ubuntu-touch-session.d/generic.conf: adding config file for the
+    emulator
+
+ -- Ricardo Salveti de Araujo <ricardo.salveti@canonical.com>  Tue, 19 Nov 2013 19:53:31 -0200
+
 ubuntu-touch-session (0.86) saucy; urgency=low
 
   * merge lp:~bfiller/session-manager-touch/fix-maliit-hang
