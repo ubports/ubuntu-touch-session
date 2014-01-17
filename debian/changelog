@@ -1,4 +1,4 @@
-ubuntu-touch-session (0.88) UNRELEASED; urgency=medium
+ubuntu-touch-session (0.88) trusty; urgency=medium
 
   * merge nested Mir mode, thanks Michael Terry
 
