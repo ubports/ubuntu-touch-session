@@ -1,3 +1,9 @@
+ubuntu-touch-session (0.88) UNRELEASED; urgency=medium
+
+  * merge nested Mir mode, thanks Michael Terry
+
+ -- Oliver Grawert <ogra@ubuntu.com>  Fri, 17 Jan 2014 16:33:20 +0100
+
 ubuntu-touch-session (0.87) trusty; urgency=low
 
   * ubuntu-touch-session.d/generic.conf: adding config file for the
