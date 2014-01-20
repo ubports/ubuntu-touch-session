@@ -1,4 +1,4 @@
-ubuntu-touch-session (0.89) UNRELEASED; urgency=medium
+ubuntu-touch-session (0.89) trusty; urgency=medium
 
   * Revert change to /etc/profile.d/qpa_plugin.sh, which relies on
     $MIR_SOCKET being set in the environment to choose the right plugin;
