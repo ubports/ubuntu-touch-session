@@ -1,3 +1,15 @@
+ubuntu-touch-session (0.89) UNRELEASED; urgency=medium
+
+  * Revert change to /etc/profile.d/qpa_plugin.sh, which relies on
+    $MIR_SOCKET being set in the environment to choose the right plugin;
+    this means the environment will not be set up correctly when connecting
+    over adb (since adb is not a child process of the Mir session), causing
+    failures for autopilot tests.  It may be the case that we need
+    MIR_SOCKET set in the adb environment, but until that's done we should
+    not regress existing functionality.
+
+ -- Steve Langasek <steve.langasek@ubuntu.com>  Sat, 18 Jan 2014 19:30:05 -0800
+
 ubuntu-touch-session (0.88) trusty; urgency=medium
 
   * merge nested Mir mode, thanks Michael Terry
