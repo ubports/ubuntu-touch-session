@@ -1,3 +1,11 @@
+ubuntu-touch-session (0.90) UNRELEASED; urgency=medium
+
+  * revert the whole of nested Mir support, it causes UI stacking issues with
+    the shell (snap decisions, WPA/WEP key input and several other UI parts
+    turn into "popunder" windows)
+
+ -- Oliver Grawert <ogra@ubuntu.com>  Mon, 20 Jan 2014 12:09:00 +0100
+
 ubuntu-touch-session (0.89) trusty; urgency=medium
 
   * Revert change to /etc/profile.d/qpa_plugin.sh, which relies on
