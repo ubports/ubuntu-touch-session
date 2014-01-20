@@ -1,4 +1,4 @@
-ubuntu-touch-session (0.90) UNRELEASED; urgency=medium
+ubuntu-touch-session (0.90) trusty; urgency=medium
 
   * revert the whole of nested Mir support, it causes UI stacking issues with
     the shell (snap decisions, WPA/WEP key input and several other UI parts
