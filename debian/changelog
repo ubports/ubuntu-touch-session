@@ -1,4 +1,4 @@
-ubuntu-touch-session (0.91) UNRELEASED; urgency=medium
+ubuntu-touch-session (0.91) trusty; urgency=medium
 
   * make sure the ubuntu-touch-surfaceflinger.desktop file is actually added
     to the bzr tree too ...
