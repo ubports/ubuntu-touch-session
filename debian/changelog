@@ -1,3 +1,10 @@
+ubuntu-touch-session (0.91) UNRELEASED; urgency=medium
+
+  * make sure the ubuntu-touch-surfaceflinger.desktop file is actually added
+    to the bzr tree too ...
+
+ -- Oliver Grawert <ogra@ubuntu.com>  Mon, 20 Jan 2014 12:26:13 +0100
+
 ubuntu-touch-session (0.90) trusty; urgency=medium
 
   * revert the whole of nested Mir support, it causes UI stacking issues with
