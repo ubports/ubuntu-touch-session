@@ -1,3 +1,9 @@
+ubuntu-touch-session (0.92) trusty; urgency=medium
+
+  * Adding config for hammerhead (Nexus 5)
+
+ -- Ricardo Salveti de Araujo <ricardo.salveti@canonical.com>  Sat, 25 Jan 2014 20:14:01 -0200
+
 ubuntu-touch-session (0.91) trusty; urgency=medium
 
   * make sure the ubuntu-touch-surfaceflinger.desktop file is actually added
