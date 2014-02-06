@@ -1,3 +1,10 @@
+ubuntu-touch-session (0.94) UNRELEASED; urgency=medium
+
+  * Plymouth job is getting split into two, override the new portion
+    plymouth-shutdown to manual as well.
+
+ -- Dimitri John Ledkov <xnox@ubuntu.com>  Tue, 04 Feb 2014 17:14:34 +0000
+
 ubuntu-touch-session (0.93) trusty; urgency=medium
 
   * Adding config for flo (Nexus 7 - 2013)
