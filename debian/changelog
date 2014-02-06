@@ -1,4 +1,4 @@
-ubuntu-touch-session (0.93) UNRELEASED; urgency=medium
+ubuntu-touch-session (0.93) trusty; urgency=medium
 
   * Adding config for flo (Nexus 7 - 2013)
 
