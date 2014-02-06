@@ -1,4 +1,4 @@
-ubuntu-touch-session (0.94) UNRELEASED; urgency=medium
+ubuntu-touch-session (0.94) trusty; urgency=medium
 
   * Plymouth job is getting split into two, override the new portion
     plymouth-shutdown to manual as well.
