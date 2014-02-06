@@ -1,3 +1,9 @@
+ubuntu-touch-session (0.93) UNRELEASED; urgency=medium
+
+  * Adding config for flo (Nexus 7 - 2013)
+
+ -- Ricardo Salveti de Araujo <ricardo.salveti@canonical.com>  Wed, 29 Jan 2014 00:02:39 +0000
+
 ubuntu-touch-session (0.92) trusty; urgency=medium
 
   * Adding config for hammerhead (Nexus 5)
