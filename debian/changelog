@@ -1,3 +1,10 @@
+ubuntu-touch-session (0.95) UNRELEASED; urgency=medium
+
+  * hammerhead.conf: using GRID_UNIT_PX=23 as default
+    (25 is too big for Nexus 5)
+
+ -- Ricardo Salveti de Araujo <ricardo.salveti@canonical.com>  Fri, 07 Feb 2014 01:34:32 -0200
+
 ubuntu-touch-session (0.94) trusty; urgency=medium
 
   * Plymouth job is getting split into two, override the new portion
