@@ -1,3 +1,9 @@
+ubuntu-touch-session (0.96) trusty; urgency=low
+
+  * merge lp:~mterry/session-manager-touch/usc to support nested Mir mode
+
+ -- Oliver Grawert <ogra@ubuntu.com>  Tue, 11 Feb 2014 11:29:55 +0100
+
 ubuntu-touch-session (0.95) trusty; urgency=medium
 
   * hammerhead.conf: using GRID_UNIT_PX=23 as default

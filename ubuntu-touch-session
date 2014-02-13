@@ -5,7 +5,7 @@
 # Do NOT add any other hacks here.  We eventually intend for this wrapper to
 # go away, once we dynamically determine screen settings.
 
-if [ -f "$HOME/.display-mir" ]; then
+if [ -n "$MIR_SOCKET" ]; then
     export QT_QPA_PLATFORM=ubuntumirclient
 else
     export QT_QPA_PLATFORM=ubuntu
@@ -28,7 +28,7 @@ grep -q GRID_UNIT_PX $bashrc || echo "export GRID_UNIT_PX=${GRID_UNIT_PX}" >> $b
 grep -q QTWEBKIT_DPR $bashrc || echo "export QTWEBKIT_DPR=${QTWEBKIT_DPR}" >> $bashrc
 
 if [ "$#" -ne 0 ]; then
-    $@
+    exec $@
 else
-    init --user
+    exec init --user
 fi
