@@ -14,6 +14,7 @@ fi
 # defaults
 GRID_UNIT_PX=18
 QTWEBKIT_DPR=2.0
+NATIVE_ORIENTATION=portrait
 
 # override defaults by sourcing /etc/ubuntu-touch-session.d/$device.conf
 device=$(getprop ro.product.device)
@@ -21,11 +22,14 @@ device=$(getprop ro.product.device)
 
 export GRID_UNIT_PX=${GRID_UNIT_PX}
 export QTWEBKIT_DPR=${QTWEBKIT_DPR}
+export NATIVE_ORIENTATION=${NATIVE_ORIENTATION}
 
 # Save in bashrc so that adb picks them up (for autopilot's benefit)
 bashrc=$HOME/.bashrc
 grep -q GRID_UNIT_PX $bashrc || echo "export GRID_UNIT_PX=${GRID_UNIT_PX}" >> $bashrc
 grep -q QTWEBKIT_DPR $bashrc || echo "export QTWEBKIT_DPR=${QTWEBKIT_DPR}" >> $bashrc
+grep -q NATIVE_ORIENTATION $bashrc || echo "export NATIVE_ORIENTATION=${NATIVE_ORIENTATION}" >> $bashrc
+
 
 if [ "$#" -ne 0 ]; then
     exec $@
