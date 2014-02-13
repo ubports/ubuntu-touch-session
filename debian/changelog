@@ -1,4 +1,4 @@
-ubuntu-touch-session (0.97) UNRELEASED; urgency=medium
+ubuntu-touch-session (0.97) trusty; urgency=medium
 
   * Adding config for the X86 emulator (generic_x86)
 
