@@ -1,4 +1,4 @@
-ubuntu-touch-session (0.98) UNRELEASED; urgency=medium
+ubuntu-touch-session (0.98) trusty; urgency=medium
 
   * set executable bit on usc-wrapper, this got lost when 0.96 got merged
     manually
