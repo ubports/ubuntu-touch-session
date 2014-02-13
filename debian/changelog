@@ -1,3 +1,9 @@
+ubuntu-touch-session (0.97) UNRELEASED; urgency=medium
+
+  * Adding config for the X86 emulator (generic_x86)
+
+ -- Ricardo Salveti de Araujo <ricardo.salveti@canonical.com>  Thu, 13 Feb 2014 01:39:44 -0200
+
 ubuntu-touch-session (0.96) trusty; urgency=low
 
   * merge lp:~mterry/session-manager-touch/usc to support nested Mir mode
