@@ -1,4 +1,4 @@
-ubuntu-touch-session (0.99) UNRELEASED; urgency=medium
+ubuntu-touch-session (0.99) trusty; urgency=medium
 
   * add support for NATIVE_ORIENTATION variable to session manager, make flo
     default to landscape, otherwise use portrait
