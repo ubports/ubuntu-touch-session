@@ -1,4 +1,4 @@
-ubuntu-touch-session (0.100) UNRELEASED; urgency=medium
+ubuntu-touch-session (0.100) trusty; urgency=medium
 
   * do not make lightdm wait for lxc-android-config, with nested mode we can
     easily start earlier now which makes the boot appear a lot faster
