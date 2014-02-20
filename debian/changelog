@@ -1,3 +1,10 @@
+ubuntu-touch-session (0.100) UNRELEASED; urgency=medium
+
+  * do not make lightdm wait for lxc-android-config, with nested mode we can
+    easily start earlier now which makes the boot appear a lot faster
+
+ -- Oliver Grawert <ogra@ubuntu.com>  Thu, 20 Feb 2014 12:34:24 +0100
+
 ubuntu-touch-session (0.99) trusty; urgency=medium
 
   * add support for NATIVE_ORIENTATION variable to session manager, make flo
