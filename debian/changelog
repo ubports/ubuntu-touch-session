@@ -1,4 +1,4 @@
-ubuntu-touch-session (0.102) UNRELEASED; urgency=medium
+ubuntu-touch-session (0.102) trusty; urgency=medium
 
   * instead of dropping the lightdm job dependency on the container and
     relying on the runlevel, lets do the opposite and drop runlevel support
