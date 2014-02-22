@@ -1,3 +1,10 @@
+ubuntu-touch-session (0.103) UNRELEASED; urgency=medium
+
+  * lightdm.override: adding dependency again on runlevel, otherwise
+    unity-system-compositor fails to start on flo (LP: #1283326)
+
+ -- Ricardo Salveti de Araujo <ricardo.salveti@canonical.com>  Sat, 22 Feb 2014 00:02:25 -0300
+
 ubuntu-touch-session (0.102) trusty; urgency=medium
 
   * instead of dropping the lightdm job dependency on the container and
