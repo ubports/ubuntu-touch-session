@@ -1,4 +1,4 @@
-ubuntu-touch-session (0.103) UNRELEASED; urgency=medium
+ubuntu-touch-session (0.103) trusty; urgency=medium
 
   * lightdm.override: adding dependency again on runlevel, otherwise
     unity-system-compositor fails to start on flo (LP: #1283326)
