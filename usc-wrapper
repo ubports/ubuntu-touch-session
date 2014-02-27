@@ -9,5 +9,6 @@ fi
 # We need to grab ANDROID_ROOT from /etc/environment, because Mir uses
 # it to find input configuration files and autopilot won't work without that.
 . /etc/environment
+export ANDROID_ROOT
 
 exec unity-system-compositor $@
