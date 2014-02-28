@@ -1,4 +1,4 @@
-ubuntu-touch-session (0.104) UNRELEASED; urgency=low
+ubuntu-touch-session (0.104) trusty; urgency=low
 
   * merge  lp:~mterry/session-manager-touch/exec-usc to make sure
     unity-system-compositor gets cleanly shot down when lightdm stops 
