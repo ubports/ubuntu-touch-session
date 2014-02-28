@@ -11,4 +11,4 @@ fi
 . /etc/environment
 export ANDROID_ROOT
 
-unity-system-compositor $@
+exec unity-system-compositor $@
