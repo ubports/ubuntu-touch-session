@@ -1,3 +1,10 @@
+ubuntu-touch-session (0.105) UNRELEASED; urgency=medium
+
+  * flo.conf: move QTWEBKIT_DPR to 2.0, so that unresizeable webapps do not
+    force horizontal scrolling
+
+ -- Oliver Grawert <ogra@ubuntu.com>  Sun, 02 Mar 2014 13:52:12 +0100
+
 ubuntu-touch-session (0.104) trusty; urgency=low
 
   * merge  lp:~mterry/session-manager-touch/exec-usc to make sure
