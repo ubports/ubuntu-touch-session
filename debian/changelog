@@ -1,4 +1,4 @@
-ubuntu-touch-session (0.106) UNRELEASED; urgency=medium
+ubuntu-touch-session (0.106) trusty; urgency=medium
 
   * Adding config for deb (Nexus 7 - 2013 - Mobile)
 
