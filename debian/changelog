@@ -1,3 +1,9 @@
+ubuntu-touch-session (0.106) UNRELEASED; urgency=medium
+
+  * Adding config for deb (Nexus 7 - 2013 - Mobile)
+
+ -- Ricardo Salveti de Araujo <ricardo.salveti@canonical.com>  Fri, 07 Mar 2014 14:39:56 -0300
+
 ubuntu-touch-session (0.105) trusty; urgency=medium
 
   * flo.conf: move QTWEBKIT_DPR to 2.0, so that unresizeable webapps do not
