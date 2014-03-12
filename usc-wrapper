@@ -11,4 +11,4 @@ fi
 . /etc/environment
 export ANDROID_ROOT
 
-exec unity-system-compositor --spinner=/usr/bin/unity-system-compositor-spinner $@
+exec unity-system-compositor --spinner=/usr/bin/unity-system-compositor-spinner --power-off-delay=500 $@
