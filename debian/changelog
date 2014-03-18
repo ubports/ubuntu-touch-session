@@ -1,3 +1,9 @@
+ubuntu-touch-session (0.107) UNRELEASED; urgency=medium
+
+  * Move 52-ubuntu-touch.conf from /etc/lightdm to /usr/share/lightdm
+
+ -- Michael Terry <mterry@ubuntu.com>  Mon, 17 Mar 2014 23:17:00 -0400
+
 ubuntu-touch-session (0.106) trusty; urgency=medium
 
   * Adding config for deb (Nexus 7 - 2013 - Mobile)
