@@ -1,7 +1,6 @@
-session-manager-touch (0.106-0ubuntu1) UNRELEASED; urgency=low
+ubuntu-touch-session (0.106-0ubuntu1) UNRELEASED; urgency=low
 
-  * Change source package name and switch to split packaging
-    as per CI Train guidelines.
+  * Switch to split packaging as per CI Train guidelines.
 
  -- Robert Bruce Park <robert.park@canonical.com>  Thu, 20 Mar 2014 13:25:45 -0700
 
