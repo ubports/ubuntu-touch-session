@@ -1,3 +1,10 @@
+session-manager-touch (0.106-0ubuntu1) UNRELEASED; urgency=low
+
+  * Change source package name and switch to split packaging
+    as per CI Train guidelines.
+
+ -- Robert Bruce Park <robert.park@canonical.com>  Thu, 20 Mar 2014 13:25:45 -0700
+
 ubuntu-touch-session (0.106) trusty; urgency=medium
 
   * Adding config for deb (Nexus 7 - 2013 - Mobile)
@@ -14,7 +21,7 @@ ubuntu-touch-session (0.105) trusty; urgency=medium
 ubuntu-touch-session (0.104) trusty; urgency=low
 
   * merge  lp:~mterry/session-manager-touch/exec-usc to make sure
-    unity-system-compositor gets cleanly shot down when lightdm stops 
+    unity-system-compositor gets cleanly shot down when lightdm stops
     (LP: #1285234)
 
  -- Oliver Grawert <ogra@ubuntu.com>  Fri, 28 Feb 2014 17:37:11 +0100
@@ -379,7 +386,7 @@ ubuntu-touch-session (0.56) saucy; urgency=low
 
 ubuntu-touch-session (0.55) saucy; urgency=low
 
-  * Replacing qml-phone-shell check with unity8 check in script. 
+  * Replacing qml-phone-shell check with unity8 check in script.
 
  -- Sergio Schvezov <sergio.schvezov@canonical.com>  Wed, 05 Jun 2013 16:06:19 -0300
 
@@ -503,14 +510,14 @@ ubuntu-session (0.40) quantal; urgency=low
 
 ubuntu-session (0.39) quantal; urgency=low
 
-  * moved lola script to generic create-online-accounts script 
+  * moved lola script to generic create-online-accounts script
 
  -- Bill Filler <bill.filler@canonical.com>  Wed, 20 Feb 2013 00:36:03 -0500
 
 ubuntu-session (0.38) quantal; urgency=low
 
   * ubuntu-session: added support for grouper and HTC DNA
-    (LP:1126366) 
+    (LP:1126366)
 
  -- Bill Filler <bill.filler@canonical.com>  Tue, 19 Feb 2013 21:15:00 -0500
 
@@ -523,13 +530,13 @@ ubuntu-session (0.37) quantal; urgency=low
 
 ubuntu-session (0.36) quantal; urgency=low
 
-  * Take care of exporting env when launching the dbus session 
+  * Take care of exporting env when launching the dbus session
 
  -- Ricardo Mendoza <ricardo.mendoza@canonical.com>  Thu, 07 Feb 2013 14:28:47 -0430
 
 ubuntu-session (0.35) quantal; urgency=low
 
-  * Set QTWEBKIT_DPR correctly for devices and export to shell 
+  * Set QTWEBKIT_DPR correctly for devices and export to shell
 
  -- Bill Filler <bill.filler@canonical.com>  Sat, 02 Feb 2013 12:11:42 -0500
 
@@ -542,7 +549,7 @@ ubuntu-session (0.34) quantal; urgency=low
 ubuntu-session (0.33) quantal; urgency=low
 
   * ubuntu-session: added device section for Manta (nexus 10)
-  * tablet-services: match phone-services for now 
+  * tablet-services: match phone-services for now
 
  -- Bill Filler <bill.filler@canonical.com>  Fri, 11 Jan 2013 18:16:13 -0500
 
@@ -703,7 +710,7 @@ ubuntu-session (0.10) quantal; urgency=low
 ubuntu-session (0.9) quantal; urgency=low
 
   * export LANG and LANGUAGE as they are needed by apps
-  * change TERM to linux 
+  * change TERM to linux
 
  -- Bill Filler <bill.filler@canonical.com>  Mon, 05 Nov 2012 14:58:15 -0500
 
