@@ -1,10 +1,10 @@
-*.override /etc/init
-52-ubuntu-touch.conf /etc/lightdm/lightdm.conf.d
 etc/dbus-1/system.d
 etc/profile.d
 startup-scripts/* /usr/bin/
-ubuntu-touch-session /usr/bin/
+*.override /etc/init
 ubuntu-touch-session.d/* /etc/ubuntu-touch-session.d/
-ubuntu-touch.desktop /usr/share/lightdm/sessions
 upstart-session/* /usr/share/upstart/sessions/
+ubuntu-touch-session /usr/bin/
+ubuntu-touch.desktop /usr/share/lightdm/sessions
+52-ubuntu-touch.conf /etc/lightdm/lightdm.conf.d
 usc-wrapper /usr/share/ubuntu-touch-session/
