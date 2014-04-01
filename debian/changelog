@@ -1,3 +1,9 @@
+ubuntu-touch-session (0.107) UNRELEASED; urgency=medium
+
+  * Bump version to ensure incompatibility with surfaceflinger support.
+
+ -- Michał Sawicz <michal.sawicz@canonical.com>  Mon, 31 Mar 2014 17:30:25 +0100
+
 ubuntu-touch-session (0.106) trusty; urgency=medium
 
   * Adding config for deb (Nexus 7 - 2013 - Mobile)
