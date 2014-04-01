@@ -1,8 +1,13 @@
-ubuntu-touch-session (0.107) UNRELEASED; urgency=medium
+ubuntu-touch-session (0.107+14.04.20140401.2-0ubuntu1) trusty; urgency=medium
 
+  [ Michał Sawicz ]
   * Bump version to ensure incompatibility with surfaceflinger support.
+  * Change source format to comply with CI Train.
 
- -- Michał Sawicz <michal.sawicz@canonical.com>  Mon, 31 Mar 2014 17:30:25 +0100
+  [ Dimitri John Ledkov ]
+  * Clean up root user environment, to not export bogus variables.
+
+ -- Ubuntu daily release <ps-jenkins@lists.canonical.com>  Tue, 01 Apr 2014 22:29:31 +0000
 
 ubuntu-touch-session (0.106) trusty; urgency=medium
 
