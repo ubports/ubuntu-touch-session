@@ -14,7 +14,7 @@ Depends: ${shlibs:Depends},
          unity-system-compositor (>= 0.0.2),
          unity8-greeter,
          upstart-app-launch (>= 0.1+13.10.20130923.4-0ubuntu1~),
-Breaks: unity8 (<< 7.83~)
+Breaks: unity8 (<< 7.85)
 Description: Ubuntu Session Manager for Ubuntu Touch Devices
  The ubuntu-touch-session tool aims to setup a very simple session
  manager for the ubuntu-touch mobile shell.

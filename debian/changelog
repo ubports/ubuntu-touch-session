@@ -1,3 +1,14 @@
+ubuntu-touch-session (0.107+14.04.20140401.2-0ubuntu1) trusty; urgency=medium
+
+  [ Michał Sawicz ]
+  * Bump version to ensure incompatibility with surfaceflinger support.
+  * Change source format to comply with CI Train.
+
+  [ Dimitri John Ledkov ]
+  * Clean up root user environment, to not export bogus variables.
+
+ -- Ubuntu daily release <ps-jenkins@lists.canonical.com>  Tue, 01 Apr 2014 22:29:31 +0000
+
 ubuntu-touch-session (0.106) trusty; urgency=medium
 
   * Adding config for deb (Nexus 7 - 2013 - Mobile)
