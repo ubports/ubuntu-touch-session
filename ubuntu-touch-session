@@ -26,6 +26,10 @@ grep -q GRID_UNIT_PX $bashrc || echo "export GRID_UNIT_PX=${GRID_UNIT_PX}" >> $b
 grep -q QTWEBKIT_DPR $bashrc || echo "export QTWEBKIT_DPR=${QTWEBKIT_DPR}" >> $bashrc
 grep -q NATIVE_ORIENTATION $bashrc || echo "export NATIVE_ORIENTATION=${NATIVE_ORIENTATION}" >> $bashrc
 
+dot_profile=$HOME/.profile
+grep -q GRID_UNIT_PX $dot_profile || echo "export GRID_UNIT_PX=${GRID_UNIT_PX}" >> $dot_profile
+grep -q QTWEBKIT_DPR $dot_profile || echo "export QTWEBKIT_DPR=${QTWEBKIT_DPR}" >> $dot_profile
+grep -q NATIVE_ORIENTATION $dot_profile || echo "export NATIVE_ORIENTATION=${NATIVE_ORIENTATION}" >> $dot_profile
 
 if [ "$#" -ne 0 ]; then
     exec $@
