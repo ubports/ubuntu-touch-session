@@ -5,11 +5,7 @@
 # Do NOT add any other hacks here.  We eventually intend for this wrapper to
 # go away, once we dynamically determine screen settings.
 
-if [ -n "$MIR_SOCKET" ]; then
-    export QT_QPA_PLATFORM=ubuntumirclient
-else
-    export QT_QPA_PLATFORM=ubuntu
-fi
+export QT_QPA_PLATFORM=ubuntumirclient
 
 # defaults
 GRID_UNIT_PX=18
@@ -25,11 +21,10 @@ export QTWEBKIT_DPR=${QTWEBKIT_DPR}
 export NATIVE_ORIENTATION=${NATIVE_ORIENTATION}
 
 # Save in bashrc so that adb picks them up (for autopilot's benefit)
-bashrc=$HOME/.bashrc
-grep -q GRID_UNIT_PX $bashrc || echo "export GRID_UNIT_PX=${GRID_UNIT_PX}" >> $bashrc
-grep -q QTWEBKIT_DPR $bashrc || echo "export QTWEBKIT_DPR=${QTWEBKIT_DPR}" >> $bashrc
-grep -q NATIVE_ORIENTATION $bashrc || echo "export NATIVE_ORIENTATION=${NATIVE_ORIENTATION}" >> $bashrc
-
+dot_profile=$HOME/.profile
+grep -q GRID_UNIT_PX $dot_profile || echo "export GRID_UNIT_PX=${GRID_UNIT_PX}" >> $dot_profile
+grep -q QTWEBKIT_DPR $dot_profile || echo "export QTWEBKIT_DPR=${QTWEBKIT_DPR}" >> $dot_profile
+grep -q NATIVE_ORIENTATION $dot_profile || echo "export NATIVE_ORIENTATION=${NATIVE_ORIENTATION}" >> $dot_profile
 
 if [ "$#" -ne 0 ]; then
     exec $@

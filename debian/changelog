@@ -1,8 +1,30 @@
-ubuntu-touch-session (0.107) UNRELEASED; urgency=medium
+ubuntu-touch-session (0.108) UNRELEASED; urgency=medium
 
   * Move 52-ubuntu-touch.conf from /etc/lightdm to /usr/share/lightdm
 
  -- Michael Terry <mterry@ubuntu.com>  Mon, 17 Mar 2014 23:17:00 -0400
+
+ubuntu-touch-session (0.107+14.04.20140407.1-0ubuntu1) trusty; urgency=low
+
+  [ Ubuntu daily release ]
+  * New rebuild forced
+
+  [ Sergio Schvezov ]
+  * Setting needed UI variables to ~/.profile for dash to pick up. (LP:
+    #1303774)
+
+ -- Ubuntu daily release <ps-jenkins@lists.canonical.com>  Mon, 07 Apr 2014 14:44:52 +0000
+
+ubuntu-touch-session (0.107+14.04.20140401.2-0ubuntu1) trusty; urgency=medium
+
+  [ Michał Sawicz ]
+  * Bump version to ensure incompatibility with surfaceflinger support.
+  * Change source format to comply with CI Train.
+
+  [ Dimitri John Ledkov ]
+  * Clean up root user environment, to not export bogus variables.
+
+ -- Ubuntu daily release <ps-jenkins@lists.canonical.com>  Tue, 01 Apr 2014 22:29:31 +0000
 
 ubuntu-touch-session (0.106) trusty; urgency=medium
 

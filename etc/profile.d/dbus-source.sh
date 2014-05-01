@@ -3,4 +3,4 @@
 
 # source dbus address from new location
 [ -e $HOME/.cache/upstart/dbus-session ] && . $HOME/.cache/upstart/dbus-session
-export DBUS_SESSION_BUS_ADDRESS
+[ -n "$DBUS_SESSION_BUS_ADDRESS" ] && export DBUS_SESSION_BUS_ADDRESS
