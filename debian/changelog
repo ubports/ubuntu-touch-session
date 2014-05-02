@@ -1,8 +1,12 @@
-ubuntu-touch-session (0.108) UNRELEASED; urgency=medium
+ubuntu-touch-session (0.108+14.10.20140502-0ubuntu1) utopic; urgency=medium
 
+  [ Michael Terry ]
   * Move 52-ubuntu-touch.conf from /etc/lightdm to /usr/share/lightdm
 
- -- Michael Terry <mterry@ubuntu.com>  Mon, 17 Mar 2014 23:17:00 -0400
+  [ Timo Jyrinki ]
+  * Merge the remaining robru's packaging fixes in.
+
+ -- Ubuntu daily release <ps-jenkins@lists.canonical.com>  Fri, 02 May 2014 15:21:22 +0000
 
 ubuntu-touch-session (0.107+14.04.20140407.1-0ubuntu1) trusty; urgency=low
 
