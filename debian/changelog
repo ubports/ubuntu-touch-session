@@ -1,3 +1,9 @@
+ubuntu-touch-session (0.108) UNRELEASED; urgency=medium
+
+  * Move 52-ubuntu-touch.conf from /etc/lightdm to /usr/share/lightdm
+
+ -- Michael Terry <mterry@ubuntu.com>  Mon, 17 Mar 2014 23:17:00 -0400
+
 ubuntu-touch-session (0.107+14.04.20140407.1-0ubuntu1) trusty; urgency=low
 
   [ Ubuntu daily release ]
