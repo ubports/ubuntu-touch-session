@@ -1,20 +1,22 @@
 Source: ubuntu-touch-session
 Section: x11
-Priority: extra
+Priority: optional
 Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
-Build-Depends: debhelper (>= 9)
-Standards-Version: 3.9.3
-Vcs-Bzr: lp:~phablet-team/session-manager-touch/trunk
+Build-Depends: debhelper (>= 9),
+Standards-Version: 3.9.5
+# if you don't have have commit access to this branch but would like to upload
+# directly to Ubuntu, don't worry: your changes will be merged back into the
+# upstream branch
+Vcs-Bzr: lp:session-manager-touch
 
 Package: ubuntu-touch-session
 Architecture: all
-Depends: ${shlibs:Depends},
-         ${misc:Depends},
-         lightdm (>= 1.9.5),
+Depends: lightdm (>= 1.9.5),
          unity-system-compositor (>= 0.0.2),
          upstart-app-launch (>= 0.1+13.10.20130923.4-0ubuntu1~),
-Breaks: unity8 (<< 7.85)
+         ${misc:Depends},
+         ${shlibs:Depends},
+Breaks: unity8 (<< 7.85),
 Description: Ubuntu Session Manager for Ubuntu Touch Devices
  The ubuntu-touch-session tool aims to setup a very simple session
  manager for the ubuntu-touch mobile shell.
-
