@@ -4,7 +4,6 @@ oom score -10
 # lightdm job normally waits for plymouth-ready, but since we disable plymouth,
 # we remove that condition from lightdm's start stanza
 start on ((filesystem
-           and runlevel [!06]
            and started dbus
            and android)
           or runlevel PREVLEVEL=S)
