@@ -6,6 +6,6 @@ ubuntu-touch-session.d/* /etc/ubuntu-touch-session.d/
 upstart-session/* /usr/share/upstart/sessions/
 ubuntu-touch-session /usr/bin/
 ubuntu-touch.desktop /usr/share/lightdm/sessions
-52-ubuntu-touch.conf /etc/lightdm/lightdm.conf.d
+52-ubuntu-touch.conf /usr/share/lightdm/lightdm.conf.d
 usc-wrapper /usr/share/ubuntu-touch-session/
 com.ubuntu.touch.NetworkManager.pkla /var/lib/polkit-1/localauthority/10-vendor.d/

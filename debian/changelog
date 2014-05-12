@@ -1,3 +1,24 @@
+ubuntu-touch-session (0.108+14.10.20140512-0ubuntu1) utopic; urgency=low
+
+  [ Ubuntu daily release ]
+  * New rebuild forced
+
+  [ Ricardo Salveti de Araujo ]
+  * lightdm.override: removing runlevel check, faster boot and
+    workaround for the x86 emulator (LP: #1318681) (LP: #1318681)
+
+ -- Ubuntu daily release <ps-jenkins@lists.canonical.com>  Mon, 12 May 2014 14:29:39 +0000
+
+ubuntu-touch-session (0.108+14.10.20140502-0ubuntu1) utopic; urgency=medium
+
+  [ Michael Terry ]
+  * Move 52-ubuntu-touch.conf from /etc/lightdm to /usr/share/lightdm
+
+  [ Timo Jyrinki ]
+  * Merge the remaining robru's packaging fixes in.
+
+ -- Ubuntu daily release <ps-jenkins@lists.canonical.com>  Fri, 02 May 2014 15:21:22 +0000
+
 ubuntu-touch-session (0.107+14.04.20140407.1-0ubuntu1) trusty; urgency=low
 
   [ Ubuntu daily release ]
