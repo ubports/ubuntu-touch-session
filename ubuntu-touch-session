@@ -16,6 +16,14 @@ NATIVE_ORIENTATION=portrait
 device=$(getprop ro.product.device)
 [ -e /etc/ubuntu-touch-session.d/$device.conf ] && . /etc/ubuntu-touch-session.d/$device.conf
 
+# Workaround for bug 1308210 / 1318070 (x86 emulator and scopes)
+if [ $(getprop ro.kernel.qemu 0) -eq 1 ]; then
+    cpu_mhz=$(grep -m1 "cpu MHz" /proc/cpuinfo | awk -F' ' '{ print $4 }')
+    if [ "$cpu_mhz" = "0.000" ]; then
+        export RDTSC_FREQUENCY=2000
+    fi
+fi
+
 export GRID_UNIT_PX=${GRID_UNIT_PX}
 export QTWEBKIT_DPR=${QTWEBKIT_DPR}
 export NATIVE_ORIENTATION=${NATIVE_ORIENTATION}
