@@ -1,0 +1,15 @@
+# This next block is actually a duplicate from livecd-rootfs.  Once this lands
+# in the image, we can remove the duplicate bits from livecd-rootfs.
+[sudo-network-rights]
+Identity=unix-group:sudo
+Action=org.freedesktop.NetworkManager.*
+ResultAny=no
+ResultInactive=no
+ResultActive=yes
+
+[lightdm-network-rights]
+Identity=unix-user:lightdm
+Action=org.freedesktop.NetworkManager.*
+ResultAny=no
+ResultInactive=no
+ResultActive=yes
