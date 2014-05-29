@@ -12,7 +12,7 @@ Vcs-Bzr: lp:session-manager-touch
 Package: ubuntu-touch-session
 Architecture: all
 Depends: lightdm (>= 1.9.5),
-         unity-system-compositor (>= 0.0.2),
+         unity-system-compositor (>= 0.0.3),
          unity8-greeter,
          upstart-app-launch (>= 0.1+13.10.20130923.4-0ubuntu1~),
          ${misc:Depends},
