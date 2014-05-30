@@ -8,3 +8,4 @@ ubuntu-touch-session /usr/bin/
 ubuntu-touch.desktop /usr/share/lightdm/sessions
 52-ubuntu-touch.conf /usr/share/lightdm/lightdm.conf.d
 usc-wrapper /usr/share/ubuntu-touch-session/
+platform-api/application.conf /etc/ubuntu-platform-api/
