@@ -5,4 +5,4 @@
 . /etc/environment
 export ANDROID_ROOT
 
-exec unity-system-compositor $@
+exec unity-system-compositor --power-off-delay=500 $@
