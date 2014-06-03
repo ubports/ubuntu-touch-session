@@ -1,0 +1,11 @@
+#!/bin/sh
+
+# /usr/sbin/lightdm-session is very X specific.  We don't want it for Ubuntu
+# Touch's Mir sessions.  So determine if we are running Mir or X and do the
+# right thing.  Ideally LightDM would do this for us, but in the meantime...
+
+if [ -n "$MIR_SOCKET" ]; then
+    exec $@
+else
+    exec /usr/sbin/lightdm-session $@
+fi
