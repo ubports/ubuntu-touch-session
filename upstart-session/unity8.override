@@ -1,0 +1,2 @@
+# Override Platform API Backend to the Touch Mirserver variant
+env UBUNTU_PLATFORM_API_BACKEND=touch_mirserver
