@@ -35,6 +35,8 @@ grep -q QTWEBKIT_DPR $dot_profile || echo "export QTWEBKIT_DPR=${QTWEBKIT_DPR}" 
 grep -q NATIVE_ORIENTATION $dot_profile || echo "export NATIVE_ORIENTATION=${NATIVE_ORIENTATION}" >> $dot_profile
 
 if [ "$#" -ne 0 ]; then
+    # Override the Greeter session's Platform API backend to Touch Mirserver
+    export UBUNTU_PLATFORM_API_BACKEND=touch_mirserver
     exec $@
 else
     exec init --user
