@@ -4,6 +4,7 @@ startup-scripts/* /usr/bin/
 *.override /etc/init
 ubuntu-touch-session.d/* /etc/ubuntu-touch-session.d/
 upstart-session/* /usr/share/upstart/sessions/
+ubuntu-touch-lightdm-session /usr/sbin/
 ubuntu-touch-session /usr/bin/
 ubuntu-touch.desktop /usr/share/lightdm/sessions
 52-ubuntu-touch.conf /usr/share/lightdm/lightdm.conf.d
