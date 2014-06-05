@@ -24,6 +24,14 @@ if [ $(getprop ro.kernel.qemu 0) -eq 1 ]; then
     fi
 fi
 
+# Set up xdg dirs
+[ -z "$XDG_CONFIG_DIRS" ] && export XDG_CONFIG_DIRS=/etc/xdg
+[ -z "$XDG_DATA_DIRS" ] && export XDG_DATA_DIRS=/usr/share/ubuntu:/usr/local/share:/usr/share
+if [ -n "$DESKTOP_SESSION" ]; then
+    export XDG_CONFIG_DIRS=/etc/xdg/xdg-$DESKTOP_SESSION:$XDG_CONFIG_DIRS
+    export XDG_DATA_DIRS=/usr/share/$DESKTOP_SESSION:$XDG_DATA_DIRS
+fi
+
 export GRID_UNIT_PX=${GRID_UNIT_PX}
 export QTWEBKIT_DPR=${QTWEBKIT_DPR}
 export NATIVE_ORIENTATION=${NATIVE_ORIENTATION}
