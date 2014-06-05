@@ -26,7 +26,7 @@ fi
 
 # Set up xdg dirs
 [ -z "$XDG_CONFIG_DIRS" ] && export XDG_CONFIG_DIRS=/etc/xdg
-[ -z "$XDG_DATA_DIRS" ] && export XDG_DATA_DIRS=/usr/share/ubuntu:/usr/local/share:/usr/share
+[ -z "$XDG_DATA_DIRS" ] && export XDG_DATA_DIRS=/usr/local/share:/usr/share
 if [ -n "$DESKTOP_SESSION" ]; then
     export XDG_CONFIG_DIRS=/etc/xdg/xdg-$DESKTOP_SESSION:$XDG_CONFIG_DIRS
     export XDG_DATA_DIRS=/usr/share/$DESKTOP_SESSION:$XDG_DATA_DIRS
