@@ -13,7 +13,6 @@ Package: ubuntu-touch-session
 Architecture: all
 Depends: lightdm (>= 1.9.5),
          unity-system-compositor (>= 0.0.3),
-         unity8-greeter (>= 7.88),
          ubuntu-app-launch (>= 0.1+13.10.20130923.4-0ubuntu1~),
          ${misc:Depends},
          ${shlibs:Depends},
