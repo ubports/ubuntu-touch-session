@@ -1,3 +1,12 @@
+ubuntu-touch-session (0.108+14.10.20140613-0ubuntu1) utopic; urgency=low
+
+  [ Michael Terry ]
+  * Revert dependency on split greeter. This gives us back the
+    integrated greeter for Touch images, to reduce the level of
+    regressions we are seeing.
+
+ -- Ubuntu daily release <ps-jenkins@lists.canonical.com>  Fri, 13 Jun 2014 09:22:32 +0000
+
 ubuntu-touch-session (0.108+14.10.20140610-0ubuntu1) utopic; urgency=low
 
   [ Ricardo Mendoza ]
