@@ -1,0 +1,8 @@
+# Normally, the apparmor job waits for rc-sysinit to start, but since
+# lightdm gets an override to no longer wait on the runlevel event, we
+# have to override the apparmor job also.
+#
+# Waiting for lightdm should be safe on touch images since we don't have
+# any daemons that get started with sysv init scripts
+start on starting lightdm
+
