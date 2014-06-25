@@ -1,3 +1,9 @@
+ubuntu-touch-session (0.108+14.10.20140625-0ubuntu3) UNRELEASED; urgency=medium
+
+  * Adding generic android.conf and logic for bind mount
+
+ -- Ricardo Salveti de Araujo <ricardo.salveti@canonical.com>  Wed, 25 Jun 2014 19:44:48 -0300
+
 ubuntu-touch-session (0.108+14.10.20140625-0ubuntu2) utopic; urgency=medium
 
   * upstart-session/pulseaudio.conf: reverting back to the default pulse
