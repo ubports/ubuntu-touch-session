@@ -1,4 +1,4 @@
-ubuntu-touch-session (0.108+14.10.20140625-0ubuntu3) UNRELEASED; urgency=medium
+ubuntu-touch-session (0.108+14.10.20140625-0ubuntu3) utopic; urgency=medium
 
   * Adding generic android.conf and logic for bind mount
 
