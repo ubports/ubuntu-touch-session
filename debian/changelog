@@ -1,3 +1,10 @@
+ubuntu-touch-session (0.108+14.10.20140625-0ubuntu2) utopic; urgency=medium
+
+  * upstart-session/pulseaudio.conf: reverting back to the default pulse
+    script file
+
+ -- Ricardo Salveti de Araujo <ricardo.salveti@canonical.com>  Wed, 25 Jun 2014 02:13:09 -0300
+
 ubuntu-touch-session (0.108+14.10.20140625-0ubuntu1) utopic; urgency=medium
 
   * Bumping revision to add again the apparmor changes (reverted by accident
