@@ -1,4 +1,4 @@
-ubuntu-touch-session (0.108+14.10.20140625-0ubuntu4) UNRELEASED; urgency=medium
+ubuntu-touch-session (0.108+14.10.20140625-0ubuntu4) utopic; urgency=medium
 
   * upstart-session/pulseaudio.conf: enabling touch specific pulse script file
 
