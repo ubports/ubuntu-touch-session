@@ -1,3 +1,10 @@
+ubuntu-touch-session (0.108+14.10.20140627-0ubuntu1) utopic; urgency=low
+
+  [ Alberto Aguirre ]
+  * Remove usc-wrapper power-off-delay argument
+
+ -- Ubuntu daily release <ps-jenkins@lists.canonical.com>  Fri, 27 Jun 2014 14:46:47 +0000
+
 ubuntu-touch-session (0.108+14.10.20140625-0ubuntu4) utopic; urgency=medium
 
   * upstart-session/pulseaudio.conf: enabling touch specific pulse script file
