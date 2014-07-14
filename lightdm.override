@@ -7,3 +7,6 @@ start on ((filesystem
            and started dbus
            and android)
           or runlevel PREVLEVEL=S)
+
+#set XDG_DATA_DIRS to include /custom, to use the custom spinner if it exists
+env XDG_DATA_DIRS=/custom/xdg/data:/usr/share
