@@ -1,3 +1,16 @@
+ubuntu-touch-session (0.108+14.10.20140813.1-0ubuntu1) utopic; urgency=low
+
+  [ Michael Terry ]
+  * Add a pam-config file to configure PAM the way that Touch likes it
+    (with an entry for pam_extrausers with low security options). We
+    previously just manually edited the file, but this way will work
+    better with apt-get upgrade. (LP: #1348637)
+
+  [ Ubuntu daily release ]
+  * New rebuild forced
+
+ -- Ubuntu daily release <ps-jenkins@lists.canonical.com>  Wed, 13 Aug 2014 21:02:40 +0000
+
 ubuntu-touch-session (0.108+14.10.20140714-0ubuntu2) utopic; urgency=medium
 
   * Updating pulse script file to support HSP devices
