@@ -1,3 +1,11 @@
+ubuntu-touch-session (0.108+14.10.20140819-0ubuntu1) utopic; urgency=low
+
+  [ Ricardo Salveti de Araujo ]
+  * touch.pa: dropping restore for formats and ports and enable
+    voicecall volume control when in voicecall mode
+
+ -- Ubuntu daily release <ps-jenkins@lists.canonical.com>  Tue, 19 Aug 2014 03:42:53 +0000
+
 ubuntu-touch-session (0.108+14.10.20140818-0ubuntu1) utopic; urgency=low
 
   [ Alberto Aguirre ]
