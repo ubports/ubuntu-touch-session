@@ -25,7 +25,7 @@
 .fail
 
 ### Automatically restore the volume of streams and devices
-load-module module-device-restore
+load-module module-device-restore restore_port=false restore_formats=false
 load-module module-stream-restore
 
 ### Automatically augment property information from .desktop files
@@ -44,7 +44,7 @@ load-module module-null-source source_name=source.fake.sco rate=8000 channels=1
 
 ### Automatically load the Pulseaudio Droid
 .ifexists module-droid-card.so
-load-module module-droid-card
+load-module module-droid-card voice_volume_call_mode=true
 .endif
 
 ### Automatically load driver modules depending on the hardware available
