@@ -44,7 +44,7 @@ load-module module-null-source source_name=source.fake.sco rate=8000 channels=1
 
 ### Automatically load the Pulseaudio Droid
 .ifexists module-droid-card.so
-load-module module-droid-card voice_volume_call_mode=true
+load-module module-droid-card voice_volume_call_mode=true voice_virtual_stream=true
 .endif
 
 ### Automatically load driver modules depending on the hardware available
@@ -128,7 +128,10 @@ load-module module-systemd-login
 load-module module-position-event-sounds
 
 ### Cork music/video streams when a phone stream is active
-#load-module module-role-cork
+load-module module-role-cork trigger_roles=alarm,ringtone,phone cork_roles=multimedia,alarm,notification,ringtone global=true
+
+### Ducking streams when certain roles are active
+load-module module-role-ducking trigger_roles=notification ducking_roles=multimedia volume=-20dB
 
 ### Modules to allow autoloading of filters (such as echo cancellation)
 ### on demand. module-filter-heuristics tries to determine what filters
