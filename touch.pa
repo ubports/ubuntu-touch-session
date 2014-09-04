@@ -125,7 +125,7 @@ load-module module-systemd-login
 load-module module-position-event-sounds
 
 ### Cork music/video streams when a phone stream is active
-load-module module-role-cork trigger_roles=phone,alarm cork_roles=alert,alarm,multimedia global=true
+load-module module-role-cork trigger_roles=phone,alarm cork_roles=alarm,multimedia global=true
 
 ### Ducking streams when certain roles are active
 load-module module-role-ducking trigger_roles=alert ducking_roles=multimedia volume=-20dB
