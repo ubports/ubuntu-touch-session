@@ -1,3 +1,10 @@
+ubuntu-touch-session (0.108+14.10.20140904-0ubuntu1) utopic; urgency=low
+
+  [ Ricardo Salveti de Araujo ]
+  * touch.pa: enabling cork and ducking
+
+ -- Ubuntu daily release <ps-jenkins@lists.canonical.com>  Thu, 04 Sep 2014 23:23:40 +0000
+
 ubuntu-touch-session (0.108+14.10.20140826-0ubuntu1) utopic; urgency=low
 
   [ Alberto Aguirre ]
