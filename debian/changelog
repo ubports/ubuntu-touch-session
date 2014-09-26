@@ -1,3 +1,11 @@
+ubuntu-touch-session (0.108+14.10.20140926.1-0ubuntu1) utopic; urgency=low
+
+  [ Oliver Grawert ]
+  * 'move to new dbus-session address handling in XDG_RUNTIME_DIR (LP:
+    #1316978) (LP: #1316978)
+
+ -- Ubuntu daily release <ps-jenkins@lists.canonical.com>  Fri, 26 Sep 2014 14:45:01 +0000
+
 ubuntu-touch-session (0.108+14.10.20140909.1-0ubuntu1) utopic; urgency=low
 
   [ Kevin Gunn ]
