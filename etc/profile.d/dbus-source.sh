@@ -1,6 +1,6 @@
 # truncate obsolete ~/.dbus-session file if it exists
-[ -e $HOME/.dbus-session ] && echo >$HOME/.dbus-session
+[ -e $XDG_RUNTIME_DIR/dbus-session ] && echo >$XDG_RUNTIME_DIR/dbus-session
 
 # source dbus address from new location
-[ -e $HOME/.cache/upstart/dbus-session ] && . $HOME/.cache/upstart/dbus-session
+[ -e $XDG_RUNTIME_DIR/dbus-session ] && . $XDG_RUNTIME_DIR/dbus-session
 [ -n "$DBUS_SESSION_BUS_ADDRESS" ] && export DBUS_SESSION_BUS_ADDRESS
