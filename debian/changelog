@@ -1,4 +1,4 @@
-ubuntu-touch-session (0.108+14.10.20140929-0ubuntu2) UNRELEASED; urgency=medium
+ubuntu-touch-session (0.108+14.10.20140929-0ubuntu2) utopic; urgency=medium
 
   * Temporarily disabling fallback table as that can get pulse in a crash loop
     without the fix available in pulseaudio 1:4.0-0ubuntu21
