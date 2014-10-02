@@ -24,9 +24,8 @@
 
 .fail
 
-### Automatically restore the volume of streams and devices
-load-module module-device-restore restore_port=false restore_formats=false
-load-module module-stream-restore
+### Automatically restore the volume of streams
+load-module module-stream-restore fallback_table=/etc/pulse/touch-stream-restore.table
 
 ### Automatically augment property information from .desktop files
 ### stored in /usr/share/application
@@ -44,7 +43,7 @@ load-module module-null-source source_name=source.fake.sco rate=8000 channels=1
 
 ### Automatically load the Pulseaudio Droid
 .ifexists module-droid-card.so
-load-module module-droid-card voice_volume_call_mode=true voice_virtual_stream=true
+load-module module-droid-card voice_virtual_stream=true
 .endif
 
 ### Automatically load driver modules depending on the hardware available
@@ -129,6 +128,11 @@ load-module module-role-cork trigger_roles=phone,alarm cork_roles=alarm,multimed
 
 ### Ducking streams when certain roles are active
 load-module module-role-ducking trigger_roles=alert ducking_roles=multimedia volume=-20dB
+
+### Load DBus protocol
+.ifexists module-dbus-protocol.so
+load-module module-dbus-protocol
+.endif
 
 ### Modules to allow autoloading of filters (such as echo cancellation)
 ### on demand. module-filter-heuristics tries to determine what filters

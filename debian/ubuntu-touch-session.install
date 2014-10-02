@@ -12,4 +12,5 @@ usc-wrapper /usr/share/ubuntu-touch-session/
 platform-api/application.conf /etc/ubuntu-platform-api/
 com.ubuntu.touch.NetworkManager.pkla /var/lib/polkit-1/localauthority/10-vendor.d/
 touch.pa /etc/pulse/
+touch-stream-restore.table /etc/pulse/
 touch-extrausers /usr/share/pam-configs/

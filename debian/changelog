@@ -1,3 +1,10 @@
+ubuntu-touch-session (0.108+14.10.20140929-0ubuntu1) utopic; urgency=low
+
+  [ Ricardo Salveti de Araujo ]
+  * Changing pulse config to allow setting volume per audio role.
+
+ -- Ubuntu daily release <ps-jenkins@lists.canonical.com>  Mon, 29 Sep 2014 19:39:42 +0000
+
 ubuntu-touch-session (0.108+14.10.20140926.1-0ubuntu1) utopic; urgency=low
 
   [ Oliver Grawert ]
