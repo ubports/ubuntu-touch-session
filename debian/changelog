@@ -1,3 +1,10 @@
+ubuntu-touch-session (0.108+14.10.20140929-0ubuntu3) UNRELEASED; urgency=medium
+
+  * touch.pa: adding back fallback table, so we can have a default volume for
+    every role used by touch
+
+ -- Ricardo Salveti de Araujo <ricardo.salveti@canonical.com>  Fri, 03 Oct 2014 14:44:27 -0300
+
 ubuntu-touch-session (0.108+14.10.20140929-0ubuntu2) utopic; urgency=medium
 
   * Temporarily disabling fallback table as that can get pulse in a crash loop

@@ -25,8 +25,7 @@
 .fail
 
 ### Automatically restore the volume of streams
-#load-module module-stream-restore fallback_table=/etc/pulse/touch-stream-restore.table
-load-module module-stream-restore
+load-module module-stream-restore fallback_table=/etc/pulse/touch-stream-restore.table
 
 ### Automatically augment property information from .desktop files
 ### stored in /usr/share/application
