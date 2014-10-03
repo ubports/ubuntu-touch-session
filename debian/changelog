@@ -1,4 +1,4 @@
-ubuntu-touch-session (0.108+14.10.20140929-0ubuntu3) UNRELEASED; urgency=medium
+ubuntu-touch-session (0.108+14.10.20140929-0ubuntu3) utopic; urgency=medium
 
   * touch.pa: adding back fallback table, so we can have a default volume for
     every role used by touch
