@@ -1,5 +1,5 @@
 limit nice 40 40
-oom score -10
+oom score 10
 
 # lightdm job normally waits for plymouth-ready, but since we disable plymouth,
 # we remove that condition from lightdm's start stanza
