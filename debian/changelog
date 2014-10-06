@@ -1,3 +1,12 @@
+ubuntu-touch-session (0.108+14.10.20141006-0ubuntu1) utopic; urgency=low
+
+  [ Oliver Grawert ]
+  * fix the oom score for the ubuntu-touch session so that the value
+    lies above system processes and session processes get killed first.
+    (LP: #1377869)
+
+ -- Ubuntu daily release <ps-jenkins@lists.canonical.com>  Mon, 06 Oct 2014 13:48:02 +0000
+
 ubuntu-touch-session (0.108+14.10.20140929-0ubuntu3) utopic; urgency=medium
 
   * touch.pa: adding back fallback table, so we can have a default volume for
