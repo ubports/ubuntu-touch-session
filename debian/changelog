@@ -1,3 +1,10 @@
+ubuntu-touch-session (0.108+14.10.20141007-0ubuntu1) utopic; urgency=low
+
+  [ Ted Gould ]
+  * Export XDG_DATA_DIRS and XDG_CONFIG_DIRS for the adb shell
+
+ -- Ubuntu daily release <ps-jenkins@lists.canonical.com>  Tue, 07 Oct 2014 19:36:38 +0000
+
 ubuntu-touch-session (0.108+14.10.20141006.1-0ubuntu1) utopic; urgency=low
 
   [ Ricardo Salveti de Araujo ]
