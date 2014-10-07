@@ -37,6 +37,11 @@ if [ -n "$DESKTOP_SESSION" ]; then
     export XDG_DATA_DIRS=/usr/share/$DESKTOP_SESSION:$XDG_DATA_DIRS
 fi
 
+# if /custom/xdg/config exists, add it to xdg_config_dirs. this is so upstart can get job definitions from /custom
+if [ -d /custom/xdg/config ]; then
+	export XDG_CONFIG_DIRS=/custom/xdg/config:$XDG_CONFIG_DIRS
+fi
+
 export GRID_UNIT_PX=${GRID_UNIT_PX}
 export QTWEBKIT_DPR=${QTWEBKIT_DPR}
 export NATIVE_ORIENTATION=${NATIVE_ORIENTATION}
@@ -46,11 +51,6 @@ dot_profile=$HOME/.profile
 grep -q GRID_UNIT_PX $dot_profile || echo "export GRID_UNIT_PX=${GRID_UNIT_PX}" >> $dot_profile
 grep -q QTWEBKIT_DPR $dot_profile || echo "export QTWEBKIT_DPR=${QTWEBKIT_DPR}" >> $dot_profile
 grep -q NATIVE_ORIENTATION $dot_profile || echo "export NATIVE_ORIENTATION=${NATIVE_ORIENTATION}" >> $dot_profile
-
-# if /custom/xdg/config exists, add it to xdg_config_dirs. this is so upstart can get job definitions from /custom
-if [ -d /custom/xdg/config ]; then
-	export XDG_CONFIG_DIRS=/custom/xdg/config:$XDG_CONFIG_DIRS
-fi
 
 if [ "$#" -ne 0 ]; then
     exec $@
