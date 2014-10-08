@@ -37,14 +37,14 @@ load-module module-switch-on-port-available
 ### Switch when connected by default
 load-module module-switch-on-connect skip_abstract=yes
 
-### Fake sink and source used by HSP
-load-module module-null-sink sink_name=sink.fake.sco rate=8000 channels=1
-load-module module-null-source source_name=source.fake.sco rate=8000 channels=1
-
 ### Automatically load the Pulseaudio Droid
 .ifexists module-droid-card.so
 load-module module-droid-card voice_virtual_stream=true
 .endif
+
+### Fake sink and source used by HSP
+load-module module-null-sink sink_name=sink.fake.sco rate=8000 channels=1
+load-module module-null-source source_name=source.fake.sco rate=8000 channels=1
 
 ### Automatically load driver modules depending on the hardware available
 #.ifexists module-udev-detect.so
@@ -140,3 +140,7 @@ load-module module-dbus-protocol
 ### loading modules and rerouting streams.
 load-module module-filter-heuristics
 load-module module-filter-apply
+
+### Make some devices default
+set-default-sink sink.primary
+set-default-source source.primary
