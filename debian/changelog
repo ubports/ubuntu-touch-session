@@ -1,3 +1,10 @@
+ubuntu-touch-session (0.108+15.04.20141111-0ubuntu1) vivid; urgency=low
+
+  [ Ted Gould ]
+  * Override indicator-sound to wait for pulse audio (LP: #1389008)
+
+ -- Ubuntu daily release <ps-jenkins@lists.canonical.com>  Tue, 11 Nov 2014 21:44:44 +0000
+
 ubuntu-touch-session (0.108+14.10.20141008-0ubuntu1) utopic; urgency=low
 
   [ Ricardo Salveti de Araujo ]
