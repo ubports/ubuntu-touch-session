@@ -1,0 +1,7 @@
+
+# This override is needed so that we can work with the Pulse Audio
+# Upstart configuration which is included here. That should go upstream
+# and this should merge with indicator-sound when it does. But until
+# then we need this override here.
+
+start on indicator-services-start and started pulseaudio
