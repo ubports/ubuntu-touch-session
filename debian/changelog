@@ -1,3 +1,17 @@
+ubuntu-touch-session (0.108+15.04.20141111-0ubuntu2) 14.09; urgency=medium
+
+  * revert the former override change since it was found to be not working on
+    first boot on fresh installs during milestone testing.
+
+ -- Oliver Grawert <ogra@ubuntu.com>  Wed, 12 Nov 2014 18:44:46 +0100
+
+ubuntu-touch-session (0.108+15.04.20141111-0ubuntu1) vivid; urgency=low
+
+  [ Ted Gould ]
+  * Override indicator-sound to wait for pulse audio (LP: #1389008)
+
+ -- Ubuntu daily release <ps-jenkins@lists.canonical.com>  Tue, 11 Nov 2014 21:44:44 +0000
+
 ubuntu-touch-session (0.108+14.10.20141008-0ubuntu1) utopic; urgency=low
 
   [ Ricardo Salveti de Araujo ]
