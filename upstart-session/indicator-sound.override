@@ -1,7 +1,13 @@
 
-# This override is needed so that we can work with the Pulse Audio
-# Upstart configuration which is included here. That should go upstream
-# and this should merge with indicator-sound when it does. But until
-# then we need this override here.
+# Ensure that Pulse is up before we are, which we unfortunately can't
+# encode in start conditions because we might need to be started more
+# than once where Pulse is only started once. This happens in the case
+# of the wizard which starts and stops the indicators once and then
+# unity restarts them
 
-start on indicator-services-start and started pulseaudio
+pre-start script
+	while true; do
+		[ -S /run/user/`id -u`/pulse/dbus-socket ] && break
+		sleep 0.1
+	done
+end script
