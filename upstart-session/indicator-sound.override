@@ -6,8 +6,10 @@
 # unity restarts them
 
 pre-start script
-	while true; do
+	for num in  {1..50}; do
 		[ -S /run/user/`id -u`/pulse/dbus-socket ] && break
 		sleep 0.1
 	done
+
+	[ -S /run/user/`id -u`/pulse/dbus-socket ] || stop
 end script
