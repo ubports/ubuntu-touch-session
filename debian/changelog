@@ -1,3 +1,11 @@
+ubuntu-touch-session (0.108+15.04.20141209-0ubuntu1) vivid; urgency=low
+
+  [ Ted Gould ]
+  * Override indicator sound to wait for Pulse to be ready (LP:
+    #1389008, #1391954)
+
+ -- Ubuntu daily release <ps-jenkins@lists.canonical.com>  Tue, 09 Dec 2014 02:10:38 +0000
+
 ubuntu-touch-session (0.108+15.04.20141111-0ubuntu2) 14.09; urgency=medium
 
   * revert the former override change since it was found to be not working on
