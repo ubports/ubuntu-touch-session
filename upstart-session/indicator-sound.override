@@ -6,7 +6,7 @@
 # unity restarts them
 
 pre-start script
-	for num in  {1..50}; do
+	for num in $(seq 1 50); do
 		[ -S /run/user/`id -u`/pulse/dbus-socket ] && break
 		sleep 0.1
 	done
