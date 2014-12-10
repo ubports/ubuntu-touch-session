@@ -1,3 +1,13 @@
+ubuntu-touch-session (0.108+15.04.20141210.1-0ubuntu1) vivid; urgency=low
+
+  [ Ubuntu daily release ]
+  * New rebuild forced
+
+  [ Tiago Salem Herrmann ]
+  * Wait for ofono in order to create telepathy accounts. (LP: #1399769)
+
+ -- Ubuntu daily release <ps-jenkins@lists.canonical.com>  Wed, 10 Dec 2014 17:53:41 +0000
+
 ubuntu-touch-session (0.108+15.04.20141210-0ubuntu1) vivid; urgency=low
 
   [ Ted Gould ]
