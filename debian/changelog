@@ -1,3 +1,9 @@
+ubuntu-touch-session (0.108+15.04.20141210.1-0ubuntu2) UNRELEASED; urgency=medium
+
+  * obexd.conf: adding upstart job for the obexd service (for BT PBAP)
+
+ -- Ricardo Salveti de Araujo <ricardo.salveti@canonical.com>  Mon, 12 Jan 2015 23:24:52 -0200
+
 ubuntu-touch-session (0.108+15.04.20141210.1-0ubuntu1) vivid; urgency=low
 
   [ Ubuntu daily release ]
