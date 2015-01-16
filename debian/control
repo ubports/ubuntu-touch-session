@@ -7,7 +7,7 @@ Standards-Version: 3.9.5
 # if you don't have have commit access to this branch but would like to upload
 # directly to Ubuntu, don't worry: your changes will be merged back into the
 # upstream branch
-Vcs-Bzr: lp:session-manager-touch
+Vcs-Bzr: lp:ubuntu-touch-session
 
 Package: ubuntu-touch-session
 Architecture: all
