@@ -1,3 +1,11 @@
+ubuntu-touch-session (0.108+15.04.20150116-0ubuntu1) vivid; urgency=low
+
+  [ Martin Pitt ]
+  * Add systemd override file corresponding to lightdm.override. Note:
+    the other overrides aren't needed under systemd.
+
+ -- Ubuntu daily release <ps-jenkins@lists.canonical.com>  Fri, 16 Jan 2015 12:37:26 +0000
+
 ubuntu-touch-session (0.108+15.04.20150113-0ubuntu1) vivid; urgency=low
 
   * New rebuild forced
