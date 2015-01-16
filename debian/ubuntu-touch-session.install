@@ -2,6 +2,7 @@ etc/dbus-1/system.d
 etc/profile.d
 startup-scripts/* /usr/bin/
 *.override /etc/init
+systemd-overrides/* /lib/systemd/system/
 ubuntu-touch-session.d/* /etc/ubuntu-touch-session.d/
 upstart-session/* /usr/share/upstart/sessions/
 ubuntu-touch-lightdm-session /usr/sbin/
