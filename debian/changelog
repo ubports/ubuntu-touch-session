@@ -1,3 +1,10 @@
+ubuntu-touch-session (0.108+15.04.20150204-0ubuntu1) vivid; urgency=medium
+
+  [ Tiago Salem Herrmann ]
+  * Do not depend on ofono upstart job. (LP: #1413316)
+
+ -- Ubuntu daily release <ps-jenkins@lists.canonical.com>  Wed, 04 Feb 2015 18:04:47 +0000
+
 ubuntu-touch-session (0.108+15.04.20150116-0ubuntu1) vivid; urgency=low
 
   [ Martin Pitt ]
