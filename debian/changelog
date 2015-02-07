@@ -1,3 +1,11 @@
+ubuntu-touch-session (0.108+15.04.20150207-0ubuntu1) vivid; urgency=medium
+
+  [ Ricardo Salveti de Araujo ]
+  * Add factory-wipe system job to watch for the production line
+    condition
+
+ -- Ubuntu daily release <ps-jenkins@lists.canonical.com>  Sat, 07 Feb 2015 02:25:22 +0000
+
 ubuntu-touch-session (0.108+15.04.20150204-0ubuntu1) vivid; urgency=medium
 
   [ Tiago Salem Herrmann ]
