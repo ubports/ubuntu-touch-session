@@ -2,6 +2,7 @@ etc/dbus-1/system.d
 etc/profile.d
 startup-scripts/* /usr/bin/
 *.override /etc/init
+factory-wipe.conf /etc/init/
 systemd-overrides/* /lib/systemd/system/
 ubuntu-touch-session.d/* /etc/ubuntu-touch-session.d/
 upstart-session/* /usr/share/upstart/sessions/
