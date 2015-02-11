@@ -1,0 +1,1 @@
+export QV4_ENABLE_JIT_CACHE=1
