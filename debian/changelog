@@ -1,3 +1,11 @@
+ubuntu-touch-session (0.108+15.04.20150211-0ubuntu1) vivid; urgency=medium
+
+  [ Ricardo Salveti de Araujo ]
+  * profile.d: export QV4_ENABLE_JIT_CACHE=1 by default, enabling cache
+    for QML applications
+
+ -- Ubuntu daily release <ps-jenkins@lists.canonical.com>  Wed, 11 Feb 2015 15:53:05 +0000
+
 ubuntu-touch-session (0.108+15.04.20150207-0ubuntu1) vivid; urgency=medium
 
   [ Ricardo Salveti de Araujo ]
