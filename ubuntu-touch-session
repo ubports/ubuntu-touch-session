@@ -54,6 +54,16 @@ grep -q NATIVE_ORIENTATION $dot_profile || echo "export NATIVE_ORIENTATION=${NAT
 grep -q XDG_CONFIG_DIRS $dot_profile || echo "export XDG_CONFIG_DIRS=${XDG_CONFIG_DIRS}" >> $dot_profile
 grep -q XDG_DATA_DIRS $dot_profile || echo "export XDG_DATA_DIRS=${XDG_DATA_DIRS}" >> $dot_profile
 
+# Make sure we're also exporting the profile.d variables
+if [ -d /etc/profile.d ]; then
+    for i in /etc/profile.d/*.sh; do
+        if [ -r $i ]; then
+            . $i
+        fi
+    done
+    unset i
+fi
+
 if [ "$#" -ne 0 ]; then
     exec $@
 else
