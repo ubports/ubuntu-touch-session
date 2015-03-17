@@ -1,4 +1,4 @@
-ubuntu-touch-session (0.108+15.04.20150211-0ubuntu3) UNRELEASED; urgency=medium
+ubuntu-touch-session (0.108+15.04.20150211-0ubuntu3) vivid; urgency=medium
 
   * qml_qv4_jit_cache.sh: don't enable cache on the emulator, still not
     working as expected
