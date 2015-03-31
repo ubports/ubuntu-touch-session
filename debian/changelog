@@ -1,3 +1,11 @@
+ubuntu-touch-session (0.108+15.04.20150331-0ubuntu1) vivid; urgency=medium
+
+  [ Ricardo Salveti de Araujo ]
+  * touch.pa: making sure we don't store/restore device and muted status
+    for module-stream-restore (LP: #1398560, #1438486)
+
+ -- CI Train Bot <ci-train-bot@canonical.com>  Tue, 31 Mar 2015 03:16:20 +0000
+
 ubuntu-touch-session (0.108+15.04.20150211-0ubuntu3) vivid; urgency=medium
 
   * qml_qv4_jit_cache.sh: don't enable cache on the emulator, still not
