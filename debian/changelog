@@ -1,3 +1,10 @@
+ubuntu-touch-session (0.108+15.04.20150407-0ubuntu1) vivid; urgency=medium
+
+  [ Ricardo Salveti de Araujo ]
+  * pulseaudio.conf: exporting PULSE_PLAYBACK_CORK_STALLED by default
+
+ -- CI Train Bot <ci-train-bot@canonical.com>  Tue, 07 Apr 2015 04:28:22 +0000
+
 ubuntu-touch-session (0.108+15.04.20150331-0ubuntu1) vivid; urgency=medium
 
   [ Ricardo Salveti de Araujo ]
