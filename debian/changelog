@@ -1,3 +1,10 @@
+ubuntu-touch-session (0.108+15.04.20150422-0ubuntu1) vivid; urgency=medium
+
+  [ Ricardo Salveti de Araujo ]
+  * obexd.conf: expecting fork instead of daemon (LP: #1447376)
+
+ -- CI Train Bot <ci-train-bot@canonical.com>  Wed, 22 Apr 2015 23:28:39 +0000
+
 ubuntu-touch-session (0.108+15.04.20150407-0ubuntu1) vivid; urgency=medium
 
   [ Ricardo Salveti de Araujo ]
