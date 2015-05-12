@@ -1,3 +1,11 @@
+ubuntu-touch-session (0.108+15.04.20150512-0ubuntu1) vivid; urgency=medium
+
+  [ Martin Pitt ]
+  * Stop assuming that "init" is upstart, to fix session startup failure
+    with systemd-sysv. (LP: #1451784)
+
+ -- CI Train Bot <ci-train-bot@canonical.com>  Tue, 12 May 2015 12:54:24 +0000
+
 ubuntu-touch-session (0.108+15.04.20150422-0ubuntu1) vivid; urgency=medium
 
   [ Ricardo Salveti de Araujo ]
