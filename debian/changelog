@@ -1,3 +1,10 @@
+ubuntu-touch-session (0.108+15.10.20150803-0ubuntu1) wily; urgency=medium
+
+  [ Tiago Salem Herrmann ]
+  * Make ofono-setup depend on pulseaudio. (LP: #1478999)
+
+ -- CI Train Bot <ci-train-bot@canonical.com>  Mon, 03 Aug 2015 13:33:43 +0000
+
 ubuntu-touch-session (0.108+15.04.20150512-0ubuntu1) vivid; urgency=medium
 
   [ Martin Pitt ]
