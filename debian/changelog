@@ -1,5 +1,6 @@
 ubuntu-touch-session (0.108+15.10.20150807-0ubuntu1) UNRELEASED; urgency=medium
 
+  * Add upstart job for trust-store for camera service
   * Add upstart job for trust-store for pulseaudio
   * Load trust-store module for pulseaudio
 
