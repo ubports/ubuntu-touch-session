@@ -1,3 +1,10 @@
+ubuntu-touch-session (0.108+15.04.20150825-0ubuntu1) vivid; urgency=medium
+
+  [ Manuel de la Pena ]
+  * The pulse audio trust store should not have whitelisted apps.
+
+ -- CI Train Bot <ci-train-bot@canonical.com>  Tue, 25 Aug 2015 12:50:24 +0000
+
 ubuntu-touch-session (0.108+15.04.20150814.1-0ubuntu1) vivid; urgency=medium
 
   [ Alfonso Sanchez-Beato (email Canonical) ]
