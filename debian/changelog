@@ -1,10 +1,14 @@
-ubuntu-touch-session (0.108+15.10.20150807-0ubuntu1) UNRELEASED; urgency=medium
+ubuntu-touch-session (0.108+15.10.20150831-0ubuntu1) wily; urgency=medium
 
+  [ Alfonso Sanchez-Beato (email Canonical) ]
   * Add upstart job for trust-store for camera service
   * Add upstart job for trust-store for pulseaudio
   * Load trust-store module for pulseaudio
 
- -- Alfonso Sanchez-Beato (email Canonical) <alfonso.sanchez-beato@canonical.com>  Fri, 07 Aug 2015 17:23:11 +0200
+  [ CI Train Bot ]
+  * No-change rebuild.
+
+ -- CI Train Bot <ci-train-bot@canonical.com>  Mon, 31 Aug 2015 15:55:21 +0000
 
 ubuntu-touch-session (0.108+15.10.20150803-0ubuntu1) wily; urgency=medium
 
