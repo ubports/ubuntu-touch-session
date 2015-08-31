@@ -72,6 +72,10 @@ load-module module-bluetooth-policy
 load-module module-bluez4-discover profile=a2dp sco_sink=sink.fake.sco sco_source=source.fake.sco
 .endif
 
+.ifexists module-bluez5-discover.so
+load-module module-bluez5-discover headset=auto
+.endif
+
 ### Load several protocols
 .ifexists module-esound-protocol-unix.so
 load-module module-esound-protocol-unix
