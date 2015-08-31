@@ -73,7 +73,7 @@ load-module module-bluez4-discover profile=a2dp sco_sink=sink.fake.sco sco_sourc
 .endif
 
 .ifexists module-bluez5-discover.so
-load-module module-bluez5-discover headset=auto
+load-module module-bluez5-discover headset=native
 .endif
 
 ### Load several protocols
