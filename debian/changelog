@@ -1,3 +1,15 @@
+ubuntu-touch-session (0.108+15.04.20151019-0ubuntu1) vivid; urgency=medium
+
+  [ Simon Fels ]
+  * Add support for BlueZ 5 added: upstart-session/bluez-mpris-
+    proxy.conf
+
+  [ simon.busch@canonical.com ]
+  * Add support for BlueZ 5 added: upstart-session/bluez-mpris-
+    proxy.conf
+
+ -- CI Train Bot <ci-train-bot@canonical.com>  Mon, 19 Oct 2015 20:22:54 +0000
+
 ubuntu-touch-session (0.108+15.04.20150825-0ubuntu1) vivid; urgency=medium
 
   [ Manuel de la Pena ]
