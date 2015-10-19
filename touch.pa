@@ -68,8 +68,8 @@ load-module module-jackdbus-detect channels=2
 load-module module-bluetooth-policy
 .endif
 
-.ifexists module-bluez4-discover.so
-load-module module-bluez4-discover profile=a2dp sco_sink=sink.fake.sco sco_source=source.fake.sco
+.ifexists module-bluez5-discover.so
+load-module module-bluez5-discover headset=both profile=a2dp_sink sco_sink=sink.fake.sco sco_source=source.fake.sco
 .endif
 
 ### Load several protocols
