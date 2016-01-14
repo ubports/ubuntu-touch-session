@@ -38,8 +38,8 @@ load-module module-switch-on-port-available
 load-module module-switch-on-connect skip_abstract=yes
 
 ### Automatically load the Pulseaudio Droid
-.ifexists module-droid-card.so
-load-module module-droid-card voice_virtual_stream=true
+.ifexists module-droid-discover.so
+load-module module-droid-discover voice_virtual_stream=true
 .endif
 
 ### Automatically load the trust-store module
