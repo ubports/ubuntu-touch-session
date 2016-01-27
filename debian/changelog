@@ -1,3 +1,16 @@
+ubuntu-touch-session (0.108+16.04.20160127-0ubuntu1) xenial; urgency=medium
+
+  * Sync with changes from vivid overlay ppa and enable PulseAudio Droid
+    discover module. added: upstart-session/bluez-mpris-proxy.conf
+    upstart-session/cameraservice-trust-stored.conf upstart-
+    session/pulseaudio-trust-stored.conf renamed: upstart-
+    session/cameraservice-trust-stored.conf => upstart-
+    session/cameraservice-trust-stored.conf.moved upstart-
+    session/pulseaudio-trust-stored.conf => upstart-session/pulseaudio-
+    trust-stored.conf.moved
+
+ -- Simon Fels <simon.busch@canonical.com>  Wed, 27 Jan 2016 13:30:46 +0000
+
 ubuntu-touch-session (0.108+15.10.20150831-0ubuntu1) wily; urgency=medium
 
   [ Alfonso Sanchez-Beato (email Canonical) ]
