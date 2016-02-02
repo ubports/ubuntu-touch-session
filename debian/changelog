@@ -1,3 +1,12 @@
+ubuntu-touch-session (0.108+16.04.20160202-0ubuntu1) xenial; urgency=medium
+
+  [ Timo Jyrinki ]
+  * Add environment variable for Qt to keep status quo on the network
+    bearer once changing to a newer upstream patch. added:
+    etc/profile.d/qt_networkmanager_bearer.sh
+
+ -- CI Train Bot <ci-train-bot@canonical.com>  Tue, 02 Feb 2016 12:59:07 +0000
+
 ubuntu-touch-session (0.108+16.04.20160127-0ubuntu1) xenial; urgency=medium
 
   * Sync with changes from vivid overlay ppa and enable PulseAudio Droid
