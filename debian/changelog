@@ -1,3 +1,12 @@
+ubuntu-touch-session (0.108+16.04.20160407-0ubuntu1) xenial; urgency=medium
+
+  [ Łukasz 'sil2100' Zemczak ]
+  * Add an etc profile.d to add the /custom/usr/share directory to
+    enable using customized notification sounds by the push client. (LP:
+    #1413818)
+
+ -- Łukasz Zemczak <ci-train-bot@canonical.com>  Thu, 07 Apr 2016 11:59:05 +0000
+
 ubuntu-touch-session (0.108+16.04.20160202-0ubuntu1) xenial; urgency=medium
 
   [ Timo Jyrinki ]
