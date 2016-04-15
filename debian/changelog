@@ -1,3 +1,9 @@
+ubuntu-touch-session (0.108+16.04.20160415-0ubuntu1) xenial; urgency=medium
+
+  * Enable support for OBEX Object Push related plugins.
+
+ -- Michael Zanetti <michael.zanetti@canonical.com>  Fri, 15 Apr 2016 08:15:46 +0000
+
 ubuntu-touch-session (0.108+16.04.20160407-0ubuntu1) xenial; urgency=medium
 
   [ Łukasz 'sil2100' Zemczak ]
