@@ -1,3 +1,9 @@
+ubuntu-touch-session (0.108+16.10.20160710-0ubuntu1) yakkety; urgency=medium
+
+  * Reload trust-stored, when use switched locale in the welcome wizard.
+
+ -- Rex Tsai <rex.tsai@canonical.com>  Sun, 10 Jul 2016 21:30:29 +0000
+
 ubuntu-touch-session (0.108+16.04.20160415-0ubuntu1) xenial; urgency=medium
 
   * Enable support for OBEX Object Push related plugins.
