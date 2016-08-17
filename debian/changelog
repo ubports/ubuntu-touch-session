@@ -1,3 +1,13 @@
+ubuntu-touch-session (0.108+16.10.20160817.1-0ubuntu1) yakkety; urgency=medium
+
+  [ Łukasz 'sil2100' Zemczak ]
+  * Modify the add_custom_to_xdg_data.sh profile.d hook to not modify
+    the XDG_DATA_DIRS if it's not set yet. (LP: #1604421)
+  * Do not save the ubuntu-touch-session environment to the local
+    .profile files as this is not required (and bad practice).
+
+ -- Łukasz Zemczak <lukasz.zemczak@canonical.com>  Wed, 17 Aug 2016 13:53:09 +0000
+
 ubuntu-touch-session (0.108+16.10.20160710-0ubuntu1) yakkety; urgency=medium
 
   * Reload trust-stored, when use switched locale in the welcome wizard.
