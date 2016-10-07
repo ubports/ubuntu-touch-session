@@ -7,5 +7,5 @@
 if [ -n "$MIR_SOCKET" ]; then
     exec $@
 else
-    exec /usr/sbin/lightdm-session $@
+    exec $SNAP/usr/sbin/lightdm-session $@
 fi
