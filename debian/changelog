@@ -1,3 +1,11 @@
+ubuntu-touch-session (0.108+16.10.20161011-0ubuntu1) yakkety; urgency=medium
+
+  [ Łukasz 'sil2100' Zemczak ]
+  * Re-add the GRID_UNIT_PX .profile addition as it seems to be required
+    by some autopilot tests. (LP: #1627056)
+
+ -- Łukasz Zemczak <lukasz.zemczak@canonical.com>  Tue, 11 Oct 2016 10:23:10 +0000
+
 ubuntu-touch-session (0.108+16.10.20160817.1-0ubuntu1) yakkety; urgency=medium
 
   [ Łukasz 'sil2100' Zemczak ]
