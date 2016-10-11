@@ -46,6 +46,10 @@ export GRID_UNIT_PX=${GRID_UNIT_PX}
 export QTWEBKIT_DPR=${QTWEBKIT_DPR}
 export NATIVE_ORIENTATION=${NATIVE_ORIENTATION}
 
+# Save some environment variables for adb and autopilot's benefit
+dot_profile=$HOME/.profile
+grep -q GRID_UNIT_PX $dot_profile || echo "export GRID_UNIT_PX=${GRID_UNIT_PX}" >> $dot_profile
+
 # Make sure we're also exporting the profile.d variables
 if [ -d /etc/profile.d ]; then
     for i in /etc/profile.d/*.sh; do
