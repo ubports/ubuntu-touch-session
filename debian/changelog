@@ -1,3 +1,10 @@
+ubuntu-touch-session (0.108+16.10.20161014-0ubuntu1) yakkety; urgency=medium
+
+  [ Alexandros Frantzis ]
+  * Keep the display on during boot (LP: #1623853) (LP: #1623853)
+
+ -- Łukasz Zemczak <lukasz.zemczak@canonical.com>  Fri, 14 Oct 2016 07:48:51 +0000
+
 ubuntu-touch-session (0.108+16.10.20161011-0ubuntu1) yakkety; urgency=medium
 
   [ Łukasz 'sil2100' Zemczak ]
