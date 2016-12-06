@@ -14,11 +14,11 @@ NATIVE_ORIENTATION=portrait
 
 # override defaults by sourcing /etc/ubuntu-touch-session.d/$device.conf
 device=$(getprop ro.product.device)
-if [ -e /etc/ubuntu-touch-session.d/$device.conf ]; then
-    . /etc/ubuntu-touch-session.d/$device.conf
+if [ -e $SNAP/etc/ubuntu-touch-session.d/$device.conf ]; then
+    . $SNAP/etc/ubuntu-touch-session.d/$device.conf
 else
     # android.conf is used by the bind mount
-    . /etc/ubuntu-touch-session.d/android.conf
+    . $SNAP/etc/ubuntu-touch-session.d/android.conf
 fi
 
 # Workaround for bug 1308210 / 1318070 (x86 emulator and scopes)
@@ -30,11 +30,11 @@ if [ $(getprop ro.kernel.qemu 0) -eq 1 ]; then
 fi
 
 # Set up xdg dirs
-[ -z "$XDG_CONFIG_DIRS" ] && export XDG_CONFIG_DIRS=/etc/xdg
-[ -z "$XDG_DATA_DIRS" ] && export XDG_DATA_DIRS=/usr/local/share:/usr/share
+[ -z "$XDG_CONFIG_DIRS" ] && export XDG_CONFIG_DIRS=$SNAP/etc/xdg
+[ -z "$XDG_DATA_DIRS" ] && export XDG_DATA_DIRS=$SNAP/usr/local/share:$SNAP/usr/share
 if [ -n "$DESKTOP_SESSION" ]; then
-    export XDG_CONFIG_DIRS=/etc/xdg/xdg-$DESKTOP_SESSION:$XDG_CONFIG_DIRS
-    export XDG_DATA_DIRS=/usr/share/$DESKTOP_SESSION:$XDG_DATA_DIRS
+    export XDG_CONFIG_DIRS=$SNAP/etc/xdg/xdg-$DESKTOP_SESSION:$XDG_CONFIG_DIRS
+    export XDG_DATA_DIRS=$SNAP/usr/share/$DESKTOP_SESSION:$XDG_DATA_DIRS
 fi
 
 # if /custom/xdg/config exists, add it to xdg_config_dirs. this is so upstart can get job definitions from /custom
@@ -51,8 +51,8 @@ dot_profile=$HOME/.profile
 grep -q GRID_UNIT_PX $dot_profile || echo "export GRID_UNIT_PX=${GRID_UNIT_PX}" >> $dot_profile
 
 # Make sure we're also exporting the profile.d variables
-if [ -d /etc/profile.d ]; then
-    for i in /etc/profile.d/*.sh; do
+if [ -d $SNAP/etc/profile.d ]; then
+    for i in $SNAP/etc/profile.d/*.sh; do
         if [ -r $i ]; then
             . $i
         fi
