@@ -1,3 +1,10 @@
+ubuntu-touch-session (0.108+17.04.20161206-0ubuntu1) zesty; urgency=medium
+
+  * Support running inside a snap (without breaking non-snap runs). (LP:
+    #1629009, #1645797, #1645833)
+
+ -- Michael Terry <michael.terry@canonical.com>  Tue, 06 Dec 2016 13:46:42 +0000
+
 ubuntu-touch-session (0.108+17.04.20161117-0ubuntu1) zesty; urgency=medium
 
   * Fix potential upstart job race between lightdm and keep-display-on-
