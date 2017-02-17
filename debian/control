@@ -14,6 +14,7 @@ Architecture: all
 Depends: libpam-runtime (>= 1.0.1-6),
          libpam-modules (>= 1.1.8-3ubuntu2),
          lightdm (>= 1.9.5),
+	upstart,
          unity-system-compositor (>= 0.0.3),
          unity8 (>= 7.89),
          ubuntu-app-launch (>= 0.1+13.10.20130923.4-0ubuntu1~),

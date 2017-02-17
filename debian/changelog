@@ -1,3 +1,12 @@
+ubuntu-touch-session (0.108+17.04.20161206-0ubuntu2) zesty; urgency=medium
+
+  * Currently this session startup scripts explicitely call upstart. Add a
+    dependency on upstart, to make sure upstart is still available, whilst
+    all the other packages transition to dual upstart and systemd support,
+    in preparation for migrating this session to systemd.
+
+ -- Dimitri John Ledkov <xnox@ubuntu.com>  Wed, 21 Dec 2016 14:08:14 +0000
+
 ubuntu-touch-session (0.108+17.04.20161206-0ubuntu1) zesty; urgency=medium
 
   * Support running inside a snap (without breaking non-snap runs). (LP:
