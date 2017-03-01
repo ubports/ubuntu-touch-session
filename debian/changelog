@@ -1,9 +1,10 @@
-ubuntu-touch-session (0.109) UNRELEASED; urgency=medium
+ubuntu-touch-session (0.109+17.04.20170301-0ubuntu1) zesty; urgency=medium
 
+  [ Michael Sheldon ]
   * Remove maliit upstart job (moved to ubuntu-keyboard package)
   * Increase version number to allow for Breaks/Replaces in ubuntu-keyboard
 
- -- Michael Sheldon <michael.sheldon@canonical.com>  Thu, 16 Feb 2017 16:35:36 +0000
+ -- Lukáš Tinkl <lukas.tinkl@canonical.com>  Wed, 01 Mar 2017 13:40:38 +0000
 
 ubuntu-touch-session (0.108+17.04.20161206-0ubuntu2) zesty; urgency=medium
 
