@@ -1,3 +1,9 @@
+ubuntu-touch-session (0.110+ubports) xenial; urgency=medium
+
+  * Imported to UBports
+
+ -- UBports auto importer <infra@ubports.com>  Fri, 05 Jan 2018 14:23:33 +0100
+
 ubuntu-touch-session (0.109+17.04.20170301-0ubuntu1) zesty; urgency=medium
 
   [ Michael Sheldon ]
