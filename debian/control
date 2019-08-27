@@ -15,13 +15,28 @@ Depends: libpam-runtime (>= 1.0.1-6),
          libpam-modules (>= 1.1.8-3ubuntu2),
          lightdm (>= 1.9.5),
          upstart,
-         unity-system-compositor (>= 0.0.3),
          unity8 (>= 7.89),
          ubuntu-app-launch (>= 0.1+13.10.20130923.4-0ubuntu1~),
          apparmor (>= 2.8.96~2541-0ubuntu1~),
+         ubuntu-touch-session-mir (= ${binary:Version}) | ubuntu-touch-session-wayland (= ${binary:Version}),
          ${misc:Depends},
          ${shlibs:Depends},
 Breaks: unity8 (<< 7.85),
 Description: Ubuntu Session Manager for Ubuntu Touch Devices
  The ubuntu-touch-session tool aims to setup a very simple session
  manager for the ubuntu-touch mobile shell.
+
+Package: ubuntu-touch-session-mir
+Architecture: all
+Depends: ubuntu-touch-session (= ${binary:Version}),
+         unity-system-compositor (>= 0.0.3),
+Conflicts: ubuntu-touch-session-wayland
+Description: Mir on Mir session using unity-system-compositor
+ Mir on Mir session using unity-system-compositor
+
+Package: ubuntu-touch-session-wayland
+Architecture: all
+Depends: ubuntu-touch-session (= ${binary:Version}),
+Conflicts: ubuntu-touch-session-mir
+Description: Wayland session without using mir on mir
+ Wayland session without using mir on mir

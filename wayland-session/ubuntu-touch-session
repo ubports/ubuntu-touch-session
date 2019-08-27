@@ -1,0 +1,67 @@
+#!/bin/sh
+
+# WARNING: this wrapper is only for setting up screen environment variables
+# that would need to be shared between a greeter process and the user session.
+# Do NOT add any other hacks here.  We eventually intend for this wrapper to
+# go away, once we dynamically determine screen settings.
+
+export QT_QPA_PLATFORM=wayland
+
+# defaults
+GRID_UNIT_PX=18
+QTWEBKIT_DPR=2.0
+NATIVE_ORIENTATION=portrait
+
+# override defaults by sourcing /etc/ubuntu-touch-session.d/$device.conf
+device=$(getprop ro.product.device)
+if [ -e $SNAP/etc/ubuntu-touch-session.d/$device.conf ]; then
+    . $SNAP/etc/ubuntu-touch-session.d/$device.conf
+else
+    # android.conf is used by the bind mount
+    . $SNAP/etc/ubuntu-touch-session.d/android.conf
+fi
+
+# Workaround for bug 1308210 / 1318070 (x86 emulator and scopes)
+if [ $(getprop ro.kernel.qemu 0) -eq 1 ]; then
+    cpu_mhz=$(grep -m1 "cpu MHz" /proc/cpuinfo | awk -F' ' '{ print $4 }')
+    if [ "$cpu_mhz" = "0.000" ]; then
+        export RDTSC_FREQUENCY=2000
+    fi
+fi
+
+# Set up xdg dirs
+[ -z "$XDG_CONFIG_DIRS" ] && export XDG_CONFIG_DIRS=$SNAP/etc/xdg
+[ -z "$XDG_DATA_DIRS" ] && export XDG_DATA_DIRS=$SNAP/usr/local/share:$SNAP/usr/share
+if [ -n "$DESKTOP_SESSION" ]; then
+    export XDG_CONFIG_DIRS=$SNAP/etc/xdg/xdg-$DESKTOP_SESSION:$XDG_CONFIG_DIRS
+    export XDG_DATA_DIRS=$SNAP/usr/share/$DESKTOP_SESSION:$XDG_DATA_DIRS
+fi
+
+# if /custom/xdg/config exists, add it to xdg_config_dirs. this is so upstart can get job definitions from /custom
+if [ -d /custom/xdg/config ]; then
+	export XDG_CONFIG_DIRS=/custom/xdg/config:$XDG_CONFIG_DIRS
+fi
+
+export GRID_UNIT_PX=${GRID_UNIT_PX}
+export QTWEBKIT_DPR=${QTWEBKIT_DPR}
+export NATIVE_ORIENTATION=${NATIVE_ORIENTATION}
+
+# Save some environment variables for adb and autopilot's benefit
+dot_profile=$HOME/.profile
+grep -q GRID_UNIT_PX $dot_profile || echo "export GRID_UNIT_PX=${GRID_UNIT_PX}" >> $dot_profile
+
+# Make sure we're also exporting the profile.d variables
+if [ -d $SNAP/etc/profile.d ]; then
+    for i in $SNAP/etc/profile.d/*.sh; do
+        if [ -r $i ]; then
+            . $i
+        fi
+    done
+    unset i
+fi
+
+if [ "$#" -ne 0 ]; then
+    exec $@
+else
+    exec upstart --user
+fi
