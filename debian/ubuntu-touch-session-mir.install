@@ -1,0 +1,5 @@
+mir-session/ubuntu-touch-session /usr/bin/
+mir-session/ubuntu-touch.desktop /usr/share/lightdm/sessions
+mir-session/52-ubuntu-touch.conf /usr/share/lightdm/lightdm.conf.d
+mir-session/usc-wrapper /usr/share/ubuntu-touch-session/
+mir-session/qpa_plugin.sh /etc/profile.d
