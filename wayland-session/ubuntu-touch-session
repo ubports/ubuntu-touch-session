@@ -6,6 +6,7 @@
 # go away, once we dynamically determine screen settings.
 
 export QT_QPA_PLATFORM=wayland
+export QT_WAYLAND_DISABLE_WINDOWDECORATION=1
 
 # defaults
 GRID_UNIT_PX=18
