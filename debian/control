@@ -37,6 +37,7 @@ Description: Mir on Mir session using unity-system-compositor
 Package: ubuntu-touch-session-wayland
 Architecture: all
 Depends: ubuntu-touch-session (= ${binary:Version}),
+         qtwayland5
 Conflicts: ubuntu-touch-session-mir
 Description: Wayland session without using mir on mir
  Wayland session without using mir on mir
