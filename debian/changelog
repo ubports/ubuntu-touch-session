@@ -1,3 +1,9 @@
+ubuntu-touch-session (0.111+0ubports0) xenial; urgency=medium
+
+  * Updates for new Mir and Unity8
+
+ -- Dalton Durst <dalton@ubports.com>  Thu, 02 May 2019 15:05:59 -0500
+
 ubuntu-touch-session (0.110+ubports) xenial; urgency=medium
 
   * Imported to UBports
