@@ -7,18 +7,10 @@
 
 export QT_QPA_PLATFORM=ubuntumirclient
 
-# defaults
-GRID_UNIT_PX=18
-QTWEBKIT_DPR=2.0
-NATIVE_ORIENTATION=portrait
-
-# override defaults by sourcing /etc/ubuntu-touch-session.d/$device.conf
-device=$(getprop ro.product.device)
-if [ -e $SNAP/etc/ubuntu-touch-session.d/$device.conf ]; then
-    . $SNAP/etc/ubuntu-touch-session.d/$device.conf
-else
-    # android.conf is used by the bind mount
-    . $SNAP/etc/ubuntu-touch-session.d/android.conf
+if [ -x "$(command -v device-info)" ]; then
+    GRID_UNIT_PX=$(device-info get GridUnit)
+    QTWEBKIT_DPR=$(device-info get WebkitDpr)
+    NATIVE_ORIENTATION=$(device-info get PrimaryOrientation)
 fi
 
 # Workaround for bug 1308210 / 1318070 (x86 emulator and scopes)
