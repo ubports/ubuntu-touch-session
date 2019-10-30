@@ -4,6 +4,7 @@ startup-scripts/* /usr/bin/
 *.override /etc/init
 factory-wipe.conf /etc/init/
 keep-display-on-during-boot.conf /etc/init
+no-android.conf /etc/init
 systemd-overrides/* /lib/systemd/system/
 ubuntu-touch-session.d/* /etc/ubuntu-touch-session.d/
 upstart-session/* /usr/share/upstart/sessions/
