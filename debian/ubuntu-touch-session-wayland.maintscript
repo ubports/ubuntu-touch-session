@@ -1,0 +1,1 @@
+rm_conffile /etc/lightdm/lightdm.conf.d/52-ubuntu-touch.conf 0.108
