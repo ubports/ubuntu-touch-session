@@ -1,4 +1,5 @@
 wayland-session/ubuntu-touch-session /usr/bin/
 wayland-session/ubuntu-touch.desktop /usr/share/lightdm/sessions
 wayland-session/52-ubuntu-touch.conf /usr/share/lightdm/lightdm.conf.d
+wayland-session/usc-wrapper /usr/share/ubuntu-touch-session/
 wayland-session/qpa_plugin.sh /etc/profile.d

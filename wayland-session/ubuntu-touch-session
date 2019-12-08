@@ -8,6 +8,9 @@
 export QT_QPA_PLATFORM=wayland
 export QT_WAYLAND_DISABLE_WINDOWDECORATION=1
 
+export MIR_SERVER_WAYLAND_HOST=/tmp/wayland-root
+unset MIR_SERVER_HOST_SOCKET
+
 if [ -x "$(command -v device-info)" ]; then
     GRID_UNIT_PX=$(device-info get GridUnit)
     QTWEBKIT_DPR=$(device-info get WebkitDpr)

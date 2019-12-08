@@ -4,5 +4,6 @@
 # it to find input configuration files and autopilot won't work without that.
 . /etc/environment
 export ANDROID_ROOT
+export COMPOSITOR_BACKEND=mir
 
 exec unity-system-compositor --enable-num-framebuffers-quirk=true --disable-overlays=false --console-provider=vt --spinner=$SNAP/usr/bin/unity-system-compositor-spinner $@

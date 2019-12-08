@@ -1,0 +1,25 @@
+#!/bin/bash
+
+# We need to grab ANDROID_ROOT from /etc/environment, because Mir uses
+# it to find input configuration files and autopilot won't work without that.
+. /etc/environment
+export ANDROID_ROOT
+export COMPOSITOR_BACKEND=wayland
+export WAYLAND_DISPLAY=wayland-root
+export XDG_RUNTIME_DIR=/tmp
+
+# Hack for virtual machines that fails to probe modeset
+if [ "$(hostnamectl status | grep 'Chassis: vm')" ]; then
+    export MIR_MESA_KMS_DISABLE_MODESET_PROBE=1
+fi
+
+function do_while {
+    while [ ! -e "${XDG_RUNTIME_DIR}/${WAYLAND_DISPLAY}" ]; do
+        echo "waiting for ${WAYLAND_DISPLAY}"
+        sleep 0.1
+    done
+    chmod 777 "$XDG_RUNTIME_DIR/$WAYLAND_DISPLAY"
+}
+
+do_while &
+exec unity-system-compositor --enable-num-framebuffers-quirk=true --disable-overlays=false --console-provider=vt --spinner=$SNAP/usr/bin/unity-system-compositor-spinner $@
