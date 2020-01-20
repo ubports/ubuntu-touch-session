@@ -52,9 +52,9 @@ load-module module-null-sink sink_name=sink.fake.sco rate=8000 channels=1
 load-module module-null-source source_name=source.fake.sco rate=8000 channels=1
 
 ### Automatically load driver modules depending on the hardware available
-#.ifexists module-udev-detect.so
-#load-module module-udev-detect
-#.endif
+.ifexists module-udev-detect.so
+load-module module-udev-detect
+.endif
 
 ### Automatically connect sink and source if JACK server is present
 .ifexists module-jackdbus-detect.so
