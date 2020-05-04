@@ -1,0 +1,16 @@
+# urfkill - killswitch manager
+#
+# This daemon manages the states of various radios on the system, such as
+# for WiFi, Bluetooth, Cellular, FM, etc. and can properly handle input events
+# to toggle these radios on devices that have such input keys.
+
+description	"killswitch manager"
+
+start on started udev and started dbus
+stop on stopping dbus
+
+respawn
+
+script
+    exec /usr/lib/aarch64-linux-gnu/urfkill/urfkilld
+end script
