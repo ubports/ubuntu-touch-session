@@ -1,0 +1,16 @@
+# Wayland rules
+owner /run/user/*/wayland-[0-9]* rw,
+owner /run/user/*/{mesa,mutter,sdl,wayland-cursor,weston,xwayland}-shared-* rw,
+
+# DRI rules
+/usr/lib{,32,64}/dri/**         mr,
+/usr/lib/@{multiarch}/dri/**    mr,
+/usr/lib/fglrx/dri/**           mr,
+/dev/dri/                       r,
+/dev/dri/**                     rw,
+/etc/drirc r,
+/usr/share/drirc.d/{,*.conf} r,
+owner @{HOME}/.drirc r,
+
+# Needed for OpenGL applications to enumerate devices
+/sys/devices/**/**/{device,subsystem_device,subsystem_vendor,uevent,vendor} r,
