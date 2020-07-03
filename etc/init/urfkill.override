@@ -6,7 +6,7 @@
 
 description	"killswitch manager"
 
-start on started udev and started dbus
+start on started udev and started dbus and started ofono
 stop on stopping dbus
 
 respawn
