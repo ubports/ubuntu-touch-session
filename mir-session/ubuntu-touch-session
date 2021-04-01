@@ -6,6 +6,7 @@
 # go away, once we dynamically determine screen settings.
 
 export QT_QPA_PLATFORM=ubuntumirclient
+export MIR_SERVER_ENABLE_MIRCLIENT=1
 
 # defaults
 GRID_UNIT_PX=18
